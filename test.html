@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+	<head>
+		
+		<title>Test</title>
+
+		<!-- Metadata -->
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+		<meta name="application-name" content="Dichotomy Tests"/>
+		<meta name="title" content="Dichotomy Tests - Test"/>
+		<meta name="description" content="Dichotomy provides interesting tests that show you how inclined you are toward certain philosophical, psychological or political views. Each test tries to discover your preferred beliefs and will attempt to accurately position you along numerous dichotomic axes."/>
+		<meta name="keywords" content="dichotomy,test,quiz,philosophy,economics,politics,psychology"/>
+		<meta name="HandheldFriendly" content="true"/>
+
+		<!-- Libraries & APIs -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dosis:500,600,700" type="text/css">
+		<script src="https://use.fontawesome.com/663f8258f5.js"></script>
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+		<!-- Local -->
+        <link rel="icon" href="favicon.ico">
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <script type="application/javascript" src="constants.js"></script>
+        <script type="application/javascript" src="tests.js"></script>
+        <script type="application/javascript" src="script.js"></script>
+
+	</head>
+
+	<body>
+
+		<div class="container main">
+
+			<div class="row">
+
+				<!-- Left margin -->
+				<div class="col-lg-3 col-md-0 col-sm-0 col-xs-0"></div>
+
+				<!-- Content -->
+				<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+
+					<div class="card">
+
+						<div class="card-body">
+
+							<h1 class="display-4 heading"><a id="title" href="/.." class="link-none">
+								Test Title
+							</a></h1>
+
+							<hr>
+
+							<div id="container-preamble">
+
+								<p id="preamble" class="text-left sizing">
+									Test preamble.
+								</p>
+
+								<button id="button" type="button" class="btn btn-outline-secondary btn-block sizing" onclick="startTest();">Begin test</button>
+
+							</div>
+
+							<div id="container-test" class="hidden">
+
+								<div class="card">
+
+									<div id="qn-num" class="card-header">Question n of n</div>
+
+									<div class="progress" style="border-radius:0px; height:3px;">
+										<div id="qn-bar" class="progress-bar" style="width:40%; height:3px;"></div>
+									</div>
+
+	                                <div class="card-body">
+
+										<p id="in" class="small font-italic">Instruction</p>
+										<p id="qn">Question</p>
+
+										<hr>
+
+										<div id="ct-agree" class="hidden">
+
+		                                    <button type="button" onclick="nextAgree(1.0)" class="btn btn-outline-secondary btn-sm btn-block sizing btn-str-agree">Strongly Agree</button>
+		                                    <button type="button" onclick="nextAgree(0.5)" class="btn btn-outline-secondary btn-sm btn-block sizing btn-agree">Agree</button>
+											<button type="button" onclick="nextAgree(0.0)" class="btn btn-outline-secondary btn-sm btn-block sizing btn-neutral">Neutral/I don't know</button>
+											<button type="button" onclick="nextAgree(-0.5)" class="btn btn-outline-secondary btn-sm btn-block sizing btn-disagree">Disagree</button>
+											<button type="button" onclick="nextAgree(-1.0)" class="btn btn-outline-secondary btn-sm btn-block sizing btn-str-disagree">Strongly Disagree</button>
+
+										</div>
+
+										<div id="ct-scenario" class="hidden"></div>
+										
+										<hr>
+
+										<button type="button" onclick="prev()" id="prev-button" class="btn btn-dark btn-block btn-sm sizing-small">Previous</button>
+										<button type="button" onclick="prev()" id="prev-button-off" class="btn btn-dark btn-block btn-sm sizing-small" disabled>Previous</button>
+
+									</div>
+
+	                            </div>
+								
+							</div>
+
+							<p class="text-center small sizing mt-10">Dichotomy Tests - 2018</p>
+
+						</div>
+
+					</div>
+
+				</div>
+
+				<!-- Right margin -->
+				<div class="col-lg-3 col-md-0 col-sm-0 col-xs-0"></div>
+
+			</div>
+
+		</div>
+
+		<script>
+
+			var id = getParameterInt("id");
+			var test = getTest(id);
+			var mode = test.testType;
+
+			document.title = test.name;
+			document.getElementById("title").innerText = test.name;
+			document.getElementById("preamble").innerText = test.preamble;
+			document.getElementById("button").classList.add(test.btnClass);
+
+			var scores = new Array(test.scales.length).fill(0);
+			var previousAnswer = null;
+			var questionNumber = 0;
+
+		</script>
+
+	</body>
+
+</html>
