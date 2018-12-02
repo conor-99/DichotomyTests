@@ -346,7 +346,7 @@ var tests = [
                 effects: [0, 5, 0, 10, 5, -10, 0]
             },
             {
-                text: "There is a distincition between 'good' and 'bad' that goes beyond mere human nature.",
+                text: "There is a distinction between 'good' and 'bad' that goes beyond mere human nature.",
                 effects: [0, 0, 0, 0, -10, 0, 0]
             },
             {
