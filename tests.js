@@ -234,7 +234,7 @@ var tests = [
                 effects: [0, 0, -10, 0, 0, 0, 0]
             },
             {
-                text: "Is it virtuous to live a simple life without an abundance of physical comforts.",
+                text: "It is virtuous to live a simple life without an abundance of physical comforts.",
                 effects: [-5, 0, 0, -10, -5, 0, 0]
             },
             {
