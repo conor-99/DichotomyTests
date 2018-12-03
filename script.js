@@ -222,7 +222,6 @@ function getResults() {
 
 	// calculate %s
 	for (var i = 0; i < maxScores.length; i++) {
-		console.log(maxScores[i]);
 		percentages[i] = ((scores[i] + maxScores[i]) / (2 * maxScores[i]));
 	}
 
