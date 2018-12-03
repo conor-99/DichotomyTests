@@ -249,6 +249,9 @@ function buildResultsBars(results) {
 
 function buildBar(scale, result) {
 
+	if (result < 0) result = 0;
+	if (result > 1) result = 1;
+
 	var axis = document.createElement("div");
 	axis.classList.add("axis");
 
