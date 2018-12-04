@@ -26,6 +26,47 @@ function getTest(id) {
 
 /* index.html */
 
+function buildComingSoon() {
+
+	// Containers
+	var col = document.createElement("div");
+	col.classList.add("col-sm-6");
+
+	var card = document.createElement("div");
+	card.classList.add("card", "mt-10");
+
+	var cardBody = document.createElement("div");
+	cardBody.classList.add("card-body");
+
+	// Test title
+	var title = document.createElement("h5");
+	title.classList.add("text-center", "font-weight-normal");
+	title.innerText = "Coming Soon";
+
+	// Test description
+	var desc = document.createElement("p");
+	desc.classList.add("text-left", "small");
+	desc.innerText = "More tests coming soon! Make sure to check this page frequently so that you don't miss out on our future tests.";
+
+	/*var button = document.createElement("button");
+	button.classList.add("btn", "btn-outline-success", "btn-block", "sizing");
+	button.innerText = "Secret link";
+	button.setAttribute("type", "button");
+
+	var link = "window.open('https://www.youtube.com/channel/UC-lHJZR3Gqxm24_Vd_AJ5Yw', '_blank');";
+	button.setAttribute("onclick", link);*/
+
+	// Putting everything together
+	cardBody.appendChild(title);
+	cardBody.appendChild(desc);
+	//cardBody.appendChild(button);
+	card.appendChild(cardBody);
+	col.appendChild(card);
+
+	return col;
+
+}
+
 function buildCol(test) {
 
 	// Calculations
@@ -102,6 +143,7 @@ function displayTests() {
 		
 		row.appendChild(col1);
 		if (col2 != null) row.appendChild(col2);
+		if (col2 == null) row.appendChild(buildComingSoon());
 		testsContainer.appendChild(row);
 
 		cols -= 2;
