@@ -41,25 +41,25 @@ function buildComingSoon() {
 	// Test title
 	var title = document.createElement("h5");
 	title.classList.add("text-center", "font-weight-normal");
-	title.innerText = "Coming Soon";
+	title.innerText = "More Tests";
 
 	// Test description
 	var desc = document.createElement("p");
 	desc.classList.add("text-left", "small");
-	desc.innerText = "More tests coming soon! Make sure to check this page frequently so that you don't miss out on our future tests.";
+	desc.innerText = "Take some of our psychological tests at PsychTests!";
 
-	/*var button = document.createElement("button");
+	var button = document.createElement("button");
 	button.classList.add("btn", "btn-outline-success", "btn-block", "sizing");
-	button.innerText = "Secret link";
+	button.innerText = "Psych Tests";
 	button.setAttribute("type", "button");
 
-	var link = "window.open('https://www.youtube.com/channel/UC-lHJZR3Gqxm24_Vd_AJ5Yw', '_blank');";
-	button.setAttribute("onclick", link);*/
+	var link = "window.open('http://psychtests.co.nf', '_blank');";
+	button.setAttribute("onclick", link);
 
 	// Putting everything together
 	cardBody.appendChild(title);
 	cardBody.appendChild(desc);
-	//cardBody.appendChild(button);
+	cardBody.appendChild(button);
 	card.appendChild(cardBody);
 	col.appendChild(card);
 
