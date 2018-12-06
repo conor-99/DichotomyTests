@@ -18,92 +18,120 @@ var tests = [
                 a: {
                     text: "Materialism",
                     path: "https://i.ibb.co/XjtG3g8/materialism.png",
-                    color: "#c4eeb2"
+                    color: "#c4eeb2",
+                    desc: "All of reality is physical and material."
                 },
                 b: {
                     text: "Spiritualism",
                     path: "https://i.ibb.co/DYZkgPV/spiritualism.png",
-                    color: "#f7b9c4"
+                    color: "#f7b9c4",
+                    desc: "Some of reality transcends the physical and material."
                 },
-                param: "m"
+                param: "m",
+                axisName: "Metaphysical Axis",
+                axisDesc: "How you view reality."
             },
             {
                 a: {
                     text: "Egoism",
                     path: "https://i.ibb.co/VqNpmVk/egoism.png",
-                    color: "#b6a8d8"
+                    color: "#b6a8d8",
+                    desc: "The individual is most important."
                 },
                 b: {
                     text: "Altruism",
                     path: "https://i.ibb.co/6t9tygg/altruism.png",
-                    color: "#fff5bf"
+                    color: "#fff5bf",
+                    desc: "The community is most important."
                 },
-                param: "e"
+                param: "e",
+                axisName: "Societal Axis",
+                axisDesc: "Your attitude toward society."
             },
             {
                 a: {
                     text: "Idealism",
                     path: "https://i.ibb.co/rmTfrvq/idealism.png",
-                    color: "#ffe081"
+                    color: "#ffe081",
+                    desc: "The underlying principles are most important."
                 },
                 b: {
                     text: "Pragmatism",
                     path: "https://i.ibb.co/3TSTpG5/pragmatism.png",
-                    color: "#7474c7"
+                    color: "#7474c7",
+                    desc: "The results are most important."
                 },
-                param: "i"
+                param: "i",
+                axisName: "Decision-making Axis",
+                axisDesc: "How you approach decision-making and your actions."
             },
             {
                 a: {
                     text: "Hedonism",
                     path: "https://i.ibb.co/YW8nMkB/hedonism.png",
-                    color: "#f99ba4"
+                    color: "#f99ba4",
+                    desc: "Pleasure is intrinsically good and should be desired."
                 },
                 b: {
                     text: "Asceticism",
                     path: "https://i.ibb.co/TmTS99G/asceticism.png",
-                    color: "#9be18c"
+                    color: "#9be18c",
+                    desc: "Abstinence from pleasure in order to discover meaning is most important."
                 },
-                param: "h"
+                param: "h",
+                axisName: "Sensuality Axis",
+                axisDesc: "How you approach your indulgences."
             },
             {
                 a: {
                     text: "Nihilism",
                     path: "https://i.ibb.co/PFH7jw9/nihilism.png",
-                    color: "#86989c"
+                    color: "#86989c",
+                    desc: "Neither meaning nor morality are objective."
                 },
                 b: {
                     text: "Moralism",
                     path: "https://i.ibb.co/YDWs0Mt/moralism.png",
-                    color: "#fcead7"
+                    color: "#fcead7",
+                    desc: "Morality and meaning are objective - to some extent."
                 },
-                param: "n"
+                param: "n",
+                axisName: "Meaning Axis",
+                axisDesc: "Whether you believe in objective meaning."
             },
             {
                 a: {
                     text: "Rationalism",
                     path: "https://i.ibb.co/txNkzJg/rationalism.png",
-                    color: "#ffd1b3"
+                    color: "#ffd1b3",
+                    desc: "Intellect and logic."
                 },
                 b: {
                     text: "Romanticism",
                     path: "https://i.ibb.co/KDKZGyQ/romanticism.png",
-                    color: "#8ac5bb"
+                    color: "#8ac5bb",
+                    desc: "Passions and the heart."
                 },
-                param: "r"
+                param: "r",
+                axisName: "Values Axis",
+                axisDesc: "What you value most."
             },
             {
                 a: {
                     text: "Skepticism",
                     path: "https://i.ibb.co/26FttkZ/skepticism.png",
-                    color: "#a2bcd4"
+                    color: "#a2bcd4",
+                    desc: "We can never truly know anything for sure."
                 },
                 b: {
                     text: "Absolutism",
                     path: "https://i.ibb.co/QFVfmyr/absolutism.png",
-                    color: "#ffe4bf"
+                    color: "#ffe4bf",
+                    desc: "There are objective truths that can also be understood."
                 },
-                param: "s"
+                param: "s",
+                axisName: "Epistemology Axis",
+                axisDesc: "Your attitude towards knowledge."
             }
         ],
 

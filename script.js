@@ -274,6 +274,7 @@ function getResults() {
 function buildResults(results) {
 	if (test.resultsType == BARS) buildResultsBars(results);
 	else builResultsCompass(results);
+	buildResultsExplain();
 }
 
 function buildResultsBars(results) {
@@ -414,5 +415,63 @@ function buildMarkers(results) {
 		container.style.height = (container.offsetHeight + 60) + "px";
 		container.appendChild(markerContainer);
 	}
+
+}
+
+function buildResultsExplain() {
+
+	var container = document.getElementById("explain");
+
+	for (var i = 0; i < test.scales.length; i++) {
+		explain = buildExplain(test.scales[i]);
+		container.appendChild(explain);
+	}
+
+}
+
+function buildExplain(scale) {
+
+	var br1 = document.createElement("br");
+	var br2 = document.createElement("br");
+
+	var explain = document.createElement("div");
+	explain.classList.add("explain-axis");
+
+	var title = document.createElement("span");
+	title.style.fontWeight = "bold";
+	title.innerText = scale.axisName + ": ";
+
+	var titleDesc = document.createElement("span");
+	titleDesc.innerText = scale.axisDesc;
+
+	explain.appendChild(title);
+	explain.appendChild(titleDesc);
+	explain.appendChild(br1);
+
+	var content = document.createElement("span");
+	content.classList.add("explain-content");
+
+	var subTitle1 = document.createElement("span");
+	subTitle1.style.fontStyle = "italic";
+	subTitle1.innerText = scale.a.text + ": ";
+	
+	var subDesc1 = document.createElement("span");
+	subDesc1.innerText = scale.a.desc;
+
+	var subTitle2 = document.createElement("span");
+	subTitle2.style.fontStyle = "italic";
+	subTitle2.innerText = scale.b.text + ": ";
+
+	var subDesc2 = document.createElement("span");
+	subDesc2.innerText = scale.b.desc;
+
+	content.appendChild(subTitle1);
+	content.appendChild(subDesc1);
+	content.appendChild(br2);
+	content.appendChild(subTitle2);
+	content.appendChild(subDesc2);
+
+	explain.appendChild(content);
+	return explain;
 
 }
