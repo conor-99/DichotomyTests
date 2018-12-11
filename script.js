@@ -26,7 +26,7 @@ function getTest(id) {
 
 /* index.html */
 
-function buildComingSoon() {
+function buildPsychTests() {
 
 	// Containers
 	var col = document.createElement("div");
@@ -133,6 +133,8 @@ function displayTests() {
 	var cols = tests.length;
 	var testsContainer = document.getElementById("tests-list");
 
+	var even = (cols % 2 == 0);
+
 	for (var i = 0; i < tests.length; i += 2) {
 	    
 	    var row = buildRow();
@@ -143,12 +145,18 @@ function displayTests() {
 		
 		row.appendChild(col1);
 		if (col2 != null) row.appendChild(col2);
-		if (col2 == null) row.appendChild(buildComingSoon());
+		if (!even && col2 == null) row.appendChild(buildPsychTests());
 		testsContainer.appendChild(row);
 
 		cols -= 2;
 
 	} 
+
+	if (even) {
+		var row = buildRow();
+		row.appendChild(buildPsychTests());
+		testsContainer.appendChild(row);
+	}
 
 }
 
