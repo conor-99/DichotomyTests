@@ -49,7 +49,7 @@ function buildPsychTests() {
 	desc.innerText = "Take some of our psychological tests at PsychTests!";
 
 	var button = document.createElement("button");
-	button.classList.add("btn", "btn-outline-success", "btn-block", "sizing");
+	button.classList.add("btn", "btn-outline-secondary", "btn-block", "sizing", "btn-53a548");
 	button.innerText = "Psych Tests";
 	button.setAttribute("type", "button");
 
