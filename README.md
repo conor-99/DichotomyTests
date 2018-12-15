@@ -6,4 +6,4 @@ The following tests are currently offered:
 * [Philosophy](http://dichotomytests.com/test.html?id=0)
 * [Economics](http://dichotomytests.com/test.html?id=1)
 
-<http://dichotomytests.com>
+Visit the site here: <http://dichotomytests.com>
