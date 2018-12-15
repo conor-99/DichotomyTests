@@ -598,5 +598,533 @@ var tests = [
             }
         ]
 
+    },
+    {
+
+        id: 1,
+        
+        name:           "Economics",
+        description:    "How do you think the economy should be run? Find out now and see your results displayed along multiple economic axes.",
+        preamble:       "You will be asked a number of questions. These will be in the form of either a statement or a scenario. For each of these questions you should state whether you agree or disagree (broadly speaking). Please try to answer as honestly as possible.",
+        results:        "Your results are displayed below:",
+        
+        btnClass:       "btn-5158bb",
+        
+        testType:       AGREE,
+        resultsType:    BARS,
+
+        scales: [
+            {
+                a: {
+                    text: "Protectionism",
+                    path: "https://i.ibb.co/2ngKX6G/protectionism.png",
+                    color: "#f67681",
+                    desc: "Restricted trade."
+                },
+                b: {
+                    text: "Free Trade",
+                    path: "https://i.ibb.co/BGc4Mbd/freetrade.png",
+                    color: "#7bed9f",
+                    desc: "Unregulated trade."
+                },
+                param: "f",
+                axisName: "Trade Axis",
+                axisDesc: "How trade should be regulated."
+            },
+            {
+                a: {
+                    text: "Inter-Dependence",
+                    path: "https://i.ibb.co/6m4TM8j/interdependence.png",
+                    color: "#fecdaa",
+                    desc: "Global reliance."
+                },
+                b: {
+                    text: "Autarky",
+                    path: "https://i.ibb.co/p3RX7Mk/autarky.png",
+                    color: "#82ccdd",
+                    desc: "Self-sufficiency."
+                },
+                param: "a",
+                axisName: "Resources Axis",
+                axisDesc: "Where resources should be derived from."
+            },
+            {
+                a: {
+                    text: "Libertarianism",
+                    path: "https://i.ibb.co/GWxySVV/libertarianism.png",
+                    color: "#D6A2E8",
+                    desc: "Less power."
+                },
+                b: {
+                    text: "Statism",
+                    path: "https://i.ibb.co/xm5LhrB/statism.png",
+                    color: "#ffeaa7",
+                    desc: "More power."
+                },
+                param: "s",
+                axisName: "State Axis",
+                axisDesc: "How much power the state should have."
+            },
+            {
+                a: {
+                    text: "Globalisation",
+                    path: "https://i.ibb.co/k1J9xwy/globalisation.png",
+                    color: "#fafac6",
+                    desc: "Leave it up to the global market."
+                },
+                b: {
+                    text: "Nationalisation",
+                    path: "https://i.ibb.co/HpWskNV/nationalisation.png",
+                    color: "#b7c3f3",
+                    desc: "The government should institute national programmes."
+                },
+                param: "n",
+                axisName: "Social Systems Axis",
+                axisDesc: "How social systems should be setup."
+            },
+            {
+                a: {
+                    text: "Commercial",
+                    path: "https://i.ibb.co/1vy4srt/commercial.png",
+                    color: "#f49390",
+                    desc: "Money and banking."
+                },
+                b: {
+                    text: "Subsistence",
+                    path: "https://i.ibb.co/fMgrp58/subsistence.png",
+                    color: "#49beaa",
+                    desc: "Agriculture and tradition."
+                },
+                param: "c",
+                axisName: "Industry Axis",
+                axisDesc: "Which industries should the economy specialise in."
+            },
+            {
+                a: {
+                    text: "Adhocracy",
+                    path: "https://i.ibb.co/fYnKhQR/adhocracy.png",
+                    color: "#f3c98b",
+                    desc: "Completely organic market that changes sporadically."
+                },
+                b: {
+                    text: "Bureaucracy",
+                    path: "https://i.ibb.co/0nn8b5P/bureaucracy.png",
+                    color: "#b8bedd",
+                    desc: "Centralised administrative body that plans certain sectors."
+                },
+                param: "b",
+                axisName: "Market Structure Axis",
+                axisDesc: "How the market is arranged."
+            },
+            {
+                a: {
+                    text: "Flat Tax",
+                    path: "https://i.ibb.co/86zJpyD/flattax.png",
+                    color: "#c5c3c6",
+                    desc: "Universal tax on all citizens, usually low."
+                },
+                b: {
+                    text: "Progressive Tax",
+                    path: "https://i.ibb.co/jHCCWh5/progressivetax.png",
+                    color: "#ef767a",
+                    desc: "Higher taxes, specifically on higher income citizens."
+                },
+                param: "p",
+                axisName: "Taxation Axis",
+                axisDesc: "How people should be taxed."
+            }
+        ],
+
+        instruction:    "How much do you agree/disagree with the following statement?",
+        questions: [
+            {
+                text: "The freer the market, the freer the people.",
+                effects: [-10, 0, 5, 0, 0, 0, 0]
+            },
+            {
+                text: "Self-sufficiency is vital for any economy.",
+                effects: [0, -10, 0, 0, -5, 0, 0]
+            },
+            {
+                text: "The government continuing to intervene in the economy will eventually lead to tyranny.",
+                effects: [0, 0, 10, 0, 0, 5, 0]
+            },
+            {
+                text: "Providing national basic income is a realistic and desirable goal.",
+                effects: [0, 0, 0, -10, 5, 0, 0]
+            },
+            {
+                text: "There should be little to no industrialisation in the economy.",
+                effects: [0, 0, 5, 0, -10, 0, 0]
+            },
+            {
+                text: "The state should initiate price controls on various goods.",
+                effects: [0, 0, -5, 0, 0, -10, 0]
+            },
+            {
+                text: "A progressive income tax is good for the economy.",
+                effects: [0, 0, 0, 0, 0, -5, -10]
+            },
+            {
+                text: "Strong tariffs are necessary in a sovereign state.",
+                effects: [10, -5, 0, 0, 0, 0, 0]
+            },
+            {
+                text: "A country should be self-sufficient when it comes to providing basic needs such as food and water",
+                effects: [0, -10, 0, 0, -5, 0, 0]
+            },
+            {
+                text: "Economic intervention is needed in order to ensure income equality.",
+                effects: [0, 0, -10, 0, 0, -5, 0]
+            },
+            {
+                text: "National work programmes which ensure employment are practical and feasible.",
+                effects: [0, 0, 0, -10, -5, 0, 0]
+            },
+            {
+                text: "The economy should be based around agriculture and natural resources.",
+                effects: [0, -5, 0, 0, -10, 0, 0]
+            },
+            {
+                text: "Long term, multiyear plans are important initiatives for the state economy.",
+                effects: [0, 0, -5, 0, 0, -10, 0]
+            },
+            {
+                text: "Luxury goods should be highly taxed.",
+                effects: [0, 0, -5, 0, 0, 0, -10]
+            },
+            {
+                text: "Goods produced within the country should recieve subsidies to help them out-compete foreign goods.",
+                effects: [10, -5, 0, 0, 0, 0, 0]
+            },
+            {
+                text: "There should exist self-sufficient local cooperatives within the economy.",
+                effects: [0, -10, 0, 0, 0, -5, 0]
+            },
+            {
+                text: "The state should have the ability to harshly punish negative forces in the economy.",
+                effects: [0, 0, -10, 0, 0, 0, -5]
+            },
+            {
+                text: "Nationalised education and healthcare systems are of great importance in a strong society.",
+                effects: [0, 0, 0, -10, 0, -5, 0]
+            },
+            {
+                text: "Our economic order should be directly linked to ecology.",
+                effects: [0, -5, 0, 0, -10, 0, 0]
+            },
+            {
+                text: "It is best if the state's economic policies are flexible and can be changed to suit the current situation.",
+                effects: [-5, 0, 0, 0, 0, 10, 0]
+            },
+            {
+                text: "Corporate taxes should be increased.",
+                effects: [0, 0, 0, 0, 0, -5, -10]
+            },
+            {
+                text: "The issuing of national patents is good for the economy.",
+                effects: [10, 0, 0, -5, 0, 0, 0]
+            },
+            {
+                text: "It is damaging to the economy to be reliant on foreign countries.",
+                effects: [0, -10, 0, 0, -5, 0, 0]
+            },
+            {
+                text: "The state has no right to interfere in the private affairs of individuals.",
+                effects: [0, 0, 10, 0, 0, 5, 0]
+            },
+            {
+                text: "Railways and other transport systems should be nationalised.",
+                effects: [0, 0, -5, -10, 0, 0, 0]
+            },
+            {
+                text: "Nations are better off having an organic economy that is tied to nature.",
+                effects: [0, -5, 0, 0, -10, 0, 0]
+            },
+            {
+                text: "State intervention in the economy almost always results in catastrophe.",
+                effects: [0, 0, 5, 0, 0, 10, 0]
+            },
+            {
+                text: "Tax cuts are necessary in order to maintain a prosperous economy.",
+                effects: [0, 0, 0, 0, 0, 5, 10]
+            },
+            {
+                text: "Trade restrictions and import taxes are good.",
+                effects: [10, 0, 0, -5, 0, 0, 0]
+            },
+            {
+                text: "Small-scale, free initiatives should be promoted within the country.",
+                effects: [0, -10, 0, 0, -5, 0, 0]
+            },
+            {
+                text: "A planned economy is best.",
+                effects: [0, 0, -10, 0, 0, -5, 0]
+            },
+            {
+                text: "It is better to have a nationalised banking system.",
+                effects: [0, 0, 0, -10, 0, -5, 0]
+            },
+            {
+                text: "An economy should be founded on competition and consumption.",
+                effects: [0, 0, 0, 0, 10, 5, 0]
+            },
+            {
+                text: "The bigger the government the better.",
+                effects: [0, 0, -5, 0, 0, -10, 0]
+            },
+            {
+                text: "Aside from funding necessary public programmes (the police force, etc) taxation should be as limited as possible.",
+                effects: [0, 0, 5, 0, 0, 0, 10]
+            },
+            {
+                text: "Trade distorting policies don't work.",
+                effects: [-10, 0, 5, 0, 0, 0, 0]
+            },
+            {
+                text: "It is better if the state receives significant support from foreign countries and corporations.",
+                effects: [0, 10, 0, 5, 0, 0, 0]
+            },
+            {
+                text: "It is better if private businesses are left to their own devices.",
+                effects: [0, 0, 10, 0, 0, 0, 5]
+            },
+            {
+                text: "Multinational corporations are more efficient than publically-funded systems.",
+                effects: [0, 0, 5, 10, 0, 0, 0]
+            },
+            {
+                text: "Economies need to industrialise and modernise in order to flourish.",
+                effects: [-5, 0, 0, 0, 10, 0, 0]
+            },
+            {
+                text: "A functioning economy will always need to have a complex set of rules and guidelines kept in place.",
+                effects: [0, 0, 0, 0, 0, -10, -5]
+            },
+            {
+                text: "Higher income households should be expected to pay a higher income tax.",
+                effects: [0, 0, 0, 0, 0, -5, -10]
+            },
+            {
+                text: "Unregulated access to foreign markets is a good thing.",
+                effects: [-10, 0, 5, 0, 0, 0, 0]
+            },
+            {
+                text: "Economic powers such as the EU should provide support to struggling countries.",
+                effects: [0, 10, 0, 5, 0, 0, 0]
+            },
+            {
+                text: "Every intervention in the economy is a potential threat to individual liberty.",
+                effects: [0, 0, 10, 0, 0, 5, 0]
+            },
+            {
+                text: "Foreign businesses should be encouraged to reside wherever they like.",
+                effects: [0, 0, 0, 10, 0, 5, 0]
+            },
+            {
+                text: "An economy that utilises foraging techniques, such as hunting and gathering, is preferable.",
+                effects: [0, 0, -5, 0, -10, 0, 0]
+            },
+            {
+                text: "The economy should be organised organically, devoid of planning and rules.",
+                effects: [0, 0, 5, 0, 0, 10, 0]
+            },
+            {
+                text: "We should increase taxes so that we can fund better social systems.",
+                effects: [0, 0, 0, 0, 0, -5, -10]
+            },
+            {
+                text: "Trade should be heavily regulated.",
+                effects: [10, -5, 0, 0, 0, 0, 0]
+            },
+            {
+                text: "Ideally, states should depend on and support each other.",
+                effects: [0, 10, 0, 5, 0, 0, 0]
+            },
+            {
+                text: "Statist dreams of utopia are one of the biggest threats to economic prosperity.",
+                effects: [0, 0, 10, 0, 0, 5, 0]
+            },
+            {
+                text: "We're better off with a modern, globalised economy.",
+                effects: [0, 0, 0, 10, 5, 0, 0]
+            },
+            {
+                text: "Monetary value or currency is at the core of any functioning economy.",
+                effects: [0, 0, 0, 0, 10, 5, 0]
+            },
+            {
+                text: "An economic structure should be fluid, lacking in formalisation, paperwork and rules.",
+                effects: [0, 0, 0, 0, -5, 10, 0]
+            },
+            {
+                text: "All citizens should pay taxes at the same rate.",
+                effects: [0, 0, 5, 0, 0, 0, 10]
+            },
+            {
+                text: "Overall, protectionism has had a net negative effect on economies.",
+                effects: [-10, 0, 0, 5, 0, 0, 0]
+            },
+            {
+                text: "Economies should support each other and promote inter-dependence.",
+                effects: [0, 10, 0, 5, 0, 0, 0]
+            },
+            {
+                text: "The economy should obey the state; never the other way around.",
+                effects: [0, 0, -10, 0, -5, 0, 0]
+            },
+            {
+                text: "Globalisation is inevitable and for the better.",
+                effects: [0, 0, 0, 10, 5, 0, 0]
+            },
+            {
+                text: "We should promote commercial lifestyles of profit and usury.",
+                effects: [0, 0, 5, 0, 10, 0, 0]
+            },
+            {
+                text: "Strong public administration is needed in order to uphold the law, maximise efficiency and prevent favoritism.",
+                effects: [0, 0, 0, 0, 0, -10, -5]
+            },
+            {
+                text: "Taxpayers shouldn't be expected to fund expensive social systems.",
+                effects: [0, 0, 5, 0, 0, 0, 10]
+            },
+            {
+                text: "The government should have major control over the economic ins and outs of the country.",
+                effects: [10, -5, 0, 0, 0, 0, 0]
+            },
+            {
+                text: "For an economy to function the state needs to have significant control over it.",
+                effects: [0, 0, -10, 0, 0, 0, -5]
+            },
+            {
+                text: "We should strive towards a universal, global economy.",
+                effects: [0, 0, 0, 10, 5, 0, 0]
+            },
+            {
+                text: "Bureacracy is needed so that law, order and a functioning economy can be maintained.",
+                effects: [0, 0, -5, 0, 0, -10, 0]
+            },
+            {
+                text: "Specialised teams should run different aspects of the economy as opposed to a single bureaucratic body.",
+                effects: [0, 0, 5, 0, 0, 10, 0]
+            }
+        ],
+
+        markers: [
+            {
+                name: "Keynesian",
+                path: "https://i.ibb.co/rt9TzqQ/keynesian.png",
+                scales: [
+                    {
+                        scale: 6,
+                        bar: 0,
+                        min: 0.7
+                    },
+                    {
+                        scale: 5,
+                        bar: 1,
+                        min: 0.6
+                    }
+                ]
+            },
+            {
+                name: "Austrian School",
+                path: "https://i.ibb.co/7p9CLBx/austrianschool.png",
+                scales: [
+                    {
+                        scale: 0,
+                        bar: 1,
+                        min: 0.7
+                    },
+                    {
+                        scale: 2,
+                        bar: 0,
+                        min: 0.6
+                    }
+                ]
+            },
+            {
+                name: "Marxism",
+                path: "https://i.ibb.co/wgNNFsm/marxism.png",
+                scales: [
+                    {
+                        scale: 2,
+                        bar: 1,
+                        min: 0.7
+                    },
+                    {
+                        scale: 3,
+                        bar: 1,
+                        min: 0.6
+                    }
+                ]
+            },
+            {
+                name: "Mercantilism",
+                path: "https://i.ibb.co/XLx6nvV/mercantilism.png",
+                scales: [
+                    {
+                        scale: 0,
+                        bar: 0,
+                        min: 0.7
+                    },
+                    {
+                        scale: 4,
+                        bar: 1,
+                        min: 0.6
+                    }
+                ]
+            },
+            {
+                name: "Chicago School",
+                path: "https://i.ibb.co/9ZTRKLx/chicagoschool.png",
+                scales: [
+                    {
+                        scale: 2,
+                        bar: 0,
+                        min: 0.7
+                    },
+                    {
+                        scale: 4,
+                        bar: 0,
+                        min: 0.6
+                    }
+                ]
+            },
+            {
+                name: "Distributism",
+                path: "https://i.ibb.co/XxPKsvB/distributism.png",
+                scales: [
+                    {
+                        scale: 4,
+                        bar: 1,
+                        min: 0.7
+                    },
+                    {
+                        scale: 2,
+                        bar: 0,
+                        min: 0.6
+                    }
+                ]
+            },
+            {
+                name: "Fascism",
+                path: "https://i.ibb.co/px4x1HQ/fascism.png",
+                scales: [
+                    {
+                        scale: 1,
+                        bar: 1,
+                        min: 0.7
+                    },
+                    {
+                        scale: 3,
+                        bar: 1,
+                        min: 0.6
+                    }
+                ]
+            }
+        ]
+
     }
 ];
