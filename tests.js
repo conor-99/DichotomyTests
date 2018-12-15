@@ -494,7 +494,7 @@ var tests = [
                         min: 0.6
                     },
                     {
-                        scale: 4,
+                        scale: 3,
                         bar: 0,
                         min: 0.6
                     }
