@@ -1126,5 +1126,57 @@ var tests = [
             }
         ]
 
+    },
+    {
+        id: 2,
+        name: "Compass",
+        description: "",
+        preamble: "",
+        results: "Your results are displayed below:",
+        btnClass: "btn-5158bb",
+        testType: AGREE,
+        resultsType: COMPASS,
+        scales: [
+            {
+                a: {
+                    text: "Left",
+                    path: "",
+                    color: "",
+                    desc: ""
+                },
+                b: {
+                    text: "Right",
+                    path: "",
+                    color: "",
+                    desc: ""
+                },
+                param: "h",
+                axisName: "Horizontal",
+                axisDesc: ""
+            },
+            {
+                a: {
+                    text: "Top",
+                    color: "",
+                    desc: ""
+                },
+                b: {
+                    text: "Bottom",
+                    color: "",
+                    desc: ""
+                },
+                param: "v",
+                axisName: "Vertical",
+                axisDesc: ""
+            }
+        ],
+        instruction: "",
+        questions: [
+            {
+                text: "Question 1",
+                effects: [-10, 5]
+            }
+        ],
+        markers: []
     }
 ];

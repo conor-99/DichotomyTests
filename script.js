@@ -382,7 +382,9 @@ function buildBar(scale, result) {
 
 }
 
-function buildResultsCompass(results) { } // to-do
+function buildResultsCompass(results) {
+	
+}
 
 function buildMarkers(results) {
 
