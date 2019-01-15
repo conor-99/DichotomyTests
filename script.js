@@ -384,8 +384,7 @@ function buildBar(scale, result) {
 
 function buildResultsCompass(results) {
 
-	var container = document.getElementById("container-results");
-	
+	var container = document.getElementById("container-results");	
 	container.style.height = (container.offsetWidth * 0.98) + 75 + "px";
 	
 	var canvas = document.createElement("canvas");

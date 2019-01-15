@@ -194,14 +194,6 @@
     z-index: 1;
 }
 
-.comp-label { position: absolute; }
-.comp-label-left { transform: rotate(270deg); }
-.comp-label-right { transform: rotate(90deg); }
-.comp-label-top {}
-.comp-label-bottom {
-    
-}
-
 /* Other Styling (buttons, etc) */
 
 .btn-1298a5 {
