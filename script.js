@@ -281,7 +281,7 @@ function getResults() {
 
 function buildResults(results) {
 	if (test.resultsType == BARS) buildResultsBars(results);
-	else builResultsCompass(results);
+	else buildResultsCompass(results);
 	buildResultsExplain();
 }
 
@@ -383,6 +383,121 @@ function buildBar(scale, result) {
 }
 
 function buildResultsCompass(results) {
+
+	var container = document.getElementById("container-results");
+	
+	container.style.height = (container.offsetWidth * 0.98) + 75 + "px";
+	
+	var canvas = document.createElement("canvas");
+	canvas.id = "compass";
+	canvas.width = container.offsetWidth * 0.98;
+	canvas.height = container.offsetWidth * 0.98;
+	canvas.style.marginTop = (container.offsetWidth * 0.01) + "px";
+	canvas.style.marginLeft = (container.offsetWidth * 0.01) + "px";
+	container.appendChild(canvas);
+
+	var offset = canvas.width * 0.08;
+	var edgeLen = canvas.width * 0.84;
+	var middle = offset + (edgeLen * 0.5);
+	
+	var ctx = canvas.getContext("2d");
+
+	ctx.fillStyle = test.scales[0].a.color;
+	ctx.fillRect(offset, offset, middle, middle);
+	ctx.fillStyle = test.scales[0].b.color;
+	ctx.fillRect(middle, middle, (edgeLen * 0.5), (edgeLen * 0.5));
+	ctx.fillStyle = test.scales[1].a.color;
+	ctx.fillRect(middle, offset, (edgeLen * 0.5), (edgeLen * 0.5));
+	ctx.fillStyle = test.scales[1].b.color;
+	ctx.fillRect(offset, middle, (edgeLen * 0.5), (edgeLen * 0.5));
+
+	ctx.lineWidth = 1;
+	ctx.strokeStyle = "#AAAAAA";
+
+	ctx.strokeRect(offset, offset, edgeLen, edgeLen);
+
+	var x;
+
+	for (var i = 0; i < 9; i++) {
+
+		x = offset + (edgeLen * ((i + 1) / 20));
+
+		ctx.beginPath();
+		ctx.moveTo(x, offset);
+		ctx.lineTo(x, (offset + edgeLen));
+		ctx.stroke();
+
+		ctx.beginPath();
+		ctx.moveTo(offset, x);
+		ctx.lineTo((offset + edgeLen), x);
+		ctx.stroke();
+
+		x = offset + (edgeLen * ((i + 11) / 20));
+
+		ctx.beginPath();
+		ctx.moveTo(x, offset);
+		ctx.lineTo(x, (offset + edgeLen));
+		ctx.stroke();
+
+		ctx.beginPath();
+		ctx.moveTo(offset, x);
+		ctx.lineTo((offset + edgeLen), x);
+		ctx.stroke();
+
+	}
+	
+	ctx.strokeStyle = "#767676";
+
+	ctx.beginPath();
+	ctx.moveTo(middle, offset);
+	ctx.lineTo(middle, (offset + edgeLen));
+	ctx.stroke();
+
+	ctx.beginPath();
+	ctx.moveTo(offset, middle);
+	ctx.lineTo((offset + edgeLen), middle);
+	ctx.stroke();
+
+	sh = offset + (results[0] * edgeLen);
+	sv = offset + (results[1] * edgeLen);
+
+	ctx.fillStyle = "#BA3B46";
+	ctx.strokeStyle = "#444444";
+	ctx.lineWidth = 2;
+	ctx.beginPath();
+	ctx.arc(sh, sv, (edgeLen * 0.02), 0, (Math.PI * 2));
+	ctx.fill();
+	ctx.stroke();
+
+	ctx.fillStyle = "#333333";
+	ctx.font = "16px Sans-Serif";
+	ctx.textAlign = "center";
+	ctx.textBaseline = "middle";
+
+	ctx.save();
+	ctx.translate((offset * 0.6), middle);
+	ctx.rotate(Math.PI * -0.5);
+	ctx.fillText(test.scales[0].a.text, 0, 0);
+	ctx.restore();
+
+	ctx.save();
+	ctx.translate((edgeLen + (offset * 1.4)), middle);
+	ctx.rotate(Math.PI * 0.5);
+	ctx.fillText(test.scales[0].b.text, 0, 0);
+ 	ctx.restore();
+
+	ctx.fillText(test.scales[1].a.text, middle, (offset * 0.6));
+	ctx.fillText(test.scales[1].b.text, middle, (edgeLen + (offset * 1.5)));
+
+	var t0 = test.scales[0].axisName + " " + test.scales[0].a.text + "/" + test.scales[0].b.text + ": " + ((results[0] - 0.5) * 20).toFixed(1);
+	var t1 = test.scales[1].axisName + " " + test.scales[1].a.text + "/" + test.scales[1].b.text + ": " + ((results[1] - 0.5) * -20).toFixed(1);
+
+	var desc = document.createElement("p");
+	desc.style.marginTop = "-5px";
+	desc.style.marginLeft = (container.offsetWidth * 0.08) + 6 + "px";
+	desc.style.fontSize = "18px";
+	desc.innerHTML = t0 + "<br>" + t1;
+	container.appendChild(desc);
 	
 }
 

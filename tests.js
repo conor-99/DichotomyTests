@@ -1126,7 +1126,7 @@ var tests = [
             }
         ]
 
-    },
+    }/*,
     {
         id: 2,
         name: "Compass",
@@ -1141,33 +1141,35 @@ var tests = [
                 a: {
                     text: "Left",
                     path: "",
-                    color: "",
-                    desc: ""
+                    color: "#f7a9a8",
+                    desc: "This is L text."
                 },
                 b: {
                     text: "Right",
                     path: "",
-                    color: "",
-                    desc: ""
+                    color: "#d8d4f2",
+                    desc: "This is R text."
                 },
                 param: "h",
                 axisName: "Horizontal",
-                axisDesc: ""
+                axisDesc: "This is H text."
             },
             {
                 a: {
                     text: "Top",
-                    color: "",
-                    desc: ""
+                    path: "",
+                    color: "#b8e1ff",
+                    desc: "This is T text."
                 },
                 b: {
                     text: "Bottom",
-                    color: "",
-                    desc: ""
+                    path: "",
+                    color: "#beef9e",
+                    desc: "This is B text."
                 },
                 param: "v",
                 axisName: "Vertical",
-                axisDesc: ""
+                axisDesc: "This is V text."
             }
         ],
         instruction: "",
@@ -1179,4 +1181,5 @@ var tests = [
         ],
         markers: []
     }
+    */
 ];
