@@ -1126,59 +1126,259 @@ var tests = [
             }
         ]
 
-    }/*,
+    },
     {
+
         id: 2,
-        name: "Compass",
-        description: "",
-        preamble: "",
+
+        name: "Personality Compass",
+        description: "Find out where you land on our personality compass. This test will measure four key personality traits along two dichotomic axes.",
+        preamble: "You will be asked a number of questions. These will be in the form of a statement. For each of these questions you should state whether you agree or disagree (broadly speaking). Please try to answer as honestly as possible.",
         results: "Your results are displayed below:",
-        btnClass: "btn-5158bb",
+
+        btnClass: "btn-e2711d",
+
         testType: AGREE,
         resultsType: COMPASS,
+
         scales: [
             {
                 a: {
-                    text: "Left",
+                    text: "Reasonable",
                     path: "",
-                    color: "#f7a9a8",
-                    desc: "This is L text."
+                    color: "#d9d2ed",
+                    //color: "#f7a9a8",
+                    desc: "Stable and conventional."
                 },
                 b: {
-                    text: "Right",
+                    text: "Sentimental",
                     path: "",
-                    color: "#d8d4f2",
-                    desc: "This is R text."
+                    color: "#fff2cf",
+                    //color: "#d8d4f2",
+                    desc: "Emotional and creative."
                 },
                 param: "h",
-                axisName: "Horizontal",
-                axisDesc: "This is H text."
+                axisName: "Emotional Axis",
+                axisDesc: "How open you are to passion and how you are influenced by it."
             },
             {
                 a: {
-                    text: "Top",
+                    text: "Assertive",
                     path: "",
-                    color: "#b8e1ff",
-                    desc: "This is T text."
+                    color: "#cfe2f8",
+                    //color: "#b8e1ff",
+                    desc: "Disagreeable and conscientious."
                 },
                 b: {
-                    text: "Bottom",
+                    text: "Deferential",
                     path: "",
-                    color: "#beef9e",
-                    desc: "This is B text."
+                    color: "#d9ead8",
+                    //color: "#beef9e",
+                    desc: "Agreeable and indifferent."
                 },
                 param: "v",
-                axisName: "Vertical",
-                axisDesc: "This is V text."
+                axisName: "Exacting Axis",
+                axisDesc: "How competitive and diligent you are."
             }
         ],
-        instruction: "",
+
+        instruction: "How much do you agree/disagree with the following statement?",
         questions: [
             {
-                text: "Question 1",
-                effects: [-10, 5]
-            }
+                text: "I'm quite an imaginative person.",
+                effects: [10, 0]
+            },
+            {
+                text: "I get stressed quite easily.",
+                effects: [10, 0]
+            },
+            {
+                text: "I get irritated easily.",
+                effects: [0, 10]
+            },
+            {
+                text: "I keep my home/office very clean.",
+                effects: [0, 10]
+            },
+            {
+                text: "I'm not very artistic or creative.",
+                effects: [-10, 0]
+            },
+            {
+                text: "I am usually relaxed.",
+                effects: [-10, 0]
+            },
+            {
+                text: "I rarely hold grudges against others.",
+                effects: [0, -10]
+            },
+            {
+                text: "I do the smallest amount work needed to get by.",
+                effects: [0, -10]
+            },
+            {
+                text: "I have an interest in art, such as music, literature or paintings.",
+                effects: [10, 0]
+            },
+            {
+                text: "I have frequent mood swings.",
+                effects: [10, 0]
+            },
+            {
+                text: "People sometimes tell me that I'm too judgemental of others.",
+                effects: [0, 10]
+            },
+            {
+                text: "I don't let impulses interfere with my behaviour.",
+                effects: [0, 10]
+            },
+            {
+                text: "Museums and art galleries bore me.",
+                effects: [-10, 0]
+            },
+            {
+                text: "I rarely feel down.",
+                effects: [-10, 0]
+            },
+            {
+                text: "I'm quick to forgive others.",
+                effects: [0, -10]
+            },
+            {
+                text: "I'm a very impulsive person.",
+                effects: [0, -10]
+            },
+            {
+                text: "I like eccentric and unconventional people.",
+                effects: [10, 0]
+            },
+            {
+                text: "I often worry about the little things.",
+                effects: [10, 0]
+            },
+            {
+                text: "I have a quick temper.",
+                effects: [0, 10]
+            },
+            {
+                text: "I follow a schedule and plan ahead.",
+                effects: [0, 10]
+            },
+            {
+                text: "I find discussions about philosophy to be quite boring.",
+                effects: [-10, 0]
+            },
+            {
+                text: "I'm not too concerned with others' feelings.",
+                effects: [-10, 0]
+            },
+            {
+                text: "I'm quite tolerant when it comes to judging others.",
+                effects: [0, -10]
+            },
+            {
+                text: "I have a messy room/desk.",
+                effects: [0, -10]
+            },
+            {
+                text: "I enjoy looking at atlases or maps of the world.",
+                effects: [10, 0]
+            },
+            {
+                text: "I sympathise with other people's feelings.",
+                effects: [10, 0]
+            },
+            {
+                text: "I often get into arguments when people tell me I'm wrong.",
+                effects: [0, 10]
+            },
+            {
+                text: "I'm a perfectionist.",
+                effects: [0, 10]
+            },
+            {
+                text: "I don't have much of an imagination.",
+                effects: [-10, 0]
+            },
+            {
+                text: "I don't mind dangerous jobs or activities.",
+                effects: [-10, 0]
+            },
+            {
+                text: "I rarely get angry.",
+                effects: [0, -10]
+            },
+            {
+                text: "Sometimes I have difficulty working due to being disorganised.",
+                effects: [0, -10]
+            },
+            {
+                text: "I enjoy learning about the histories and cultures of other countries.",
+                effects: [10, 0]
+            },
+            {
+                text: "I am very fearful when it comes to dangerous situations.",
+                effects: [10, 0]
+            },
+            {
+                text: "I'm very stubborn.",
+                effects: [0, 10]
+            },
+            {
+                text: "I pay close attention to minor details.",
+                effects: [0, 10]
+            },
+            {
+                text: "I wouldn't enjoy reading through an encylopedia.",
+                effects: [-10, 0]
+            },
+            {
+                text: "I'm less sentimental than most people.",
+                effects: [-10, 0]
+            },
+            {
+                text: "I try to be positive, even when people mess up.",
+                effects: [0, -10]
+            },
+            {
+                text: "I forget to put things back in their proper place.",
+                effects: [0, -10]
+            },
+            {
+                text: "I have lots of good ideas.",
+                effects: [10, 0]
+            },
+            {
+                text: "I often feel down.",
+                effects: [10, 0]
+            },
+            {
+                text: "I find it difficult to compromise with others when I'm sure I'm right.",
+                effects: [0, 10]
+            },
+            {
+                text: "I'm very driven when it comes to achieving goals.",
+                effects: [0, 10]
+            },
+            {
+                text: "I'm not as inquisitive as most people.",
+                effects: [-10, 0]
+            },
+            {
+                text: "I rarely worry about things.",
+                effects: [-10, 0]
+            },
+            {
+                text: "When others disagree with me I can be flexible in my opinions.",
+                effects: [0, -10]
+            },
+            {
+                text: "I often neglect my duties.",
+                effects: [0, -10]
+            },
         ],
+
         markers: []
-    }*/
+
+    }
 ];

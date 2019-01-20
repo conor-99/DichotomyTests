@@ -385,7 +385,7 @@ function buildBar(scale, result) {
 function buildResultsCompass(results) {
 
 	var container = document.getElementById("container-results");	
-	container.style.height = (container.offsetWidth * 0.98) + 75 + "px";
+	container.style.height = (container.offsetWidth * 0.98) + 135 + "px";
 	
 	var canvas = document.createElement("canvas");
 	canvas.id = "compass";
@@ -458,7 +458,7 @@ function buildResultsCompass(results) {
 	ctx.stroke();
 
 	sh = offset + (results[0] * edgeLen);
-	sv = offset + (results[1] * edgeLen);
+	sv = offset + ((1 - results[1]) * edgeLen);
 
 	ctx.fillStyle = "#BA3B46";
 	ctx.strokeStyle = "#444444";
@@ -488,8 +488,8 @@ function buildResultsCompass(results) {
 	ctx.fillText(test.scales[1].a.text, middle, (offset * 0.6));
 	ctx.fillText(test.scales[1].b.text, middle, (edgeLen + (offset * 1.5)));
 
-	var t0 = test.scales[0].axisName + " " + test.scales[0].a.text + "/" + test.scales[0].b.text + ": " + ((results[0] - 0.5) * 20).toFixed(1);
-	var t1 = test.scales[1].axisName + " " + test.scales[1].a.text + "/" + test.scales[1].b.text + ": " + ((results[1] - 0.5) * -20).toFixed(1);
+	var t0 = "<b>" + test.scales[0].axisName + "</b>: <br><i>" + test.scales[0].a.text + " </i>vs<i> " + test.scales[0].b.text + "</i>: " + ((results[0] - 0.5) * 20).toFixed(1);
+	var t1 = "<b>" + test.scales[1].axisName + "</b>: <br><i>" + test.scales[1].a.text + " </i>vs<i> " + test.scales[1].b.text + "</i>: " + ((results[1] - 0.5) * 20).toFixed(1);
 
 	var desc = document.createElement("p");
 	desc.style.marginTop = "-5px";
