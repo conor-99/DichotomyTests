@@ -5,5 +5,6 @@ We currently offer the following tests:
 
 * [Philosophy](http://dichotomytests.com/test.html?id=0)
 * [Economics](http://dichotomytests.com/test.html?id=1)
+* [Personality Compass](http://dichotomytests.com/test.html?id=2)
 
 Visit the site here: <http://dichotomytests.com>
