@@ -1,6 +1,542 @@
 var tests = [
     {
 
+        id: 3,
+        
+        name:           "Literature",
+        description:    "Do you prefer realistic literature or fantasy? Dark or light-hearted? This test breaks down your literary taste into seven different dichotomies!",
+        preamble:       "You will be asked a number of questions. These will be in the form of either a statement or a scenario. For each of these questions you should state whether you agree or disagree (broadly speaking). Please try to answer as honestly as possible.",
+        results:        "Your results are displayed below:",
+        
+        btnClass:       "btn-3f88c5",
+        
+        testType:       AGREE,
+        resultsType:    BARS,
+
+        scales: [
+            {
+                a: {
+                    text: "Minimalism",
+                    path: "https://i.ibb.co/Wfq42p1/minimalism.png",
+                    color: "#ebebeb",
+                    desc: "Subtle prose with an economic use of words."
+                },
+                b: {
+                    text: "Maximalism",
+                    path: "https://i.ibb.co/fHzRDg6/maximalism.png",
+                    color: "#d499b9",
+                    desc: "Elaborate and complex prose."
+                },
+                param: "f",
+                axisName: "Form Axis",
+                axisDesc: "The level of simplicity or complexity."
+            },
+            {
+                a: {
+                    text: "Fantasy",
+                    path: "https://i.ibb.co/tJ5L2Zh/fantasy.png",
+                    color: "#69dc9e",
+                    desc: "Imaginary worlds beyond material reality."
+                },
+                b: {
+                    text: "Reality",
+                    path: "https://i.ibb.co/b6yL6pL/reality.png",
+                    color: "#fc8c8e",
+                    desc: "The real and empirical world."
+                },
+                param: "o",
+                axisName: "Ontological Axis",
+                axisDesc: "The nature of reality."
+            },
+            {
+                a: {
+                    text: "Dark",
+                    path: "https://i.ibb.co/S0DHLV1/dark.png",
+                    color: "#6d8a96",
+                    desc: "Grim and pessimistic."
+                },
+                b: {
+                    text: "Celebratory",
+                    path: "https://i.ibb.co/TcFzg38/celebratory.png",
+                    color: "#fcfcb8",
+                    desc: "Triumphant and optimistic."
+                },
+                param: "t",
+                axisName: "Tone Axis",
+                axisDesc: "The pervading mood and feeling."
+            },
+            {
+                a: {
+                    text: "Urban",
+                    path: "https://i.ibb.co/k0Lxp8n/urban.png",
+                    color: "#88abc0",
+                    desc: "Set in cities and industrial regions."
+                },
+                b: {
+                    text: "Rural",
+                    path: "https://i.ibb.co/DbfJSyR/rural.png",
+                    color: "#98ce96",
+                    desc: "Set in organic regions and the countryside."
+                },
+                param: "s",
+                axisName: "Setting Axis",
+                axisDesc: "The setting of the story."
+            },
+            {
+                a: {
+                    text: "Moralistic",
+                    path: "https://i.ibb.co/g9cj8Tt/moralistic.png",
+                    color: "#d4e09b",
+                    desc: "Strong message and virtues espoused."
+                },
+                b: {
+                    text: "Satirical",
+                    path: "https://i.ibb.co/GTnPf7X/satirical.png",
+                    color: "#e79da3",
+                    desc: "Lack of certainty, more irony."
+                },
+                param: "e",
+                axisName: "Ethical Axis",
+                axisDesc: "The approach to moral questions as well as the certainty of the story's message."
+            },
+            {
+                a: {
+                    text: "Abstract",
+                    path: "https://i.ibb.co/MN872cK/abstract.png",
+                    color: "#9d97d0",
+                    desc: "Esoteric and experimental."
+                },
+                b: {
+                    text: "Concrete",
+                    path: "https://i.ibb.co/ZfPy3jm/concrete.png",
+                    color: "#d9d1d4",
+                    desc: "Straightforward and conventional."
+                },
+                param: "a",
+                axisName: "Accessibility Axis",
+                axisDesc: "The overall coherence of style and story."
+            },
+            {
+                a: {
+                    text: "Philosophical",
+                    path: "https://i.ibb.co/PxV6K4q/philosophical.png",
+                    color: "#b0a9a9",
+                    desc: "Based around questions and pontification."
+                },
+                b: {
+                    text: "Cozy",
+                    path: "https://i.ibb.co/m6hvK64/cozy.png",
+                    color: "#edb284",
+                    desc: "Based mainly around the story."
+                },
+                param: "p",
+                axisName: "Perspective Axis",
+                axisDesc: "The perspective supplied by the author with regard to the purpose of the story."
+            }
+        ],
+
+        instruction:    "How much do you agree/disagree with the following statement?",
+        questions: [
+            {
+                text: "I prefer prose that is direct and straight to the point.",
+                effects: [-10, 0, 0, 0, 0, 0, 0]
+            },
+            {
+                text: "It is better if a story maintains a solid and traditional struture with regard to pacing, characters, etc.",
+                effects: [0, 0, 0, 0, 0, 10, 0]
+            },
+            {
+                text: "All great artists are philosophers first and foremost.",
+                effects: [0, 0, 0, 0, 0, 0, -10]
+            },
+            {
+                text: "Literature allows us to live out our dreams.",
+                effects: [0, -10, 0, 0, 0, 0, 0]
+            },
+            {
+                text: "I prefer stories that take on the world.",
+                effects: [10, 0, 0, 0, 0, 0, 0]
+            },
+            {
+                text: "Art is most compelling when it's at its darkest.",
+                effects: [0, 0, -10, 0, 0, 0, 0]
+            },
+            {
+                text: "I'm most interested in works that invert or play around with traditional literary structures.",
+                effects: [0, 0, 0, 0, 0, -10, 0]
+            },
+            {
+                text: "I'm interested in stories that act as a gateway to another world.",
+                effects: [0, -10, 0, 0, 0, 0, 0]
+            },
+            {
+                text: "I prefer authors who never use a long word when a short one will do.",
+                effects: [-10, 0, 0, 0, 0, 0, 0]
+            },
+            {
+                text: "Works that feature clear, archetypal representations of good and evil are preferable to more philosophical texts.",
+                effects: [0, 0, 0, 0, 0, 0, 10]
+            },
+            {
+                text: "The most exciting questions to relate to progress and technology in the modern world.",
+                effects: [0, 0, 0, -10, 0, 0, 0]
+            },
+            {
+                text: "I prefer stories that are set in the real world as opposed to an imaginary one.",
+                effects: [0, 10, 0, 0, 0, 0, 0]
+            },
+            {
+                text: "Literature with grandiose and dazzling prose is best.",
+                effects: [10, 0, 0, 0, 0, 0, 0]
+            },
+            {
+                text: "Literature should be optimistic about the future.",
+                effects: [0, 0, 10, 0, 0, 0, 0]
+            },
+            {
+                text: "I want the work I read to challenge me ideologically.",
+                effects: [0, 0, 0, 0, 0, 0, -10]
+            },
+            {
+                text: "I appreciate it when an author clearly puts forward a moral doctrine in his or her work.",
+                effects: [0, 0, 0, 0, -10, 0, 0]
+            },
+            {
+                text: "I'm most interested in stories that focus on the day-to-day lives of people.",
+                effects: [0, 10, 0, 0, 0, 0, 0]
+            },
+            {
+                text: "I prefer stories that have a clear and direct style and aren't experimental in structure or prose.",
+                effects: [0, 0, 0, 0, 0, 10, 0]
+            },
+            {
+                text: "I prefer it when the story takes centre stage as opposed to the author's style.",
+                effects: [-10, 0, 0, 0, 0, 0, 0]
+            },
+            {
+                text: "Stories are at their best when they are inspirational or hopeful.",
+                effects: [0, 0, 10, 0, 0, 0, 0]
+            },
+            {
+                text: "The death of a beautiful woman is one of the most poetic topics in literature.",
+                effects: [0, 0, -10, 0, 0, 0, 0]
+            },
+            {
+                text: "Traditional towns provide a better backdrop than modern metropolises when it comes to analysing human nature.",
+                effects: [0, 0, 0, 10, 0, 0, 0]
+            },
+            {
+                text: "One of the primary purposes of literature should be to instill a love of life in the reader.",
+                effects: [0, 0, 10, 0, 0, 0, 0]
+            },
+            {
+                text: "Authors should focus on telling direct stories before diving into profound questions.",
+                effects: [0, 0, 0, 0, 0, 0, 10]
+            },
+            {
+                text: "Literature provides an ideal opportunity to promote healthy moral values.",
+                effects: [0, 0, 0, 0, -10, 0, 0]
+            },
+            {
+                text: "A small number of characters and settings are preferable in a story.",
+                effects: [-10, 0, 0, 0, 0, 0, 0]
+            },
+            {
+                text: "I enjoy ironic and sarcastic literature.",
+                effects: [0, 0, 0, 0, 10, 0, 0]
+            },
+            {
+                text: "Stories set in the modern technological world are more compelling than those set in the old traditional world.",
+                effects: [0, 0, 0, -10, 0, 0, 0]
+            },
+            {
+                text: "I tend to prefer literature which is full of passion and life as opposed to literature that is nihilistic and dark.",
+                effects: [0, 0, 10, 0, 0, 0, 0]
+            },
+            {
+                text: "It is vital that a story should espouse strong moral virtues.",
+                effects: [0, 0, 0, 0, -10, 0, 0]
+            },
+            {
+                text: "Stories about ghouls and monsters often say a lot more about people than stories merely about humans.",
+                effects: [0, -10, 0, 0, 0, 0, 0]
+            },
+            {
+                text: "Despair is at the center of all great art.",
+                effects: [0, 0, -10, 0, 0, 0, 0]
+            },
+            {
+                text: "I gravitate towards literature that analyses the modern cosmopolitan world.",
+                effects: [0, 0, 0, -10, 0, 0, 0]
+            },
+            {
+                text: "Literature that lacks a moral message isn't very literary at all.",
+                effects: [0, 0, 0, 0, -10, 0, 0]
+            },
+            {
+                text: "I prefer authors who have unorthodox writing styles and are willing to experiment.",
+                effects: [0, 0, 0, 0, 0, -10, 0]
+            },
+            {
+                text: "Individual lives are always more fascinating to examine than the grander picture.",
+                effects: [-10, 0, 0, 0, 0, 0, 0]
+            },
+            {
+                text: "I'd rather read to explore dangerous questions than to receive comfortable answers.",
+                effects: [0, 0, 0, 0, 0, 0, -10]
+            },
+            {
+                text: "I prefer stories that feature a small and intimate cast of archetypal characters.",
+                effects: [0, 0, 0, 0, 0, 0, 10]
+            },
+            {
+                text: "I'm interested in authors who use comic prose to accurately critique dogma.",
+                effects: [0, 0, 0, 0, 10, 0, 0]
+            },
+            {
+                text: "Literature, in its purest form, is about escaping reality.",
+                effects: [0, -10, 0, 0, 0, 0, 0]
+            },
+            {
+                text: "I prefer stories set in the countryside or in small communities.",
+                effects: [0, 0, 0, 10, 0, 0, 0]
+            },
+            {
+                text: "I'd rather read stories that are comforting and attractive as opposed to challenging and harsh.",
+                effects: [0, 0, 0, 0, 0, 0, 10]
+            },
+            {
+                text: "I enjoy literature that pulls moralism apart.",
+                effects: [0, 0, 0, 0, 10, 0, 0]
+            },
+            {
+                text: "I find nature and the ecosystem more inspiring than the day-to-day lives of most people.",
+                effects: [0, 0, 0, 10, 0, 0, 0]
+            },
+            {
+                text: "Literature is best when it's as coherent as possible and lacking in pretensions.",
+                effects: [0, 0, 0, 0, 0, 10, 0]
+            },
+            {
+                text: "I prefer stories with a wide and cinematic scope.",
+                effects: [10, 0, 0, 0, 0, 0, 0]
+            },
+            {
+                text: "I'm drawn to literature that represents life in a realisitc and authentic way.",
+                effects: [0, 10, 0, 0, 0, 0, 0]
+            },
+            {
+                text: "Works of great beauty are timeless and should be celebrated.",
+                effects: [0, 0, 10, 0, 0, 0, 0]
+            },
+            {
+                text: "Most great works are set in major cities or global states.",
+                effects: [0, 0, 0, -10, 0, 0, 0]
+            },
+            {
+                text: "I'm more intrigued by stories that are esoteric or cryptic.",
+                effects: [0, 0, 0, 0, 0, -10, 0]
+            },
+            {
+                text: "I'm most interested in works that explore and advocate a coherent moral system.",
+                effects: [0, 0, 0, 0, -10, 0, 0]
+            },
+            {
+                text: "Literature allows one to escape from the meaninglessness of individual life and explore humanity in a greater picture.",
+                effects: [10, 0, 0, 0, 0, 0, 0]
+            },
+            {
+                text: "I'm drawn towards literature with a darker aesthetic.",
+                effects: [0, 0, -10, 0, 0, 0, 0]
+            },
+            {
+                text: "Art should accurately represent life in its truest form.",
+                effects: [0, 10, 0, 0, 0, 0, 0]
+            },
+            {
+                text: "I'm most attracted to literature that focuses on 'the simple life' and living in harmony with nature.",
+                effects: [0, 0, 0, 10, 0, 0, 0]
+            },
+            {
+                text: "I enjoy reading authors who raise grand metaphysical and epistemological questions.",
+                effects: [0, 0, 0, 0, 0, 0, -10]
+            },
+            {
+                text: "The greatest stories follow a clear, concise and rigid style.",
+                effects: [0, 0, 0, 0, 0, 10, 0]
+            },
+            {
+                text: "I prefer authors with a refined and lavish style as opposed to a direct one.",
+                effects: [10, 0, 0, 0, 0, 0, 0]
+            },
+            {
+                text: "I enjoy it when an authors dabbles with the avant-garde.",
+                effects: [0, 0, 0, 0, 0, -10, 0]
+            },
+            {
+                text: "Works that deal with the psychology of industrial society interest me more than those that deal with traditional and 'natural' societies.",
+                effects: [0, 0, 0, -10, 0, 0, 0]
+            },
+            {
+                text: "I'd rather read stories that are devoid of challenging or controversial material.",
+                effects: [0, 0, 0, 0, 0, 0, 10]
+            },
+            {
+                text: "Life is suffering and art should reflect this in a clear way.",
+                effects: [0, 0, -10, 0, 0, 0, 0]
+            },
+            {
+                text: "I prefer imaginative or dreamlike literature.",
+                effects: [0, -10, 0, 0, 0, 0, 0]
+            },
+            {
+                text: "One of the primary purposes of literature should be to lambast puritans and zealots.",
+                effects: [0, 0, 0, 0, 10, 0, 0]
+            },
+            {
+                text: "In literature, village life is more compelling than city life.",
+                effects: [0, 0, 0, 10, 0, 0, 0]
+            },
+            {
+                text: "There's enough magic and wonder in our own world - no need to imagine new ones.",
+                effects: [0, 10, 0, 0, 0, 0, 0]
+            },
+            {
+                text: "It's not worth reading stories unless they raise profound existential questions.",
+                effects: [0, 0, 0, 0, 0, 0, 10]
+            },
+            {
+                text: "Art is at its best when it's challenging the traditional order of its genre or field.",
+                effects: [0, 0, 0, 0, 0, -10, 0]
+            },
+            {
+                text: "Literature is about growing old enough to read fairytales again.",
+                effects: [0, -10, 0, 0, 0, 0, 0]
+            },
+            {
+                text: "For a story to hold my attention it needs to have a solid structure and maintain archetypal consistency.",
+                effects: [0, 0, 0, 0, 0, 10, 0]
+            }
+        ],
+
+        markers: [
+            {
+                name: "Romanticism",
+                path: "https://i.ibb.co/zQ6sR17/romanticism.png",
+                scales: [
+                    {
+                        scale: 2,
+                        bar: 1,
+                        min: 0.7
+                    },
+                    {
+                        scale: 3,
+                        bar: 1,
+                        min: 0.7
+                    }
+                ]
+            },
+            {
+                name: "Realism",
+                path: "https://i.ibb.co/JF3Jhr6/realism.png",
+                scales: [
+                    {
+                        scale: 1,
+                        bar: 1,
+                        min: 0.7
+                    },
+                    {
+                        scale: 4,
+                        bar: 0,
+                        min: 0.7
+                    }
+                ]
+            },
+            {
+                name: "Gothic",
+                path: "https://i.ibb.co/dPqqKyv/gothic.png",
+                scales: [
+                    {
+                        scale: 2,
+                        bar: 0,
+                        min: 0.7
+                    },
+                    {
+                        scale: 1,
+                        bar: 0,
+                        min: 0.7
+                    }
+                ]
+            },
+            {
+                name: "Modernism",
+                path: "https://i.ibb.co/RgZkrbn/modernism.png",
+                scales: [
+                    {
+                        scale: 6,
+                        bar: 0,
+                        min: 0.7
+                    },
+                    {
+                        scale: 3,
+                        bar: 0,
+                        min: 0.7
+                    }
+                ]
+            },
+            {
+                name: "Transcendentalism",
+                path: "https://i.ibb.co/kg4VRDp/transcendentalism.png",
+                scales: [
+                    {
+                        scale: 3,
+                        bar: 1,
+                        min: 0.7
+                    },
+                    {
+                        scale: 6,
+                        bar: 0,
+                        min: 0.7
+                    }
+                ]
+            },
+            {
+                name: "Postmodernism",
+                path: "https://i.ibb.co/VwQ6xzT/postmodernism.png",
+                scales: [
+                    {
+                        scale: 4,
+                        bar: 1,
+                        min: 0.7
+                    },
+                    {
+                        scale: 5,
+                        bar: 0,
+                        min: 0.7
+                    }
+                ]
+            },
+            {
+                name: "Magical Realism",
+                path: "https://i.ibb.co/fY7RFhM/magicrealism.png",
+                scales: [
+                    {
+                        scale: 1,
+                        bar: 0,
+                        min: 0.7
+                    },
+                    {
+                        scale: 5,
+                        bar: 0,
+                        min: 0.7
+                    }
+                ]
+            }
+        ]
+
+    },
+    {
+
         id: 0,
         
         name:           "Philosophy",

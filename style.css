@@ -1,5 +1,9 @@
 /* Standard Styling */
 
+html {
+    font-family: Dosis;
+}
+
 .main { margin-top: 20px; }
 
 .heading {
@@ -234,4 +238,12 @@
 } .btn-e2711d:hover {
     background-color: #e2711d;
     border-color: #e2711d;
+}
+
+.btn-3f88c5 {
+    color: #143642;
+    border-color: #143642;
+} .btn-3f88c5:hover {
+    background-color: #143642;
+    border-color: #143642;
 }
