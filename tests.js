@@ -178,7 +178,7 @@ var tests = [
                 effects: [0, 0, 0, 0, 0, 0, 10]
             },
             {
-                text: "The most exciting questions to relate to progress and technology in the modern world.",
+                text: "The most exciting questions relate to progress and technology in the modern world.",
                 effects: [0, 0, 0, -10, 0, 0, 0]
             },
             {
