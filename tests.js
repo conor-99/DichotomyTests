@@ -427,12 +427,12 @@ var tests = [
                     {
                         scale: 2,
                         bar: 1,
-                        min: 0.7
+                        min: 0.65
                     },
                     {
                         scale: 3,
                         bar: 1,
-                        min: 0.7
+                        min: 0.65
                     }
                 ]
             },
@@ -443,12 +443,12 @@ var tests = [
                     {
                         scale: 1,
                         bar: 1,
-                        min: 0.7
+                        min: 0.65
                     },
                     {
                         scale: 4,
                         bar: 0,
-                        min: 0.7
+                        min: 0.65
                     }
                 ]
             },
@@ -459,12 +459,12 @@ var tests = [
                     {
                         scale: 2,
                         bar: 0,
-                        min: 0.7
+                        min: 0.65
                     },
                     {
                         scale: 1,
                         bar: 0,
-                        min: 0.7
+                        min: 0.65
                     }
                 ]
             },
@@ -475,12 +475,12 @@ var tests = [
                     {
                         scale: 6,
                         bar: 0,
-                        min: 0.7
+                        min: 0.65
                     },
                     {
                         scale: 3,
                         bar: 0,
-                        min: 0.7
+                        min: 0.65
                     }
                 ]
             },
@@ -491,12 +491,12 @@ var tests = [
                     {
                         scale: 3,
                         bar: 1,
-                        min: 0.7
+                        min: 0.65
                     },
                     {
                         scale: 6,
                         bar: 0,
-                        min: 0.7
+                        min: 0.65
                     }
                 ]
             },
@@ -507,12 +507,12 @@ var tests = [
                     {
                         scale: 4,
                         bar: 1,
-                        min: 0.7
+                        min: 0.65
                     },
                     {
                         scale: 5,
                         bar: 0,
-                        min: 0.7
+                        min: 0.65
                     }
                 ]
             },
@@ -523,12 +523,12 @@ var tests = [
                     {
                         scale: 1,
                         bar: 0,
-                        min: 0.7
+                        min: 0.65
                     },
                     {
                         scale: 5,
                         bar: 0,
-                        min: 0.7
+                        min: 0.65
                     }
                 ]
             }
