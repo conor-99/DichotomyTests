@@ -370,7 +370,7 @@ var tests = [
                 effects: [10, 0, 0, 0, 0, 0, 0]
             },
             {
-                text: "I enjoy it when an authors dabbles with the avant-garde.",
+                text: "I enjoy it when an author dabbles with the avant-garde.",
                 effects: [0, 0, 0, 0, 0, -10, 0]
             },
             {
