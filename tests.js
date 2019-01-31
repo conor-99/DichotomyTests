@@ -322,7 +322,7 @@ var tests = [
                 effects: [10, 0, 0, 0, 0, 0, 0]
             },
             {
-                text: "I'm drawn to literature that represents life in a realisitc and authentic way.",
+                text: "I'm drawn to literature that represents life in a realistic and authentic way.",
                 effects: [0, 10, 0, 0, 0, 0, 0]
             },
             {
