@@ -531,6 +531,54 @@ var tests = [
                         min: 0.65
                     }
                 ]
+            },
+            {
+                name: "Crime Fiction",
+                path: "https://i.ibb.co/28KWYnX/crimefiction.png",
+                scales: [
+                    {
+                        scale: 6,
+                        bar: 1,
+                        min: 0.65
+                    },
+                    {
+                        scale: 5,
+                        bar: 1,
+                        min: 0.65
+                    }
+                ]
+            },
+            {
+                name: "Expressionism",
+                path: "https://i.ibb.co/7SxvWC9/expressionism.png",
+                scales: [
+                    {
+                        scale: 4,
+                        bar: 1,
+                        min: 0.65
+                    },
+                    {
+                        scale: 5,
+                        bar: 0,
+                        min: 0.65
+                    }
+                ]
+            },
+            {
+                name: "High Fantasy",
+                path: "https://i.ibb.co/fNF260L/highfantasy.png",
+                scales: [
+                    {
+                        scale: 1,
+                        bar: 0,
+                        min: 0.65
+                    },
+                    {
+                        scale: 3,
+                        bar: 1,
+                        min: 0.65
+                    }
+                ]
             }
         ]
 
