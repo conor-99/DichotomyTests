@@ -89,6 +89,54 @@ html {
     border-color: #c43131;
 }
 
+.btn-str-left {
+    color: #7a8dbc;
+    border-color: #7a8dbc;
+} .btn-str-left:hover {
+    background-color: #7a8dbc;
+    border-color: #7a8dbc;
+}
+
+.btn-neutral-light {
+    color: #959595;
+    border-color: #959595;
+} .btn-neutral-light:hover {
+    background-color: #959595;
+    border-color: #959595;
+}
+
+.btn-left {
+    color: #92a1c8;
+    border-color: #92a1c8;
+} .btn-left:hover {
+    background-color: #92a1c8;
+    border-color: #92a1c8;
+}
+
+.btn-right {
+    color: #d099cd;
+    border-color: #d099cd;
+} .btn-right:hover {
+    background-color: #d099cd;
+    border-color: #d099cd;
+}
+
+.btn-str-right {
+    color: #c387d1;
+    border-color: #c387d1;
+} .btn-str-right:hover {
+    background-color: #c387d1;
+    border-color: #c387d1;
+}
+
+.ct-images-img {
+    max-width: 100%;
+    height: auto;
+}
+
+.ct-images-btn-col {
+    padding: 0;
+}
 
 /* Results Styling - Bars */
 

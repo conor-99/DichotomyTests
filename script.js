@@ -170,9 +170,13 @@ function startTest() {
 	if (mode == AGREE) {
 		document.getElementById("ct-agree").classList.remove("hidden");
 		initAgree();
-	} else {
+	} else if (mode == SCENARIO) {
 		document.getElementById("ct-scenario").classList.remove("hidden");
 		initScenario();
+	}
+	else {
+		document.getElementById("ct-images").classList.remove("hidden");
+		initImages();
 	}
 
 }
@@ -196,6 +200,26 @@ function initAgree() {
 
 function initScenario() { } // to-do
 
+function initImages() {
+
+	document.getElementById("qn-num").innerText = "Question " + (questionNumber + 1) + " of " + (test.questions.length);
+	document.getElementById("in").innerText = test.instruction;
+	document.getElementById("qn").style.display = "none";
+	document.getElementById("qn-bar").style.width = (100 * (questionNumber / test.questions.length)).toString() + "%";
+
+	document.getElementById("img-left").src = test.questions[questionNumber].imageA;
+	document.getElementById("img-right").src = test.questions[questionNumber].imageB;
+
+	if (previousAnswer == null) {
+		document.getElementById("prev-button").style.display = "none";
+		document.getElementById("prev-button-off").style.display = "block";
+	} else {
+		document.getElementById("prev-button").style.display = "block";
+		document.getElementById("prev-button-off").style.display = "none";
+	}
+
+}
+
 function nextAgree(val) {
 
 	var question = test.questions[questionNumber];
@@ -214,9 +238,24 @@ function nextAgree(val) {
 
 function nextScenario(val) { } // to-do
 
+function nextImages(val) {
+
+	for (var i = 0; i < scores.length; i++) {
+		scores[i] += (val * question.effects[i]);
+	}
+
+	previousAnswer = val;
+	questionNumber++;
+
+	if (questionNumber < test.questions.length) initImages();
+	else goToResults();
+	
+}
+
 function prev() {
 	if (mode == AGREE) prevAgree();
-	else prevScenario();
+	else if (mode == IMAGES) prevScenario();
+	else prevImages();
 }
 
 function prevAgree() {
@@ -237,6 +276,10 @@ function prevAgree() {
 }
 
 function prevScenario() { } // to-do
+
+function prevImages() {
+
+}
 
 function goToResults() {
 

@@ -1,6 +1,7 @@
 // Test types
 const SCENARIO  = 0;
 const AGREE     = 1;
+const IMAGES	= 2;
 
 // Results types
 const BARS  	= 0;

@@ -1,6 +1,41 @@
 var tests = [
     {
 
+        id: 4,
+
+        name:           "*****",
+        description:    "...",
+        preamble:       "...",
+        results:        "Your results are displayed below:",
+        
+        btnClass:       "btn-3f88c5",
+        
+        testType:       IMAGES,
+        resultsType:    BARS,
+
+        scales: [
+        ],
+
+        instruction:    "Choose which **** you prefer and to what degree you prefer it.",
+        questions: [
+            {
+                imageA: "https://via.placeholder.com/300/DDDDDD",
+                imageB: "https://via.placeholder.com/300/DDDDDD",
+                effects: [0]
+            },
+            {
+                imageA: "https://via.placeholder.com/300/FFFFDD",
+                imageB: "https://via.placeholder.com/300/FFFFDD",
+                effects: [0]
+            },
+        ],
+
+        markers: [
+        ]
+
+    },
+    {
+
         id: 3,
         
         name:           "Literature",
