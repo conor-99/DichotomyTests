@@ -3,34 +3,396 @@ var tests = [
 
         id: 4,
 
-        name:           "*****",
-        description:    "...",
-        preamble:       "...",
+        name:           "Memes",
+        description:    "Do you like memes? <a href='https://reddit.com/r/fellowkids' target='_blank'>/r/FellowKids</a> here we come...",
+        preamble:       "You may need to take the test in landscape mode if you are viewing the site on a mobile phone.<br>For each question you will be shown two memes. You should choose the meme you prefer and indicate the degree to which you prefer it.<br><i>Note: some users may find some of the images used in this test offensive; please bear this in mind if you are easily upset or offended.</i>",
         results:        "Your results are displayed below:",
         
-        btnClass:       "btn-3f88c5",
+        btnClass:       "btn-ddbdd5",
         
         testType:       IMAGES,
         resultsType:    BARS,
 
         scales: [
+            {
+                a: {
+                    text: "Edgy",
+                    path: "https://i.ibb.co/nQSZFBC/edgy.png",
+                    color: "#ebebeb",
+                    desc: "..."
+                },
+                b: {
+                    text: "Wholesome",
+                    path: "https://i.ibb.co/mHK3Mdj/wholesome.png",
+                    color: "#d499b9",
+                    desc: "..."
+                },
+                param: "e",
+                axisName: "...",
+                axisDesc: "..."
+            },
+            {
+                a: {
+                    text: "Ironic",
+                    path: "https://i.ibb.co/GRsK54q/ironic.png",
+                    color: "#c4eeb2",
+                    desc: "..."
+                },
+                b: {
+                    text: "Sincere",
+                    path: "https://i.ibb.co/tb1v7GN/sincere.png",
+                    color: "#f7b9c4",
+                    desc: "..."
+                },
+                param: "i",
+                axisName: "...",
+                axisDesc: "..."
+            },
+            {
+                a: {
+                    text: "Abstract",
+                    path: "https://i.ibb.co/RHpKZNX/abstract.png",
+                    color: "#a2bcd4",
+                    desc: "..."
+                },
+                b: {
+                    text: "Concrete",
+                    path: "https://i.ibb.co/Hr8HtbV/concrete.png",
+                    color: "#ffe4bf",
+                    desc: "..."
+                },
+                param: "a",
+                axisName: "...",
+                axisDesc: "..."
+            },
+            {
+                a: {
+                    text: "Dank",
+                    path: "https://i.ibb.co/n3pWNXC/dank.png",
+                    color: "#c5c3c6",
+                    desc: "..."
+                },
+                b: {
+                    text: "Normie",
+                    path: "https://i.ibb.co/FXMrX6r/normie.png",
+                    color: "#ef767a",
+                    desc: "..."
+                },
+                param: "d",
+                axisName: "...",
+                axiDseesc: "..."
+            },
+            {
+                a: {
+                    text: "Political",
+                    path: "https://i.ibb.co/ZxBxcnG/political.png",
+                    color: "#d6a2e8",
+                    desc: "..."
+                },
+                b: {
+                    text: "Relatable",
+                    path: "https://i.ibb.co/rsCbVz7/relatable.png",
+                    color: "#ffeaa7",
+                    desc: "..."
+                },
+                param: "p",
+                axisName: "...",
+                axisDesc: "..."
+            }
         ],
 
-        instruction:    "Choose which **** you prefer and to what degree you prefer it.",
+        instruction:    "Choose which meme you prefer and to what degree you prefer it.",
         questions: [
             {
-                imageA: "https://via.placeholder.com/300/DDDDDD",
-                imageB: "https://via.placeholder.com/300/DDDDDD",
-                effects: [0]
+                imageA: "https://i.ibb.co/gvyM25W/1.jpg",
+                imageB: "https://i.ibb.co/Xt3XtT3/1.jpg",
+                effects: [10, 0, 0, 0, 0]
             },
             {
-                imageA: "https://via.placeholder.com/300/FFFFDD",
-                imageB: "https://via.placeholder.com/300/FFFFDD",
-                effects: [0]
+                imageA: "https://i.ibb.co/fnR7jGq/1.jpg",
+                imageB: "https://i.ibb.co/h1sn3hR/1.jpg",
+                effects: [0, 10, 0, 0, 0]
             },
+            {
+                imageA: "https://i.ibb.co/k05ZnG5/1.png",
+                imageB: "https://i.ibb.co/wSdkKM4/1.jpg",
+                effects: [0, 0, 10, 0, 0]
+            },
+            {
+                imageA: "https://i.ibb.co/F8BMPd6/1.jpg",
+                imageB: "https://i.ibb.co/8ztbDgK/1.jpg",
+                effects: [0, 0, 0, 10, 0]
+            },
+            {
+                imageA: "https://i.ibb.co/q9L7kqh/1.jpg",
+                imageB: "https://i.ibb.co/2gF7jwm/1.jpg",
+                effects: [0, 0, 0, 0, 10]
+            },
+            {
+                imageA: "https://i.ibb.co/F0y6q75/2.png",
+                imageB: "https://i.ibb.co/DtJCc1k/2.jpg",
+                effects: [10, 0, 0, 0, 0]
+            },
+            {
+                imageA: "https://i.ibb.co/cLVrT79/2.jpg",
+                imageB: "https://i.ibb.co/dmHkBTw/2.jpg",
+                effects: [0, 10, 0, 0, 0]
+            },
+            {
+                imageA: "https://i.ibb.co/W6CbnGQ/2.png",
+                imageB: "https://i.ibb.co/9v6CrDt/2.jpg",
+                effects: [0, 0, 10, 0, 0]
+            },
+            {
+                imageA: "https://i.ibb.co/NsqMn3D/2.png",
+                imageB: "https://i.ibb.co/4856Zpd/2.jpg",
+                effects: [0, 0, 0, 10, 0]
+            },
+            {
+                imageA: "https://i.ibb.co/H2DLYzc/2.jpg",
+                imageB: "https://i.ibb.co/09dJ7jb/2.jpg",
+                effects: [0, 0, 0, 0, 10]
+            },
+            {
+                imageA: "https://i.ibb.co/GHnHMK1/3.png",
+                imageB: "https://i.ibb.co/9qWR4bG/3.jpg",
+                effects: [10, 0, 0, 0, 0]
+            },
+            {
+                imageA: "https://i.ibb.co/ZBSyzfv/3.jpg",
+                imageB: "https://i.ibb.co/tsLzXgh/3.jpg",
+                effects: [0, 10, 0, 0, 0]
+            },
+            {
+                imageA: "https://i.ibb.co/X20h8xY/3.png",
+                imageB: "https://i.ibb.co/5Y10bvw/3.jpg",
+                effects: [0, 0, 10, 0, 0]
+            },
+            {
+                imageA: "https://i.ibb.co/gvy25t2/3.jpg",
+                imageB: "https://i.ibb.co/HVtr21N/3.jpg",
+                effects: [0, 0, 0, 10, 0]
+            },
+            {
+                imageA: "https://i.ibb.co/n0KVByt/3.jpg",
+                imageB: "https://i.ibb.co/1MBMT0K/3.jpg",
+                effects: [0, 0, 0, 0, 10]
+            },
+            {
+                imageA: "https://i.ibb.co/QkGtzGc/4.jpg",
+                imageB: "https://i.ibb.co/GF3CmN3/4.jpg",
+                effects: [10, 0, 0, 0, 0]
+            },
+            {
+                imageA: "https://i.ibb.co/qRkQCF1/4.jpg",
+                imageB: "https://i.ibb.co/4YgRT0x/4.jpg",
+                effects: [0, 10, 0, 0, 0]
+            },
+            {
+                imageA: "https://i.ibb.co/jVV2FMQ/4.jpg",
+                imageB: "https://i.ibb.co/nrdy8FS/4.jpg",
+                effects: [0, 0, 10, 0, 0]
+            },
+            {
+                imageA: "https://i.ibb.co/cwPLN1W/4.png",
+                imageB: "https://i.ibb.co/DQ806P5/4.jpg",
+                effects: [0, 0, 0, 10, 0]
+            },
+            {
+                imageA: "https://i.ibb.co/qBLgp7C/4.png",
+                imageB: "https://i.ibb.co/NspFCnm/4.jpg",
+                effects: [0, 0, 0, 0, 10]
+            },
+            {
+                imageA: "https://i.ibb.co/N7V8NWm/5.jpg",
+                imageB: "https://i.ibb.co/cF70jZH/5.jpg",
+                effects: [10, 0, 0, 0, 0]
+            },
+            {
+                imageA: "https://i.ibb.co/bmqS0kS/5.png",
+                imageB: "https://i.ibb.co/0Yvf482/5.jpg",
+                effects: [0, 10, 0, 0, 0]
+            },
+            {
+                imageA: "https://i.ibb.co/wLQVYQw/5.png",
+                imageB: "https://i.ibb.co/6gr4jyZ/5.jpg",
+                effects: [0, 0, 10, 0, 0]
+            },
+            {
+                imageA: "https://i.ibb.co/TkpPNwC/5.png",
+                imageB: "https://i.ibb.co/NxDqPVY/5.jpg",
+                effects: [0, 0, 0, 10, 0]
+            },
+            {
+                imageA: "https://i.ibb.co/rtj6kTr/5.jpg",
+                imageB: "https://i.ibb.co/4pjrGxZ/5.jpg",
+                effects: [0, 0, 0, 0, 10]
+            },
+            {
+                imageA: "https://i.ibb.co/jWz3mb6/6.png",
+                imageB: "https://i.ibb.co/3RtgRbs/6.jpg",
+                effects: [10, 0, 0, 0, 0]
+            },
+            {
+                imageA: "https://i.ibb.co/CmLgdqS/6.png",
+                imageB: "https://i.ibb.co/640pTd1/6.jpg",
+                effects: [0, 10, 0, 0, 0]
+            },
+            {
+                imageA: "https://i.ibb.co/3zsXpBp/6.jpg",
+                imageB: "https://i.ibb.co/LCRM3F7/6.jpg",
+                effects: [0, 0, 10, 0, 0]
+            },
+            {
+                imageA: "https://i.ibb.co/GkR8dPB/6.jpg",
+                imageB: "https://i.ibb.co/jwnHdZH/6.jpg",
+                effects: [0, 0, 0, 10, 0]
+            },
+            {
+                imageA: "https://i.ibb.co/r0LB2bK/6.jpg",
+                imageB: "https://i.ibb.co/qFJVGCC/6.jpg",
+                effects: [0, 0, 0, 0, 10]
+            },
+            {
+                imageA: "https://i.ibb.co/NVtrnhC/7.png",
+                imageB: "https://i.ibb.co/ph56Knv/7.jpg",
+                effects: [10, 0, 0, 0, 0]
+            },
+            {
+                imageA: "https://i.ibb.co/GpnHVvL/7.jpg",
+                imageB: "https://i.ibb.co/gwBDRZ7/7.jpg",
+                effects: [0, 10, 0, 0, 0]
+            },
+            {
+                imageA: "https://i.ibb.co/ZVFFjrR/7.jpg",
+                imageB: "https://i.ibb.co/VJBDwr3/7.jpg",
+                effects: [0, 0, 10, 0, 0]
+            },
+            {
+                imageA: "https://i.ibb.co/ctK6LjQ/7.jpg",
+                imageB: "https://i.ibb.co/fdVxysQ/7.jpg",
+                effects: [0, 0, 0, 10, 0]
+            },
+            {
+                imageA: "https://i.ibb.co/5WNK1bk/7.jpg",
+                imageB: "https://i.ibb.co/Sr6Y9G2/7.jpg",
+                effects: [0, 0, 0, 0, 10]
+            }
         ],
 
         markers: [
+            {
+                name: "4chan",
+                path: "https://i.ibb.co/pRNhM8f/4chan.png",
+                scales: [
+                    {
+                        scale: 0,
+                        bar: 0,
+                        min: 0.65
+                    },
+                    {
+                        scale: 3,
+                        bar: 0,
+                        min: 0.65
+                    }
+                ]
+            },
+            {
+                name: "9gag",
+                path: "https://i.ibb.co/bHkzpgv/9gag.png",
+                scales: [
+                    {
+                        scale: 3,
+                        bar: 1,
+                        min: 0.65
+                    },
+                    {
+                        scale: 0,
+                        bar: 1,
+                        min: 0.65
+                    }
+                ]
+            },
+            {
+                name: "Facebook",
+                path: "https://i.ibb.co/CMjLZX0/facebook.png",
+                scales: [
+                    {
+                        scale: 3,
+                        bar: 1,
+                        min: 0.65
+                    },
+                    {
+                        scale: 4,
+                        bar: 1,
+                        min: 0.65
+                    }
+                ]
+            },
+            {
+                name: "/pol/",
+                path: "https://i.ibb.co/1MK0VF6/pol.png",
+                scales: [
+                    {
+                        scale: 0,
+                        bar: 0,
+                        min: 0.65
+                    },
+                    {
+                        scale: 4,
+                        bar: 0,
+                        min: 0.65
+                    }
+                ]
+            },
+            {
+                name: "reddit",
+                path: "https://i.ibb.co/rdBFFGL/reddit.png",
+                scales: [
+                    {
+                        scale: 1,
+                        bar: 0,
+                        min: 0.65
+                    },
+                    {
+                        scale: 2,
+                        bar: 1,
+                        min: 0.65
+                    }
+                ]
+            },
+            {
+                name: "Tumblr",
+                path: "https://i.ibb.co/PQq6Qn1/tumblr.png",
+                scales: [
+                    {
+                        scale: 0,
+                        bar: 1,
+                        min: 0.65
+                    },
+                    {
+                        scale: 4,
+                        bar: 1,
+                        min: 0.65
+                    }
+                ]
+            },
+            {
+                name: "Twitter",
+                path: "https://i.ibb.co/4Ww4Zkz/twitter.png",
+                scales: [
+                    {
+                        scale: 1,
+                        bar: 1,
+                        min: 0.65
+                    },
+                    {
+                        scale: 4,
+                        bar: 0,
+                        min: 0.65
+                    }
+                ]
+            }
         ]
 
     },
@@ -1271,7 +1633,7 @@ var tests = [
                 a: {
                     text: "Libertarianism",
                     path: "https://i.ibb.co/GWxySVV/libertarianism.png",
-                    color: "#D6A2E8",
+                    color: "#d6a2e8",
                     desc: "Less power."
                 },
                 b: {

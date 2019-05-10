@@ -96,7 +96,7 @@ function buildCol(test) {
 	// Test description
 	var desc = document.createElement("p");
 	desc.classList.add("text-left", "small");
-	desc.innerText = test.description;
+	desc.innerHTML = test.description;
 
 	// Test button
 	var button = document.createElement("button");
@@ -240,6 +240,8 @@ function nextScenario(val) { } // to-do
 
 function nextImages(val) {
 
+	var question = test.questions[questionNumber];
+
 	for (var i = 0; i < scores.length; i++) {
 		scores[i] += (val * question.effects[i]);
 	}
@@ -278,7 +280,20 @@ function prevAgree() {
 function prevScenario() { } // to-do
 
 function prevImages() {
-
+	
+	if (previousAnswer == null) return;
+	
+	var question = test.questions[questionNumber - 1];
+	
+	for (var i = 0; i < scores.length; i++) {
+		scores[i] -= (previousAnswer * question.effects[i]);
+	}
+	
+	questionNumber--;
+	previousAnswer = null;
+	
+	initImages();
+	
 }
 
 function goToResults() {
@@ -586,6 +601,13 @@ function buildMarkers(results) {
 }
 
 function buildResultsExplain() {
+
+	// Skip the meme test
+	if (id == 4) {
+		var box = document.getElementById("container-explain")
+		box.parentNode.removeChild(box);
+		return;
+	}
 
 	var container = document.getElementById("explain");
 

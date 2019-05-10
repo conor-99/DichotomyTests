@@ -9,3 +9,6 @@ const COMPASS 	= 1;
 
 // Miscellaneous
 const ANSWERS_PER_MINUTE = 6;
+
+// Image test
+const IMAGE_WIDTH = 300;

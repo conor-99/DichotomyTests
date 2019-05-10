@@ -295,3 +295,11 @@ html {
     background-color: #143642;
     border-color: #143642;
 }
+
+.btn-ddbdd5 {
+    color: #422340;
+    border-color: #422340;
+} .btn-ddbdd5:hover {
+    background-color: #422340;
+    border-color: #422340;
+}

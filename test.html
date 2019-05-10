@@ -124,7 +124,11 @@
 								
 							</div>
 
-							<p class="text-center small sizing mt-10">Dichotomy Tests - 2019</p>
+							<p class="text-center small sizing mt-10">
+								<a href="https://www.youtube.com/user/PewDiePie" target="_blank">#ThankYouPewDiePie</a>
+								<br>
+								Dichotomy Tests - 2019
+							</p>
 
 						</div>
 
@@ -147,7 +151,7 @@
 
 			document.title = test.name;
 			document.getElementById("title").innerText = test.name;
-			document.getElementById("preamble").innerText = test.preamble;
+			document.getElementById("preamble").innerHTML = test.preamble;
 			document.getElementById("button").classList.add(test.btnClass);
 
 			var scores = new Array(test.scales.length).fill(0);
