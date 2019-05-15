@@ -164,7 +164,7 @@ var tests = [
                 effects: [0, 10, 0, 0, 0]
             },
             {
-                imageA: "https://i.ibb.co/X20h8xY/3.png",
+                imageA: "https://i.ibb.co/bvRZJyC/3.png",
                 imageB: "https://i.ibb.co/5Y10bvw/3.jpg",
                 effects: [0, 0, 10, 0, 0]
             },
