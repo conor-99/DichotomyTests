@@ -164,7 +164,7 @@ var tests = [
                 effects: [0, 10, 0, 0, 0]
             },
             {
-                imageA: "https://i.ibb.co/bvRZJyC/3.png",
+                imageA: "https://i.ibb.co/Q9C2Gw6/3.png",
                 imageB: "https://i.ibb.co/5Y10bvw/3.jpg",
                 effects: [0, 0, 10, 0, 0]
             },
@@ -214,7 +214,7 @@ var tests = [
                 effects: [0, 10, 0, 0, 0]
             },
             {
-                imageA: "https://i.ibb.co/wLQVYQw/5.png",
+                imageA: "https://i.ibb.co/mrnyHwZ/5.png",
                 imageB: "https://i.ibb.co/6gr4jyZ/5.jpg",
                 effects: [0, 0, 10, 0, 0]
             },
