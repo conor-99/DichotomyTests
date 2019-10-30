@@ -2026,16 +2026,16 @@ var tests = [
                 ]
             },
             {
-                name: "Marxism", // Statism + Nationalisation
+                name: "Marxism", // Nationalisation + Bureaucracy
                 path: "https://i.ibb.co/wgNNFsm/marxism.png",
                 scales: [
                     {
-                        scale: 2,
+                        scale: 3,
                         bar: 1,
                         min: 0.7
                     },
                     {
-                        scale: 3,
+                        scale: 5,
                         bar: 1,
                         min: 0.6
                     }
@@ -2090,17 +2090,17 @@ var tests = [
                 ]
             },
             {
-                name: "Fascism", // Autarky + Nationalisation
+                name: "Fascism", // Statism + Commercial
                 path: "https://i.ibb.co/px4x1HQ/fascism.png",
                 scales: [
                     {
-                        scale: 1,
+                        scale: 2,
                         bar: 1,
                         min: 0.7
                     },
                     {
-                        scale: 3,
-                        bar: 1,
+                        scale: 4,
+                        bar: 0,
                         min: 0.6
                     }
                 ]
