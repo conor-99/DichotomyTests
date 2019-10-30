@@ -2104,6 +2104,70 @@ var tests = [
                         min: 0.6
                     }
                 ]
+            },
+            {
+                name: "Imperialism", // Protectionism + Inter-Dependence
+                path: "https://static.thenounproject.com/png/429943-200.png",
+                scales: [
+                    {
+                        scale: 0,
+                        bar: 0,
+                        min: 0.7
+                    },
+                    {
+                        scale: 1,
+                        bar: 0,
+                        min: 0.6
+                    }
+                ]
+            },
+            {
+                name: "Autonomism", // Autarky + Adhocracy
+                path: "https://static.thenounproject.com/png/1876392-200.png",
+                scales: [
+                    {
+                        scale: 1,
+                        bar: 1,
+                        min: 0.7
+                    },
+                    {
+                        scale: 5,
+                        bar: 0,
+                        min: 0.6
+                    }
+                ]
+            },
+            {
+                name: "Plutocracy", // Globalisation + Flat Tax
+                path: "https://static.thenounproject.com/png/2584495-200.png",
+                scales: [
+                    {
+                        scale: 3,
+                        bar: 0,
+                        min: 0.6
+                    },
+                    {
+                        scale: 6,
+                        bar: 0,
+                        min: 0.6
+                    }
+                ]
+            },
+            {
+                name: "Social Ecology", // Progressive Tax + Subsistence
+                path: "https://static.thenounproject.com/png/2021406-200.png",
+                scales: [
+                    {
+                        scale: 6,
+                        bar: 1,
+                        min: 0.7
+                    },
+                    {
+                        scale: 4,
+                        bar: 1,
+                        min: 0.6
+                    }
+                ]
             }
         ]
 
