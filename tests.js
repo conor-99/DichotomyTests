@@ -1994,7 +1994,7 @@ var tests = [
 
         markers: [
             {
-                name: "Keynesian",
+                name: "Keynesian", // Flat Tax + Bureaucracy
                 path: "https://i.ibb.co/rt9TzqQ/keynesian.png",
                 scales: [
                     {
@@ -2010,7 +2010,7 @@ var tests = [
                 ]
             },
             {
-                name: "Austrian School",
+                name: "Austrian School", // Free Trade + Libertarianism
                 path: "https://i.ibb.co/7p9CLBx/austrianschool.png",
                 scales: [
                     {
@@ -2026,7 +2026,7 @@ var tests = [
                 ]
             },
             {
-                name: "Marxism",
+                name: "Marxism", // Statism + Nationalisation
                 path: "https://i.ibb.co/wgNNFsm/marxism.png",
                 scales: [
                     {
@@ -2042,7 +2042,7 @@ var tests = [
                 ]
             },
             {
-                name: "Mercantilism",
+                name: "Mercantilism", // Protectionism + Subsistence
                 path: "https://i.ibb.co/XLx6nvV/mercantilism.png",
                 scales: [
                     {
@@ -2058,7 +2058,7 @@ var tests = [
                 ]
             },
             {
-                name: "Chicago School",
+                name: "Chicago School", // Libertarianism + Commercial
                 path: "https://i.ibb.co/9ZTRKLx/chicagoschool.png",
                 scales: [
                     {
@@ -2074,7 +2074,7 @@ var tests = [
                 ]
             },
             {
-                name: "Distributism",
+                name: "Distributism", // Bureaucracy + Libertarianism
                 path: "https://i.ibb.co/XxPKsvB/distributism.png",
                 scales: [
                     {
@@ -2090,7 +2090,7 @@ var tests = [
                 ]
             },
             {
-                name: "Fascism",
+                name: "Fascism", // Autarky + Nationalisation
                 path: "https://i.ibb.co/px4x1HQ/fascism.png",
                 scales: [
                     {
