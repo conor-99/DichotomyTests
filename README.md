@@ -3,10 +3,10 @@ Dichotomy provides interesting tests that show you how inclined you are toward c
 
 We currently offer the following tests:
 
-* [Memes](http://dichotomytests.com/test.html?id=4)
-* [Literature](http://dichotomytests.com/test.html?id=3)
-* [Philosophy](http://dichotomytests.com/test.html?id=0)
-* [Economics](http://dichotomytests.com/test.html?id=1)
-* [Personality Compass](http://dichotomytests.com/test.html?id=2)
+* [Memes](https://dichotomytests.com/test.html?id=4)
+* [Literature](https://dichotomytests.com/test.html?id=3)
+* [Philosophy](https://dichotomytests.com/test.html?id=0)
+* [Economics](https://dichotomytests.com/test.html?id=1)
+* [Personality Compass](https://dichotomytests.com/test.html?id=2)
 
-Visit the site here: <http://dichotomytests.com>
+Visit the site here: <https://dichotomytests.com>
