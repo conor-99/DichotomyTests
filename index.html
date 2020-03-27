@@ -7,27 +7,27 @@
 
 		<!-- Metadata -->
 		<meta charset="utf-8"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-		<meta name="application-name" content="Dichotomy Tests"/>
-		<meta name="title" content="Dichotomy Tests"/>
-		<meta name="description" content="Dichotomy provides interesting tests that show you how inclined you are toward certain philosophical, psychological or political views. Each test tries to discover your preferred beliefs and will attempt to accurately position you along numerous dichotomic axes."/>
-		<meta name="keywords" content="dichotomy,test,quiz,philosophy,economics,politics,psychology"/>
 		<meta name="HandheldFriendly" content="true"/>
-
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+		<meta name="title" content="Dichotomy Tests"/>
+		<meta name="description" content="Dichotomy Tests provides interesting tests that show you how inclined you are toward certain philosophical, psychological or political views. Each test tries to discover your preferred beliefs and will attempt to accurately position you along numerous dichotomic axes."/>
+		
 		<!-- Libraries & APIs -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dosis:500,600,700" type="text/css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 		<script src="https://use.fontawesome.com/663f8258f5.js"></script>
-		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-cookies.js"></script>
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+		
 		<!-- Local -->
 		<link rel="icon" href="favicon.ico">
 		<link rel="stylesheet" href="style.css" type="text/css">
-		<script type="application/javascript" src="constants.js"></script>
-		<script type="application/javascript" src="tests.js"></script>
-		<script type="application/javascript" src="script.js"></script>
+		<script src="constants.js"></script>
+		<script src="tests.js"></script>
+		<script src="script.js"></script>
 
 		<!-- Ads -->
 		<meta name="propeller" content="a4a399ec4c76419ead037822a7fc95d7">
@@ -36,9 +36,11 @@
 	</head>
 	
 	<body>
-
+		
+		<!-- Hidden image to act as a thumbnail when site is linked to externally -->
 		<img style="display: none;" src="https://i.ibb.co/TmTS99G/asceticism.png"/>
 
+		<!-- GitHub link -->
 		<a href="https://github.com/conormccauley1999/DichotomyTests" class="github-corner" aria-label="View source on Github">
 			<svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
 				<path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
@@ -52,17 +54,8 @@
 
 			<div class="row">
 
-				<!-- Left margin -->
-				<div class="col-lg-3 col-md-0 col-sm-0 col-xs-0"></div>
+				<div class="col-lg-6 col-md-12 offset-lg-3 offset-md-0">
 
-				<!-- Content -->
-				<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-
-					<!--<div class="alert alert-info alert-dismissable fade show">
-						<button type="button" class="close" data-dismiss="alert">&times;</button>
-						Check our Twitter for updates <a href="https://twitter.com/DichotomyTests" target="_blank">@dichotomytests</a>.
-					</div>-->
-					
 					<div class="card">
 
 						<div class="card-body">
@@ -72,7 +65,7 @@
 							<hr>
 
 							<p class="text-justify sizing">
-								Dichotomy provides interesting tests that show you how inclined you are toward certain philosophical, psychological or political views. Each test tries to discover your preferred beliefs and will attempt to accurately position you along numerous dichotomic axes.
+								Dichotomy Tests provides interesting tests that show you how inclined you are toward certain philosophical, psychological or political views. Each test tries to discover your preferred beliefs and will attempt to accurately position you along numerous dichotomic axes.
 								<br>
 								Follow us on Twitter <a href="https://twitter.com/DichotomyTests" target="_blank">@DichotomyTests</a>.
 							</p>
@@ -83,35 +76,15 @@
 
 							<br>
 
-							<!--<div class="row">
-								<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
-								<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">
-									<div class="card">
-										<div class="card-body">
-											<h6 class="card-title">Testimonials</h6>
-											<small class="card-text"><i>"there are some very right wing and racist individuals who make those tests profiting by u doing them"</i> - a satisfied visitor</small>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
-							</div>-->
-
 							<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>
 
-							<p class="text-center small sizing mt-10">
-								<!--<a href="https://www.youtube.com/watch?v=abDhE3tC3fs" target="_blank">Arcwords - Father Figure</a>
-								<br>-->
-								Dichotomy Tests - 2019
-							</p>
+							<p class="text-center small sizing mt-10">Dichotomy Tests - 2019</p>
 
 						</div>
 
 					</div>
 
 				</div>
-				
-				<!-- Right margin -->
-				<div class="col-lg-3 col-md-0 col-sm-0 col-xs-0"></div>
 
 			</div>
 
