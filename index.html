@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="dtapp" ng-controller="dtctrl" ng-init="init()" ng-cloak>
 
 	<head>
 
@@ -12,22 +12,19 @@
 		<meta name="title" content="Dichotomy Tests"/>
 		<meta name="description" content="Dichotomy Tests provides interesting tests that show you how inclined you are toward certain philosophical, psychological or political views. Each test tries to discover your preferred beliefs and will attempt to accurately position you along numerous dichotomic axes."/>
 		
+		<!-- CSS, fonts and favicon -->
+		<link rel="icon" type="image/png" href="assets/images/favicon.png">
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Dosis:500,600,700">
+		<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="style.css">
+
 		<!-- Libraries & APIs -->
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dosis:500,600,700" type="text/css">
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 		<script src="https://use.fontawesome.com/663f8258f5.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-cookies.js"></script>
 		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-		
-		<!-- Local -->
-		<link rel="icon" href="favicon.ico">
-		<link rel="stylesheet" href="style.css" type="text/css">
-		<script src="constants.js"></script>
-		<script src="tests.js"></script>
-		<script src="script.js"></script>
 
 		<!-- Ads -->
 		<meta name="propeller" content="a4a399ec4c76419ead037822a7fc95d7">
@@ -70,9 +67,20 @@
 								Follow us on Twitter <a href="https://twitter.com/DichotomyTests" target="_blank">@DichotomyTests</a>.
 							</p>
 
-							<!-- Begin auto-generated content -->
-							<div id="tests-list"></div>
-							<!-- End auto-generated content -->
+							<div class="row tests-row">
+								
+								<div class="col-sm-6" ng-repeat="test in basicInfo | orderBy:'sort'">
+									<div class="card mt-10">
+										<div class="card-body">
+											<h5 class="text-center font-weight-normal">{{ test.name }}</h5>
+											<h6 class="text-left text-muted small font-italic">{{ test.questions }} questions, {{ test.minutes }} minutes</h6>
+											<p class="text-left small">{{ test.description }}</p>
+											<button class="btn btn-outline-secondary btn-block sizing btn-{{ test.colour }}" type="button" onclick="location.href='./test.html?id=1';">Start the test</button>
+										</div>
+									</div>
+								</div>
+								
+							</div>
 
 							<br>
 
@@ -90,9 +98,9 @@
 
 		</div>
 
-		<script>
-			displayTests();
-		</script>
+		<!-- Local JavaScript files -->
+		<script src="js/constants.js"></script>
+		<script src="js/dtapp.js"></script>
 
 		<!-- Begin StatCounter code -->
 		<script type="text/javascript">
