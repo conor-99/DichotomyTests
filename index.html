@@ -22,10 +22,11 @@
 		<script src="https://use.fontawesome.com/663f8258f5.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-cookies.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-sanitize.js"></script>
 		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-
+		
 		<!-- Ads -->
 		<meta name="propeller" content="a4a399ec4c76419ead037822a7fc95d7">
 		<script type="text/javascript" src="//bodelen.com/apu.php?zoneid=2204959"></script>
@@ -70,18 +71,22 @@
 							<div class="row tests-row">
 								
 								<div class="col-sm-6" ng-repeat="test in basicInfo | orderBy:'sort'">
+									
 									<div class="card mt-10">
 										<div class="card-body">
+											
 											<h5 class="text-center font-weight-normal">{{ test.name }}</h5>
 											<h6 class="text-left text-muted small font-italic">{{ test.questions }} questions, {{ test.minutes }} minutes</h6>
-											<p class="text-left small">{{ test.description }}</p>
-											<button class="btn btn-outline-secondary btn-block sizing btn-{{ test.colour }}" type="button" onclick="location.href='./test.html?id=1';">Start the test</button>
+											<p class="text-left small" ng-bind-html="test.description"></p>
+											<a class="btn btn-outline-secondary btn-block sizing btn-{{ test.colour }}" type="button" href="test.html?id={{ test.id }}">Start the test</a>
+											
 										</div>
 									</div>
+									
 								</div>
 								
 							</div>
-
+							
 							<br>
 
 							<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1"></div>

@@ -1,6 +1,6 @@
-var app = angular.module('dtapp', ['ngCookies'])
+var app = angular.module('dtapp', ['ngCookies', 'ngSanitize'])
 
-app.controller('dtctrl', function($scope, $cookies, $http) {
+app.controller('dtctrl', function($scope, $cookies, $sce, $http) {
 
     /* Page initialisation */
     function init() {
@@ -9,7 +9,7 @@ app.controller('dtctrl', function($scope, $cookies, $http) {
 
     /* Reads in basic test information */
     function loadBasicInfo() {
-        $http.get(`${JSON_DIRECTORY}basicinfo.json`).then(function (json) {
+        $http.get(`${JSON_DIRECTORY}/basicinfo.json`).then(function (json) {
 
             $scope.basicInfo = json.data.tests;
 
@@ -20,7 +20,7 @@ app.controller('dtctrl', function($scope, $cookies, $http) {
         });
     }
 
-    /* Functions called from page*/
+    /* Functions called from page */
     $scope.init = init;
 
 });

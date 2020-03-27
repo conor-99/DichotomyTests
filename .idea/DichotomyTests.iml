@@ -7,5 +7,6 @@
     <orderEntry type="library" name="angular" level="application" />
     <orderEntry type="library" name="angular-cookies" level="application" />
     <orderEntry type="library" name="jquery-3.4.1" level="application" />
+    <orderEntry type="library" name="angular-sanitize" level="application" />
   </component>
 </module>
