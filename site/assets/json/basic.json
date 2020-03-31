@@ -5,40 +5,40 @@
       "name": "Philosophy",
       "description": "Find out how you stand along many philosophical dichotomies from egoism and altruism to skepticism and absolutism.",
       "questions": 74,
-      "colour": "a51344",
-      "sort": 20
+      "color": "a51344",
+      "sort": 200
     },
     {
       "id": 1,
       "name": "Economics",
       "description": "How do you think the economy should be run? Find out now and see your results displayed along multiple economic axes.",
       "questions": 68,
-      "colour": "5158bb",
-      "sort": 40
+      "color": "5158bb",
+      "sort": 400
     },
     {
       "id": 2,
       "name": "Personality Compass",
       "description": "Find out where you land on our personality compass. This test will measure four key personality traits along two dichotomic axes.",
       "questions": 48,
-      "colour": "e2711d",
-      "sort": 50
+      "color": "e2711d",
+      "sort": 500
     },
     {
       "id": 3,
       "name": "Literature",
       "description": "Do you prefer realistic literature or fantasy? Dark or light-hearted? This test breaks down your literary taste into seven different dichotomies!",
       "questions": 70,
-      "colour": "3f88c5",
-      "sort": 30
+      "color": "3f88c5",
+      "sort": 300
     },
     {
       "id": 4,
       "name": "Memes",
       "description": "Do you like memes? <a href='https://reddit.com/r/fellowkids' target='_blank'>/r/FellowKids</a> here we come...",
       "questions": 35,
-      "colour": "ddbdd5",
-      "sort": 10
+      "color": "ddbdd5",
+      "sort": 100
     }
   ]
 }

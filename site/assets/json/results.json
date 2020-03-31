@@ -1,0 +1,24 @@
+{
+  "tests": [
+    {
+      "id": 0,
+      "name": "Philosophy"
+    },
+    {
+      "id": 1,
+      "name": "Economics"
+    },
+    {
+      "id": 2,
+      "name": "Personality Compass"
+    },
+    {
+      "id": 3,
+      "name": "Literature"
+    },
+    {
+      "id": 4,
+      "name": "Memes"
+    }
+  ]
+}

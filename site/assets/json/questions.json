@@ -1,0 +1,29 @@
+{
+  "tests": [
+    {
+      "id": 0,
+      "name": "Philosophy",
+      "color": "a51344"
+    },
+    {
+      "id": 1,
+      "name": "Economics",
+      "color": "5158bb"
+    },
+    {
+      "id": 2,
+      "name": "Personality Compass",
+      "color": "e2711d"
+    },
+    {
+      "id": 3,
+      "name": "Literature",
+      "color": "3f88c5"
+    },
+    {
+      "id": 4,
+      "name": "Memes",
+      "color": "ddbdd5"
+    }
+  ]
+}

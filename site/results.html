@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+	<head>
+
+		<title>Results | Test</title>
+
+		<!-- Metadata -->
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+		<meta name="application-name" content="Dichotomy Tests"/>
+		<meta name="title" content="Dichotomy Tests - Results"/>
+		<meta name="description" content="Dichotomy provides interesting tests that show you how inclined you are toward certain philosophical, psychological or political views. Each test tries to discover your preferred beliefs and will attempt to accurately position you along numerous dichotomic axes."/>
+		<meta name="keywords" content="dichotomy,test,quiz,philosophy,economics,politics,psychology"/>
+		<meta name="HandheldFriendly" content="true"/>
+
+		<!-- Libraries & APIs -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dosis:500,600,700" type="text/css">
+		<script src="https://use.fontawesome.com/663f8258f5.js"></script>
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+		<!-- Local -->
+		<link rel="icon" href="assets/images/favicon.png">
+		<link rel="stylesheet" href="css/style.css" type="text/css">
+		<link rel="stylesheet" type="text/css" href="css/buttons.css">
+		<script type="application/javascript" src="constants.js"></script>
+		<script type="application/javascript" src="tests.js"></script>
+		<script type="application/javascript" src="script.js"></script>
+		
+	</head>
+
+	<body>
+
+		<div class="container main">
+
+			<div class="row">
+
+				<!-- Left margin -->
+				<div class="col-lg-3 col-md-0 col-sm-0 col-xs-0"></div>
+
+				<!-- Content -->
+				<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+
+					<div class="card">
+
+						<div class="card-body">
+
+							<h1 class="display-4 heading"><a id="title" href="/.." class="link-none">
+								Results | Test
+							</a></h1>
+
+							<hr>
+
+							<!--<p class="text-left sizing"><a href="http://bodelen.com/afu.php?zoneid=2205673" target="_blank">Click here</a> to view an advertisement and help support the site!</p>-->
+
+							<p id="results" class="text-left sizing">
+								Test results preamble.
+							</p>
+
+							<!-- Begin auto-generated content -->
+
+							<div id="container-results"></div>
+
+							<div id="container-explain">
+								<button type="button" class="btn btn-outline-dark btn-block" data-toggle="collapse" data-target="#explain">What do my results mean?</button>
+								<div id="explain" class="collapse"></div>
+							</div>
+
+							<!-- End auto-generated content -->
+
+							<p class="text-center small sizing mt-10">
+								<!--<a href="https://www.youtube.com/watch?v=abDhE3tC3fs" target="_blank">Arcwords - Father Figure</a>
+								<br>-->
+								Dichotomy Tests - 2019
+							</p>
+
+						</div>
+
+					</div>
+
+				</div>
+
+				<!-- Right margin -->
+				<div class="col-lg-3 col-md-0 col-sm-0 col-xs-0"></div>
+
+			</div>
+
+		</div>
+
+		<script>
+
+			var id = getParameterInt("id");
+			var test = getTest(id);
+			var mode = test.resultsType;
+
+			document.title = "Results | " + test.name;
+			document.getElementById("title").innerText = "Results: " + test.name;
+			document.getElementById("results").innerText = test.results;
+
+			var results = getResults();
+			buildResults(results);
+			buildMarkers(results);
+
+			$(document).ready(function(){
+    			$('[data-toggle="tooltip"]').tooltip();
+			});
+
+			//window.addEventListener("resize", resize);
+
+		</script>
+
+	</body>
+
+</html>

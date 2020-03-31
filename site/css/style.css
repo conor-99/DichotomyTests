@@ -1,0 +1,167 @@
+/* Standard Styling */
+
+html {
+    font-family: Dosis;
+}
+
+.main { margin-top: 20px; }
+
+.heading {
+    font-size: 40px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.sizing {
+    margin-left: 5%;
+    width: 90%;
+}
+
+.sizing-small {
+    margin-left: 40%;
+    width: 20%;
+}
+
+.mt-10 {
+    margin-top: 15px;
+    margin-bottom: 0px;
+}
+
+.tests-row {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.card {
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+.link-none {
+    color: #343a40;
+    text-decoration: none;
+} .link-none:hover {
+    color: #343a40;
+    text-decoration: none;
+}
+
+.hidden { display: none; }
+
+/* Test-type Styling */
+
+.ct-images-img {
+    max-width: 100%;
+    height: auto;
+}
+
+.ct-images-btn-col {
+    padding: 0;
+}
+
+/* Results Styling - Bars */
+
+#container-results {
+    margin-left: 2.5%;
+    width: 95%;
+    background: #F8F8F8;
+    border-radius: 9px;
+}
+
+#container-explain {
+    margin-top: 15px;
+    margin-left: 2.5%;
+    width: 95%;
+    background: #F8F8F8;
+    border-radius: 9px;
+    padding: 15px;
+}
+
+.explain-axis {
+    margin: 10px 5px 0px 5px;
+    padding: 5px;
+}
+
+.explain-content {
+    font-size: 14px;
+}
+
+.axis {
+    height: 60px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5px;
+}
+
+.label-vs {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 14px;
+    color: #666666;
+}
+
+.label-percent {
+    position: absolute;
+    font-size: 14px;
+    padding-top: 12.8px;
+    color: black;
+    z-index: 4;
+}
+.label-percent-left { left: calc(12% + 50px); }
+.label-percent-right { right: calc(12% + 50px); }
+
+.icon {
+    position: absolute;
+    z-index: 5;
+}
+.icon-left { left: 10%; }
+.icon-right { right: 10%; }
+
+.img {
+    width: 50px;
+    height: 50px;
+    border: 0px solid black;
+    border-radius: 50px;
+}
+
+.marker-img {
+    width: 50px;
+    height: 50px;
+    margin: 30px 5px 0px 5px;
+    border: 0px solid black;
+    border-radius: 50px;
+    background-color: white;
+}
+
+.bar {
+    position: absolute;
+    display: inline;
+    width: 70%;
+    height: 22px;
+    left: 15%;
+    margin-top: 13px;
+    background-color: white;
+    z-index: 0;
+}
+
+.fill {
+    position: absolute;
+    display: inline;
+    height: 18px;
+    left: calc(15% + 13px);
+    margin-top: 15px;
+}
+.fill-l { z-index: 3; }
+.fill-m {
+    background-color: white;
+    z-index: 2;
+}
+.fill-r {
+    width: calc(70% - 26px);
+    z-index: 1;
+}
