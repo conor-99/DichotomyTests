@@ -1,166 +1,141 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="dtapp" ng-controller="dtctrl" ng-init="initTest()" ng-cloak>
 
-	<head>
+    <head>
 
-		<title>Test</title>
+        <title>{{ test.name }} | Dichotomy Tests</title>
 
-		<!-- Metadata -->
-		<meta charset="utf-8"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-		<meta name="application-name" content="Dichotomy Tests"/>
-		<meta name="title" content="Dichotomy Tests - Test"/>
-		<meta name="description" content="Dichotomy provides interesting tests that show you how inclined you are toward certain philosophical, psychological or political views. Each test tries to discover your preferred beliefs and will attempt to accurately position you along numerous dichotomic axes."/>
-		<meta name="keywords" content="dichotomy,test,quiz,philosophy,economics,politics,psychology"/>
-		<meta name="HandheldFriendly" content="true"/>
+        <!-- Metadata -->
+        <meta charset="utf-8"/>
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+        <meta name="title" content="{{ test.name }} | Dichotomy Tests"/>
+        <meta name="description" content="{{ test.description }}"/>
 
-		<!-- Libraries & APIs -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dosis:500,600,700" type="text/css">
-		<script src="https://use.fontawesome.com/663f8258f5.js"></script>
-		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <!-- CSS, fonts and favicon -->
+        <link rel="icon" type="image/png" href="assets/images/favicon.png">
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Dosis:500,600,700">
+        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Wruczek/Bootstrap-Cookie-Alert@gh-pages/cookiealert.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/buttons.css">
 
-		<!-- Local -->
-		<link rel="icon" href="assets/images/favicon.png">
-		<link rel="stylesheet" href="css/style.css" type="text/css">
-		<link rel="stylesheet" type="text/css" href="css/buttons.css">
-		<script type="application/javascript" src="constants.js"></script>
-		<script type="application/javascript" src="tests.js"></script>
-		<script type="application/javascript" src="script.js"></script>
-		
-	</head>
+        <!-- Libraries & APIs -->
+        <script src="https://use.fontawesome.com/663f8258f5.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-cookies.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-sanitize.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/Wruczek/Bootstrap-Cookie-Alert@gh-pages/cookiealert.js"></script>
 
-	<body>
+    </head>
 
-		<div class="container main">
+    <body>
 
-			<div class="row">
+        <div class="container main">
 
-				<!-- Left margin -->
-				<div class="col-lg-3 col-md-0 col-sm-0 col-xs-0"></div>
+            <div class="row">
 
-				<!-- Content -->
-				<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                <div class="col-lg-6 col-md-12 offset-lg-3 offset-md-0">
 
-					<div class="card">
+                    <div class="card">
 
-						<div class="card-body">
+                        <div class="card-body">
 
-							<h1 class="display-4 heading"><a id="title" href="/.." class="link-none">
-								Test Title
-							</a></h1>
+                            <h1 class="display-4 heading"><a href="/.." class="link-none">{{ test.name }}</a></h1>
 
-							<hr>
+                            <hr>
 
-							<div id="container-preamble">
+                            <!-- Preamble -->
+                            <div ng-show="!started">
 
-								<p id="preamble" class="text-left sizing">
-									Test preamble.
-								</p>
+                                <p ng-show="resultsExist" class="text-left sizing"><i>You have taken this test before. Click <a href="#" ng-click="">here</a> to see your results!</i></p>
 
-								<button id="button" type="button" class="btn btn-outline-secondary btn-block sizing" onclick="startTest();">Begin test</button>
+                                <p ng-bind-html="test.preamble" class="text-left sizing"></p>
+                                <button type="button" ng-click="start()" class="btn btn-outline-secondary btn-block sizing btn-{{ test.color }}">Begin test</button>
 
-							</div>
+                            </div>
 
-							<div id="container-test" class="hidden">
+                            <!-- Questions -->
+                            <div ng-show="started">
 
-								<div class="card">
+                                <div class="card">
 
-									<div id="qn-num" class="card-header">Question n of n</div>
+                                    <div class="card-header">Question {{ current }} of {{ test.numQuestions }}</div>
 
-									<div class="progress" style="border-radius:0px; height:3px;">
-										<div id="qn-bar" class="progress-bar" style="width:40%; height:3px;"></div>
-									</div>
+                                    <div class="progress" style="border-radius:0px; height:3px;">
+                                        <div class="progress-bar" style="width:40%; height:3px;"></div>
+                                    </div>
 
-	                                <div class="card-body">
+                                    <div class="card-body">
 
-										<p id="in" class="small font-italic">Instruction</p>
-										<p id="qn">Question</p>
+                                        <p class="small font-italic">{{ test.instruction }}</p>
+                                        <p>{{ test.questions[current - 1].text }}</p>
 
-										<hr>
+                                        <hr>
 
-										<div id="ct-agree" class="hidden">
+                                        <!-- Type: Statement -->
+                                        <div ng-show="isTypeStatement">
 
-		                                    <button type="button" onclick="nextAgree(1.0)" class="btn btn-outline-secondary btn-sm btn-block sizing btn-str-agree">Strongly Agree</button>
-		                                    <button type="button" onclick="nextAgree(0.5)" class="btn btn-outline-secondary btn-sm btn-block sizing btn-agree">Agree</button>
-											<button type="button" onclick="nextAgree(0.0)" class="btn btn-outline-secondary btn-sm btn-block sizing btn-neutral">Neutral/I don't know</button>
-											<button type="button" onclick="nextAgree(-0.5)" class="btn btn-outline-secondary btn-sm btn-block sizing btn-disagree">Disagree</button>
-											<button type="button" onclick="nextAgree(-1.0)" class="btn btn-outline-secondary btn-sm btn-block sizing btn-str-disagree">Strongly Disagree</button>
+                                            <button type="button" ng-click="next(1.0)" class="btn btn-outline-secondary btn-sm btn-block sizing btn-str-agree">Strongly Agree</button>
+                                            <button type="button" ng-click="next(0.5)" class="btn btn-outline-secondary btn-sm btn-block sizing btn-agree">Agree</button>
+                                            <button type="button" ng-click="next(0.0)" class="btn btn-outline-secondary btn-sm btn-block sizing btn-neutral">Neutral/I don't know</button>
+                                            <button type="button" ng-click="next(-0.5)" class="btn btn-outline-secondary btn-sm btn-block sizing btn-disagree">Disagree</button>
+                                            <button type="button" ng-click="next(-1.0)" class="btn btn-outline-secondary btn-sm btn-block sizing btn-str-disagree">Strongly Disagree</button>
 
-										</div>
+                                        </div>
 
-										<div id="ct-scenario" class="hidden"></div>
+                                        <!-- Type: Images -->
+                                        <div ng-show="isTypeImages">
 
-										<div id="ct-images" class="hidden">
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <img src="{{ test.questions[current - 1].imageA }}" class="mx-auto d-block ct-images-img">
+                                                </div>
+                                                <div class="col-6">
+                                                    <img src="{{ test.questions[current - 1].imageB }}" class="mx-auto d-block ct-images-img">
+                                                </div>
+                                            </div>
 
-											<div class="row">
-												<div class="col-6">
-													<img id="img-left" src="" class="mx-auto d-block ct-images-img">
-												</div>
-												<div class="col-6">
-													<img id="img-right" src="" class="mx-auto d-block ct-images-img">
-												</div>
-											</div>
+                                            <br>
 
-											<br>
+                                            <button type="button" ng-click="next(1.0)" class="btn btn-outline-secondary btn-sm btn-block sizing btn-str-left">Definitely Left</button>
+                                            <button type="button" ng-click="next(0.5)" class="btn btn-outline-secondary btn-sm btn-block sizing btn-left">Left</button>
+                                            <button type="button" ng-click="next(0.0)" class="btn btn-outline-secondary btn-sm btn-block sizing btn-neutral-light">Neutral/I don't know</button>
+                                            <button type="button" ng-click="next(-0.5)" class="btn btn-outline-secondary btn-sm btn-block sizing btn-right">Right</button>
+                                            <button type="button" ng-click="next(-1.0)" class="btn btn-outline-secondary btn-sm btn-block sizing btn-str-right">Definitely Right</button>
 
-											<button type="button" onclick="nextImages(1.0)" class="btn btn-outline-secondary btn-sm btn-block sizing btn-str-left">Definitely Left</button>
-		                                    <button type="button" onclick="nextImages(0.5)" class="btn btn-outline-secondary btn-sm btn-block sizing btn-left">Left</button>
-											<button type="button" onclick="nextImages(0.0)" class="btn btn-outline-secondary btn-sm btn-block sizing btn-neutral-light">Neutral/I don't know</button>
-											<button type="button" onclick="nextImages(-0.5)" class="btn btn-outline-secondary btn-sm btn-block sizing btn-right">Right</button>
-											<button type="button" onclick="nextImages(-1.0)" class="btn btn-outline-secondary btn-sm btn-block sizing btn-str-right">Definitely Right</button>
+                                        </div>
 
-										</div>
-										
-										<hr>
+                                        <hr>
 
-										<button type="button" onclick="prev()" id="prev-button" class="btn btn-dark btn-block btn-sm sizing-small">Previous</button>
-										<button type="button" onclick="prev()" id="prev-button-off" class="btn btn-dark btn-block btn-sm sizing-small" disabled>Previous</button>
+                                        <button type="button" ng-click="prev()" ng-disabled="current == 1" class="btn btn-dark btn-block btn-sm sizing-small">Previous</button>
 
-									</div>
+                                    </div>
 
-	                            </div>
-								
-							</div>
+                                </div>
 
-							<p class="text-center small sizing mt-10">
-								<!--<a href="https://www.youtube.com/watch?v=abDhE3tC3fs" target="_blank">Arcwords - Father Figure</a>
-								<br>-->
-								Dichotomy Tests - 2019
-							</p>
+                            </div>
 
-						</div>
+                            <p class="text-center small sizing mt-10">Dichotomy Tests - 2020</p>
 
-					</div>
+                        </div>
 
-				</div>
+                    </div>
 
-				<!-- Right margin -->
-				<div class="col-lg-3 col-md-0 col-sm-0 col-xs-0"></div>
+                </div>
 
-			</div>
+            </div>
 
-		</div>
+        </div>
 
-		<script>
+        <!-- Local JavaScript files -->
+        <script src="js/constants.js"></script>
+        <script src="js/utils.js"></script>
+        <script src="js/dtapp.js"></script>
 
-			var id = getParameterInt("id");
-			var test = getTest(id);
-			var mode = test.testType;
-
-			document.title = test.name;
-			document.getElementById("title").innerText = test.name;
-			document.getElementById("preamble").innerHTML = test.preamble;
-			document.getElementById("button").classList.add(test.btnClass);
-
-			var scores = new Array(test.scales.length).fill(0);
-			var previousAnswer = null;
-			var questionNumber = 0;
-
-		</script>
-
-	</body>
+    </body>
 
 </html>
