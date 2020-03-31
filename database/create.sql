@@ -11,7 +11,7 @@ create table test (
 create table result (
 	id int not null primary key auto_increment,
     test_id int not null,
-    ip_address varchar(255) not null unique,
+    ip_address varchar(255) not null,
     answers text not null,
     percentages text not null,
     `timestamp` datetime not null,
@@ -23,6 +23,6 @@ insert into test (id, `name`)
 values
 	(0, 'Philosophy'),
     (1, 'Economics'),
-    (2, 'Personality Compass'),
-    (3, 'Literature')
+    (3, 'Literature'),
+    (4, 'Memes')
 ;
