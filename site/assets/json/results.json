@@ -2,23 +2,1106 @@
   "tests": [
     {
       "id": 0,
-      "name": "Philosophy"
+      "name": "Philosophy",
+      "preamble": "Your results are displayed below:",
+      "resultsType": 0,
+      "scales": [
+        {
+          "a": {
+            "text": "Materialism",
+            "path": "https://i.ibb.co/XjtG3g8/materialism.png",
+            "color": "#c4eeb2",
+            "desc": "All of reality is physical and material."
+          },
+          "b": {
+            "text": "Spiritualism",
+            "path": "https://i.ibb.co/DYZkgPV/spiritualism.png",
+            "color": "#f7b9c4",
+            "desc": "Some of reality transcends the physical and material."
+          },
+          "param": "m",
+          "axisName": "Metaphysical Axis",
+          "axisDesc": "How you view reality."
+        },
+        {
+          "a": {
+            "text": "Egoism",
+            "path": "https://i.ibb.co/VqNpmVk/egoism.png",
+            "color": "#b6a8d8",
+            "desc": "The individual is most important."
+          },
+          "b": {
+            "text": "Altruism",
+            "path": "https://i.ibb.co/6t9tygg/altruism.png",
+            "color": "#fff5bf",
+            "desc": "The community is most important."
+          },
+          "param": "e",
+          "axisName": "Societal Axis",
+          "axisDesc": "Your attitude toward society."
+        },
+        {
+          "a": {
+            "text": "Idealism",
+            "path": "https://i.ibb.co/rmTfrvq/idealism.png",
+            "color": "#ffe081",
+            "desc": "The underlying principles are most important."
+          },
+          "b": {
+            "text": "Pragmatism",
+            "path": "https://i.ibb.co/3TSTpG5/pragmatism.png",
+            "color": "#7474c7",
+            "desc": "The results are most important."
+          },
+          "param": "i",
+          "axisName": "Decision-making Axis",
+          "axisDesc": "How you approach decision-making and your actions."
+        },
+        {
+          "a": {
+            "text": "Hedonism",
+            "path": "https://i.ibb.co/YW8nMkB/hedonism.png",
+            "color": "#f99ba4",
+            "desc": "Pleasure is intrinsically good and should be desired."
+          },
+          "b": {
+            "text": "Asceticism",
+            "path": "https://i.ibb.co/TmTS99G/asceticism.png",
+            "color": "#9be18c",
+            "desc": "Abstinence from pleasure in order to discover meaning is most important."
+          },
+          "param": "h",
+          "axisName": "Sensuality Axis",
+          "axisDesc": "How you approach your indulgences."
+        },
+        {
+          "a": {
+            "text": "Nihilism",
+            "path": "https://i.ibb.co/PFH7jw9/nihilism.png",
+            "color": "#86989c",
+            "desc": "Neither meaning nor morality are objective."
+          },
+          "b": {
+            "text": "Moralism",
+            "path": "https://i.ibb.co/YDWs0Mt/moralism.png",
+            "color": "#fcead7",
+            "desc": "Morality and meaning are objective - to some extent."
+          },
+          "param": "n",
+          "axisName": "Meaning Axis",
+          "axisDesc": "Whether you believe in objective meaning."
+        },
+        {
+          "a": {
+            "text": "Rationalism",
+            "path": "https://i.ibb.co/txNkzJg/rationalism.png",
+            "color": "#ffd1b3",
+            "desc": "Intellect and logic."
+          },
+          "b": {
+            "text": "Romanticism",
+            "path": "https://i.ibb.co/KDKZGyQ/romanticism.png",
+            "color": "#8ac5bb",
+            "desc": "Passions and the heart."
+          },
+          "param": "r",
+          "axisName": "Values Axis",
+          "axisDesc": "What you value most."
+        },
+        {
+          "a": {
+            "text": "Skepticism",
+            "path": "https://i.ibb.co/26FttkZ/skepticism.png",
+            "color": "#a2bcd4",
+            "desc": "We can never truly know anything for sure."
+          },
+          "b": {
+            "text": "Absolutism",
+            "path": "https://i.ibb.co/QFVfmyr/absolutism.png",
+            "color": "#ffe4bf",
+            "desc": "There are objective truths that can also be understood."
+          },
+          "param": "s",
+          "axisName": "Epistemology Axis",
+          "axisDesc": "Your attitude towards knowledge."
+        }
+      ],
+      "markers": [
+        {
+          "name": "Platonism",
+          "path": "https://i.ibb.co/nbyn1gf/platonism.png",
+          "url": "https://en.wikipedia.org/wiki/Platonism",
+          "scales": [
+            {
+              "scale": 0,
+              "bar": 1,
+              "min": 0.6
+            },
+            {
+              "scale": 2,
+              "bar": 0,
+              "min": 0.6
+            }
+          ]
+        },
+        {
+          "name": "Aristotelianism",
+          "path": "https://i.ibb.co/tmFbrjB/aristotelianism.png",
+          "url": "https://en.wikipedia.org/wiki/Aristotelianism",
+          "scales": [
+            {
+              "scale": 0,
+              "bar": 0,
+              "min": 0.6
+            },
+            {
+              "scale": 2,
+              "bar": 1,
+              "min": 0.6
+            }
+          ]
+        },
+        {
+          "name": "Stoicism",
+          "path": "https://i.ibb.co/5WzmpWb/stoicism.png",
+          "url": "https://en.wikipedia.org/wiki/Stoicism",
+          "scales": [
+            {
+              "scale": 2,
+              "bar": 1,
+              "min": 0.6
+            },
+            {
+              "scale": 3,
+              "bar": 1,
+              "min": 0.6
+            }
+          ]
+        },
+        {
+          "name": "Epicureanism",
+          "path": "https://i.ibb.co/hRt7gWW/epicureanism.png",
+          "url": "https://en.wikipedia.org/wiki/Epicureanism",
+          "scales": [
+            {
+              "scale": 1,
+              "bar": 1,
+              "min": 0.6
+            },
+            {
+              "scale": 3,
+              "bar": 0,
+              "min": 0.6
+            }
+          ]
+        },
+        {
+          "name": "Objectivism",
+          "path": "https://i.ibb.co/q9jRYcn/objectivism.png",
+          "url": "https://en.wikipedia.org/wiki/Objectivism",
+          "scales": [
+            {
+              "scale": 0,
+              "bar": 0,
+              "min": 0.6
+            },
+            {
+              "scale": 1,
+              "bar": 0,
+              "min": 0.6
+            }
+          ]
+        },
+        {
+          "name": "Humanism",
+          "path": "https://i.ibb.co/QK7s8Sw/humanism.png",
+          "url": "https://en.wikipedia.org/wiki/Humanism",
+          "scales": [
+            {
+              "scale": 1,
+              "bar": 1,
+              "min": 0.6
+            },
+            {
+              "scale": 5,
+              "bar": 1,
+              "min": 0.6
+            }
+          ]
+        },
+        {
+          "name": "Hobbesian",
+          "path": "https://i.ibb.co/k90bqZY/hobbesian.png",
+          "url": "https://plato.stanford.edu/entries/hobbes-moral/",
+          "scales": [
+            {
+              "scale": 0,
+              "bar": 0,
+              "min": 0.6
+            },
+            {
+              "scale": 5,
+              "bar": 0,
+              "min": 0.6
+            }
+          ]
+        },
+        {
+          "name": "Monotheism",
+          "path": "https://i.ibb.co/qYwgtsX/monotheism.png",
+          "url": "https://en.wikipedia.org/wiki/Monotheism",
+          "scales": [
+            {
+              "scale": 0,
+              "bar": 1,
+              "min": 0.6
+            },
+            {
+              "scale": 4,
+              "bar": 1,
+              "min": 0.6
+            }
+          ]
+        },
+        {
+          "name": "Nietzschean",
+          "path": "https://i.ibb.co/r4j9vqf/nietzschean.png",
+          "url": "https://en.wikipedia.org/wiki/Philosophy_of_Friedrich_Nietzsche",
+          "scales": [
+            {
+              "scale": 4,
+              "bar": 0,
+              "min": 0.6
+            },
+            {
+              "scale": 5,
+              "bar": 1,
+              "min": 0.6
+            }
+          ]
+        },
+        {
+          "name": "Rousseauian",
+          "path": "https://i.ibb.co/7Kyn5vm/rousseauian.png",
+          "url": "https://en.wikipedia.org/wiki/Jean-Jacques_Rousseau#Philosophy",
+          "scales": [
+            {
+              "scale": 1,
+              "bar": 0,
+              "min": 0.6
+            },
+            {
+              "scale": 5,
+              "bar": 1,
+              "min": 0.6
+            }
+          ]
+        }
+      ]
     },
     {
       "id": 1,
-      "name": "Economics"
+      "name": "Economics",
+      "preamble": "Your results are displayed below:",
+      "resultsType": 0,
+      "scales": [
+        {
+          "a": {
+            "text": "Protectionism",
+            "path": "https://i.ibb.co/2ngKX6G/protectionism.png",
+            "color": "#f67681",
+            "desc": "Restricted trade."
+          },
+          "b": {
+            "text": "Free Trade",
+            "path": "https://i.ibb.co/BGc4Mbd/freetrade.png",
+            "color": "#7bed9f",
+            "desc": "Unregulated trade."
+          },
+          "param": "f",
+          "axisName": "Trade Axis",
+          "axisDesc": "How trade should be regulated."
+        },
+        {
+          "a": {
+            "text": "Inter-Dependence",
+            "path": "https://i.ibb.co/6m4TM8j/interdependence.png",
+            "color": "#fecdaa",
+            "desc": "Global reliance."
+          },
+          "b": {
+            "text": "Autarky",
+            "path": "https://i.ibb.co/p3RX7Mk/autarky.png",
+            "color": "#82ccdd",
+            "desc": "Self-sufficiency."
+          },
+          "param": "a",
+          "axisName": "Resources Axis",
+          "axisDesc": "Where resources should be derived from."
+        },
+        {
+          "a": {
+            "text": "Libertarianism",
+            "path": "https://i.ibb.co/GWxySVV/libertarianism.png",
+            "color": "#d6a2e8",
+            "desc": "Less power."
+          },
+          "b": {
+            "text": "Statism",
+            "path": "https://i.ibb.co/xm5LhrB/statism.png",
+            "color": "#ffeaa7",
+            "desc": "More power."
+          },
+          "param": "s",
+          "axisName": "State Axis",
+          "axisDesc": "How much power the state should have."
+        },
+        {
+          "a": {
+            "text": "Globalisation",
+            "path": "https://i.ibb.co/k1J9xwy/globalisation.png",
+            "color": "#fafac6",
+            "desc": "Leave it up to the global market."
+          },
+          "b": {
+            "text": "Nationalisation",
+            "path": "https://i.ibb.co/HpWskNV/nationalisation.png",
+            "color": "#b7c3f3",
+            "desc": "The government should institute national programmes."
+          },
+          "param": "n",
+          "axisName": "Social Systems Axis",
+          "axisDesc": "How social systems should be setup."
+        },
+        {
+          "a": {
+            "text": "Commercial",
+            "path": "https://i.ibb.co/1vy4srt/commercial.png",
+            "color": "#f49390",
+            "desc": "Money and banking."
+          },
+          "b": {
+            "text": "Subsistence",
+            "path": "https://i.ibb.co/fMgrp58/subsistence.png",
+            "color": "#49beaa",
+            "desc": "Agriculture and tradition."
+          },
+          "param": "c",
+          "axisName": "Industry Axis",
+          "axisDesc": "Which industries should the economy specialise in."
+        },
+        {
+          "a": {
+            "text": "Adhocracy",
+            "path": "https://i.ibb.co/fYnKhQR/adhocracy.png",
+            "color": "#f3c98b",
+            "desc": "Completely organic market that changes sporadically."
+          },
+          "b": {
+            "text": "Bureaucracy",
+            "path": "https://i.ibb.co/0nn8b5P/bureaucracy.png",
+            "color": "#b8bedd",
+            "desc": "Centralised administrative body that plans certain sectors."
+          },
+          "param": "b",
+          "axisName": "Market Structure Axis",
+          "axisDesc": "How the market is arranged."
+        },
+        {
+          "a": {
+            "text": "Flat Tax",
+            "path": "https://i.ibb.co/86zJpyD/flattax.png",
+            "color": "#c5c3c6",
+            "desc": "Universal tax on all citizens, usually low."
+          },
+          "b": {
+            "text": "Progressive Tax",
+            "path": "https://i.ibb.co/jHCCWh5/progressivetax.png",
+            "color": "#ef767a",
+            "desc": "Higher taxes, specifically on higher income citizens."
+          },
+          "param": "p",
+          "axisName": "Taxation Axis",
+          "axisDesc": "How people should be taxed."
+        }
+      ],
+      "markers": [
+        {
+          "name": "Keynesian",
+          "path": "https://i.ibb.co/rt9TzqQ/keynesian.png",
+          "url": "https://en.wikipedia.org/wiki/Keynesian_economics",
+          "scales": [
+            {
+              "scale": 6,
+              "bar": 0,
+              "min": 0.7
+            },
+            {
+              "scale": 5,
+              "bar": 1,
+              "min": 0.6
+            }
+          ]
+        },
+        {
+          "name": "Austrian School",
+          "path": "https://i.ibb.co/7p9CLBx/austrianschool.png",
+          "url": "https://en.wikipedia.org/wiki/Austrian_School",
+          "scales": [
+            {
+              "scale": 0,
+              "bar": 1,
+              "min": 0.7
+            },
+            {
+              "scale": 2,
+              "bar": 0,
+              "min": 0.6
+            }
+          ]
+        },
+        {
+          "name": "Marxism",
+          "path": "https://i.ibb.co/wgNNFsm/marxism.png",
+          "url": "https://en.wikipedia.org/wiki/Marxian_economics",
+          "scales": [
+            {
+              "scale": 2,
+              "bar": 1,
+              "min": 0.7
+            },
+            {
+              "scale": 3,
+              "bar": 1,
+              "min": 0.6
+            }
+          ]
+        },
+        {
+          "name": "Mercantilism",
+          "path": "https://i.ibb.co/XLx6nvV/mercantilism.png",
+          "url": "https://en.wikipedia.org/wiki/Mercantilism",
+          "scales": [
+            {
+              "scale": 0,
+              "bar": 0,
+              "min": 0.7
+            },
+            {
+              "scale": 4,
+              "bar": 1,
+              "min": 0.6
+            }
+          ]
+        },
+        {
+          "name": "Chicago School",
+          "path": "https://i.ibb.co/9ZTRKLx/chicagoschool.png",
+          "url": "https://en.wikipedia.org/wiki/Chicago_school_of_economics",
+          "scales": [
+            {
+              "scale": 2,
+              "bar": 0,
+              "min": 0.7
+            },
+            {
+              "scale": 4,
+              "bar": 0,
+              "min": 0.6
+            }
+          ]
+        },
+        {
+          "name": "Distributism",
+          "path": "https://i.ibb.co/XxPKsvB/distributism.png",
+          "url": "https://en.wikipedia.org/wiki/Distributism",
+          "scales": [
+            {
+              "scale": 4,
+              "bar": 1,
+              "min": 0.7
+            },
+            {
+              "scale": 2,
+              "bar": 0,
+              "min": 0.6
+            }
+          ]
+        },
+        {
+          "name": "Fascism",
+          "path": "https://i.ibb.co/px4x1HQ/fascism.png",
+          "url": "https://en.wikipedia.org/wiki/Economics_of_fascism",
+          "scales": [
+            {
+              "scale": 1,
+              "bar": 1,
+              "min": 0.7
+            },
+            {
+              "scale": 3,
+              "bar": 1,
+              "min": 0.6
+            }
+          ]
+        }
+      ]
     },
     {
       "id": 2,
-      "name": "Personality Compass"
+      "name": "Personality Compass",
+      "preamble": "Your results are displayed below:",
+      "resultsType": 1,
+      "scales": [
+        {
+          "a": {
+            "text": "Reasonable",
+            "path": "",
+            "color": "#d9d2ed",
+            "desc": "Stable and conventional."
+          },
+          "b": {
+            "text": "Sentimental",
+            "path": "",
+            "color": "#fff2cf",
+            "desc": "Emotional and creative."
+          },
+          "param": "h",
+          "axisName": "Emotional Axis",
+          "axisDesc": "How open you are to passion and how you are influenced by it."
+        },
+        {
+          "a": {
+            "text": "Assertive",
+            "path": "",
+            "color": "#cfe2f8",
+            "desc": "Disagreeable and conscientious."
+          },
+          "b": {
+            "text": "Deferential",
+            "path": "",
+            "color": "#d9ead8",
+            "desc": "Agreeable and indifferent."
+          },
+          "param": "v",
+          "axisName": "Exacting Axis",
+          "axisDesc": "How competitive and diligent you are."
+        }
+      ],
+      "markers": []
     },
     {
       "id": 3,
-      "name": "Literature"
+      "name": "Literature",
+      "preamble": "Your results are displayed below:",
+      "resultsType": 0,
+      "scales": [
+        {
+          "a": {
+            "text": "Minimalism",
+            "path": "https://i.ibb.co/Wfq42p1/minimalism.png",
+            "color": "#ebebeb",
+            "desc": "Subtle prose with an economic use of words."
+          },
+          "b": {
+            "text": "Maximalism",
+            "path": "https://i.ibb.co/fHzRDg6/maximalism.png",
+            "color": "#d499b9",
+            "desc": "Elaborate and complex prose."
+          },
+          "param": "f",
+          "axisName": "Form Axis",
+          "axisDesc": "The level of simplicity or complexity."
+        },
+        {
+          "a": {
+            "text": "Fantasy",
+            "path": "https://i.ibb.co/tJ5L2Zh/fantasy.png",
+            "color": "#69dc9e",
+            "desc": "Imaginary worlds beyond material reality."
+          },
+          "b": {
+            "text": "Reality",
+            "path": "https://i.ibb.co/b6yL6pL/reality.png",
+            "color": "#fc8c8e",
+            "desc": "The real and empirical world."
+          },
+          "param": "o",
+          "axisName": "Ontological Axis",
+          "axisDesc": "The nature of reality."
+        },
+        {
+          "a": {
+            "text": "Dark",
+            "path": "https://i.ibb.co/S0DHLV1/dark.png",
+            "color": "#6d8a96",
+            "desc": "Grim and pessimistic."
+          },
+          "b": {
+            "text": "Celebratory",
+            "path": "https://i.ibb.co/TcFzg38/celebratory.png",
+            "color": "#fcfcb8",
+            "desc": "Triumphant and optimistic."
+          },
+          "param": "t",
+          "axisName": "Tone Axis",
+          "axisDesc": "The pervading mood and feeling."
+        },
+        {
+          "a": {
+            "text": "Urban",
+            "path": "https://i.ibb.co/k0Lxp8n/urban.png",
+            "color": "#88abc0",
+            "desc": "Set in cities and industrial regions."
+          },
+          "b": {
+            "text": "Rural",
+            "path": "https://i.ibb.co/DbfJSyR/rural.png",
+            "color": "#98ce96",
+            "desc": "Set in organic regions and the countryside."
+          },
+          "param": "s",
+          "axisName": "Setting Axis",
+          "axisDesc": "The setting of the story."
+        },
+        {
+          "a": {
+            "text": "Moralistic",
+            "path": "https://i.ibb.co/g9cj8Tt/moralistic.png",
+            "color": "#d4e09b",
+            "desc": "Strong message and virtues espoused."
+          },
+          "b": {
+            "text": "Satirical",
+            "path": "https://i.ibb.co/GTnPf7X/satirical.png",
+            "color": "#e79da3",
+            "desc": "Lack of certainty, more irony."
+          },
+          "param": "e",
+          "axisName": "Ethical Axis",
+          "axisDesc": "The approach to moral questions as well as the certainty of the story's message."
+        },
+        {
+          "a": {
+            "text": "Abstract",
+            "path": "https://i.ibb.co/MN872cK/abstract.png",
+            "color": "#9d97d0",
+            "desc": "Esoteric and experimental."
+          },
+          "b": {
+            "text": "Concrete",
+            "path": "https://i.ibb.co/ZfPy3jm/concrete.png",
+            "color": "#d9d1d4",
+            "desc": "Straightforward and conventional."
+          },
+          "param": "a",
+          "axisName": "Accessibility Axis",
+          "axisDesc": "The overall coherence of style and story."
+        },
+        {
+          "a": {
+            "text": "Philosophical",
+            "path": "https://i.ibb.co/PxV6K4q/philosophical.png",
+            "color": "#b0a9a9",
+            "desc": "Based around questions and pontification."
+          },
+          "b": {
+            "text": "Cozy",
+            "path": "https://i.ibb.co/m6hvK64/cozy.png",
+            "color": "#edb284",
+            "desc": "Based mainly around the story."
+          },
+          "param": "p",
+          "axisName": "Perspective Axis",
+          "axisDesc": "The perspective supplied by the author with regard to the purpose of the story."
+        }
+      ],
+      "markers": [
+        {
+          "name": "Romanticism",
+          "path": "https://i.ibb.co/zQ6sR17/romanticism.png",
+          "url": "https://en.wikipedia.org/wiki/Romanticism#Literature",
+          "scales": [
+            {
+              "scale": 2,
+              "bar": 1,
+              "min": 0.65
+            },
+            {
+              "scale": 3,
+              "bar": 1,
+              "min": 0.65
+            }
+          ]
+        },
+        {
+          "name": "Realism",
+          "path": "https://i.ibb.co/JF3Jhr6/realism.png",
+          "url": "https://en.wikipedia.org/wiki/Literary_realism",
+          "scales": [
+            {
+              "scale": 1,
+              "bar": 1,
+              "min": 0.65
+            },
+            {
+              "scale": 4,
+              "bar": 0,
+              "min": 0.65
+            }
+          ]
+        },
+        {
+          "name": "Gothic",
+          "path": "https://i.ibb.co/dPqqKyv/gothic.png",
+          "url": "https://en.wikipedia.org/wiki/Gothic_fiction",
+          "scales": [
+            {
+              "scale": 2,
+              "bar": 0,
+              "min": 0.65
+            },
+            {
+              "scale": 1,
+              "bar": 0,
+              "min": 0.65
+            }
+          ]
+        },
+        {
+          "name": "Modernism",
+          "path": "https://i.ibb.co/RgZkrbn/modernism.png",
+          "url": "https://en.wikipedia.org/wiki/Literary_modernism",
+          "scales": [
+            {
+              "scale": 6,
+              "bar": 0,
+              "min": 0.65
+            },
+            {
+              "scale": 3,
+              "bar": 0,
+              "min": 0.65
+            }
+          ]
+        },
+        {
+          "name": "Transcendentalism",
+          "path": "https://i.ibb.co/kg4VRDp/transcendentalism.png",
+          "url": "https://en.wikipedia.org/wiki/Transcendentalism",
+          "scales": [
+            {
+              "scale": 3,
+              "bar": 1,
+              "min": 0.65
+            },
+            {
+              "scale": 6,
+              "bar": 0,
+              "min": 0.65
+            }
+          ]
+        },
+        {
+          "name": "Postmodernism",
+          "path": "https://i.ibb.co/VwQ6xzT/postmodernism.png",
+          "url": "https://en.wikipedia.org/wiki/Postmodern_literature",
+          "scales": [
+            {
+              "scale": 4,
+              "bar": 1,
+              "min": 0.65
+            },
+            {
+              "scale": 5,
+              "bar": 0,
+              "min": 0.65
+            }
+          ]
+        },
+        {
+          "name": "Magical Realism",
+          "path": "https://i.ibb.co/fY7RFhM/magicrealism.png",
+          "url": "https://en.wikipedia.org/wiki/Magic_realism",
+          "scales": [
+            {
+              "scale": 1,
+              "bar": 0,
+              "min": 0.65
+            },
+            {
+              "scale": 5,
+              "bar": 0,
+              "min": 0.65
+            }
+          ]
+        },
+        {
+          "name": "Crime Fiction",
+          "path": "https://i.ibb.co/28KWYnX/crimefiction.png",
+          "url": "https://en.wikipedia.org/wiki/Crime_fiction",
+          "scales": [
+            {
+              "scale": 6,
+              "bar": 1,
+              "min": 0.65
+            },
+            {
+              "scale": 5,
+              "bar": 1,
+              "min": 0.65
+            }
+          ]
+        },
+        {
+          "name": "Expressionism",
+          "path": "https://i.ibb.co/7SxvWC9/expressionism.png",
+          "url": "https://en.wikipedia.org/wiki/Expressionism#Literature",
+          "scales": [
+            {
+              "scale": 4,
+              "bar": 1,
+              "min": 0.65
+            },
+            {
+              "scale": 5,
+              "bar": 0,
+              "min": 0.65
+            }
+          ]
+        },
+        {
+          "name": "High Fantasy",
+          "path": "https://i.ibb.co/fNF260L/highfantasy.png",
+          "url": "https://en.wikipedia.org/wiki/High_fantasy",
+          "scales": [
+            {
+              "scale": 1,
+              "bar": 0,
+              "min": 0.65
+            },
+            {
+              "scale": 3,
+              "bar": 1,
+              "min": 0.65
+            }
+          ]
+        }
+      ]
     },
     {
       "id": 4,
-      "name": "Memes"
+      "name": "Memes",
+      "preamble": "Your results are displayed below:",
+      "resultsType": 0,
+      "scales": [
+        {
+          "a": {
+            "text": "Edgy",
+            "path": "https://i.ibb.co/nQSZFBC/edgy.png",
+            "color": "#ebebeb",
+            "desc": "..."
+          },
+          "b": {
+            "text": "Wholesome",
+            "path": "https://i.ibb.co/mHK3Mdj/wholesome.png",
+            "color": "#d499b9",
+            "desc": "..."
+          },
+          "param": "e",
+          "axisName": "...",
+          "axisDesc": "..."
+        },
+        {
+          "a": {
+            "text": "Ironic",
+            "path": "https://i.ibb.co/GRsK54q/ironic.png",
+            "color": "#c4eeb2",
+            "desc": "..."
+          },
+          "b": {
+            "text": "Sincere",
+            "path": "https://i.ibb.co/tb1v7GN/sincere.png",
+            "color": "#f7b9c4",
+            "desc": "..."
+          },
+          "param": "i",
+          "axisName": "...",
+          "axisDesc": "..."
+        },
+        {
+          "a": {
+            "text": "Abstract",
+            "path": "https://i.ibb.co/RHpKZNX/abstract.png",
+            "color": "#a2bcd4",
+            "desc": "..."
+          },
+          "b": {
+            "text": "Concrete",
+            "path": "https://i.ibb.co/Hr8HtbV/concrete.png",
+            "color": "#ffe4bf",
+            "desc": "..."
+          },
+          "param": "a",
+          "axisName": "...",
+          "axisDesc": "..."
+        },
+        {
+          "a": {
+            "text": "Dank",
+            "path": "https://i.ibb.co/n3pWNXC/dank.png",
+            "color": "#c5c3c6",
+            "desc": "..."
+          },
+          "b": {
+            "text": "Normie",
+            "path": "https://i.ibb.co/FXMrX6r/normie.png",
+            "color": "#ef767a",
+            "desc": "..."
+          },
+          "param": "d",
+          "axisName": "...",
+          "axisDesc": "..."
+        },
+        {
+          "a": {
+            "text": "Political",
+            "path": "https://i.ibb.co/ZxBxcnG/political.png",
+            "color": "#d6a2e8",
+            "desc": "..."
+          },
+          "b": {
+            "text": "Relatable",
+            "path": "https://i.ibb.co/rsCbVz7/relatable.png",
+            "color": "#ffeaa7",
+            "desc": "..."
+          },
+          "param": "p",
+          "axisName": "...",
+          "axisDesc": "..."
+        }
+      ],
+      "markers": [
+        {
+          "name": "4chan",
+          "path": "https://i.ibb.co/pRNhM8f/4chan.png",
+          "url": "https://en.wikipedia.org/wiki/4chan",
+          "scales": [
+            {
+              "scale": 0,
+              "bar": 0,
+              "min": 0.65
+            },
+            {
+              "scale": 3,
+              "bar": 0,
+              "min": 0.65
+            }
+          ]
+        },
+        {
+          "name": "9gag",
+          "path": "https://i.ibb.co/bHkzpgv/9gag.png",
+          "url": "https://en.wikipedia.org/wiki/9GAG",
+          "scales": [
+            {
+              "scale": 3,
+              "bar": 1,
+              "min": 0.65
+            },
+            {
+              "scale": 0,
+              "bar": 1,
+              "min": 0.65
+            }
+          ]
+        },
+        {
+          "name": "Facebook",
+          "path": "https://i.ibb.co/CMjLZX0/facebook.png",
+          "url": "https://en.wikipedia.org/wiki/Facebook",
+          "scales": [
+            {
+              "scale": 3,
+              "bar": 1,
+              "min": 0.65
+            },
+            {
+              "scale": 4,
+              "bar": 1,
+              "min": 0.65
+            }
+          ]
+        },
+        {
+          "name": "/pol/",
+          "path": "https://i.ibb.co/1MK0VF6/pol.png",
+          "url": "https://en.wikipedia.org/wiki//pol/",
+          "scales": [
+            {
+              "scale": 0,
+              "bar": 0,
+              "min": 0.65
+            },
+            {
+              "scale": 4,
+              "bar": 0,
+              "min": 0.65
+            }
+          ]
+        },
+        {
+          "name": "reddit",
+          "path": "https://i.ibb.co/rdBFFGL/reddit.png",
+          "url": "https://en.wikipedia.org/wiki/Reddit",
+          "scales": [
+            {
+              "scale": 1,
+              "bar": 0,
+              "min": 0.65
+            },
+            {
+              "scale": 2,
+              "bar": 1,
+              "min": 0.65
+            }
+          ]
+        },
+        {
+          "name": "Tumblr",
+          "path": "https://i.ibb.co/PQq6Qn1/tumblr.png",
+          "url": "https://en.wikipedia.org/wiki/Tumblr",
+          "scales": [
+            {
+              "scale": 0,
+              "bar": 1,
+              "min": 0.65
+            },
+            {
+              "scale": 4,
+              "bar": 1,
+              "min": 0.65
+            }
+          ]
+        },
+        {
+          "name": "Twitter",
+          "path": "https://i.ibb.co/4Ww4Zkz/twitter.png",
+          "url": "https://en.wikipedia.org/wiki/Twitter",
+          "scales": [
+            {
+              "scale": 1,
+              "bar": 1,
+              "min": 0.65
+            },
+            {
+              "scale": 4,
+              "bar": 0,
+              "min": 0.65
+            }
+          ]
+        }
+      ]
     }
   ]
 }

@@ -17,14 +17,6 @@
       "sort": 400
     },
     {
-      "id": 2,
-      "name": "Personality Compass",
-      "description": "Find out where you land on our personality compass. This test will measure four key personality traits along two dichotomic axes.",
-      "questions": 48,
-      "color": "e2711d",
-      "sort": 500
-    },
-    {
       "id": 3,
       "name": "Literature",
       "description": "Do you prefer realistic literature or fantasy? Dark or light-hearted? This test breaks down your literary taste into seven different dichotomies!",

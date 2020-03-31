@@ -58,6 +58,15 @@ html {
     padding: 0;
 }
 
+.progress {
+    border-radius: 0px;
+    height: 3px;
+}
+
+.progress-bar {
+    height: 3px;
+}
+
 /* Results Styling - Bars */
 
 #container-results {
@@ -136,6 +145,7 @@ html {
     border: 0px solid black;
     border-radius: 50px;
     background-color: white;
+    cursor: pointer;
 }
 
 .bar {
@@ -164,4 +174,10 @@ html {
 .fill-r {
     width: calc(70% - 26px);
     z-index: 1;
+}
+
+.compass-text {
+    margin-top: -5px;
+    margin-left: 10px;
+    font-size: 18px;
 }

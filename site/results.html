@@ -1,117 +1,145 @@
 <!DOCTYPE html>
-<html lang="en">
-	
-	<head>
+<html ng-app="dtapp" ng-controller="dtctrl" ng-init="initResults()" ng-cloak>
 
-		<title>Results | Test</title>
+    <head>
 
-		<!-- Metadata -->
-		<meta charset="utf-8"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-		<meta name="application-name" content="Dichotomy Tests"/>
-		<meta name="title" content="Dichotomy Tests - Results"/>
-		<meta name="description" content="Dichotomy provides interesting tests that show you how inclined you are toward certain philosophical, psychological or political views. Each test tries to discover your preferred beliefs and will attempt to accurately position you along numerous dichotomic axes."/>
-		<meta name="keywords" content="dichotomy,test,quiz,philosophy,economics,politics,psychology"/>
-		<meta name="HandheldFriendly" content="true"/>
+        <title>{{ test.name }} Results | Dichotomy Tests</title>
 
-		<!-- Libraries & APIs -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dosis:500,600,700" type="text/css">
-		<script src="https://use.fontawesome.com/663f8258f5.js"></script>
-		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <!-- Metadata -->
+        <meta charset="utf-8"/>
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+        <meta name="title" content="{{ test.name }} Results | Dichotomy Tests"/>
+        <meta name="description" content="{{ test.description }}"/>
 
-		<!-- Local -->
-		<link rel="icon" href="assets/images/favicon.png">
-		<link rel="stylesheet" href="css/style.css" type="text/css">
-		<link rel="stylesheet" type="text/css" href="css/buttons.css">
-		<script type="application/javascript" src="constants.js"></script>
-		<script type="application/javascript" src="tests.js"></script>
-		<script type="application/javascript" src="script.js"></script>
-		
-	</head>
+        <!-- CSS, fonts and favicon -->
+        <link rel="icon" type="image/png" href="assets/images/favicon.png">
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Dosis:500,600,700">
+        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Wruczek/Bootstrap-Cookie-Alert@gh-pages/cookiealert.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/buttons.css">
 
-	<body>
+        <!-- Libraries & APIs -->
+        <script src="https://use.fontawesome.com/663f8258f5.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-cookies.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-sanitize.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/Wruczek/Bootstrap-Cookie-Alert@gh-pages/cookiealert.js"></script>
 
-		<div class="container main">
+    </head>
 
-			<div class="row">
+    <body>
 
-				<!-- Left margin -->
-				<div class="col-lg-3 col-md-0 col-sm-0 col-xs-0"></div>
+        <div class="container main">
 
-				<!-- Content -->
-				<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+            <div class="row">
 
-					<div class="card">
+                <div class="col-lg-6 col-md-12 offset-lg-3 offset-md-0">
 
-						<div class="card-body">
+                    <div class="card">
 
-							<h1 class="display-4 heading"><a id="title" href="/.." class="link-none">
-								Results | Test
-							</a></h1>
+                        <div class="card-body">
 
-							<hr>
+                            <h1 class="display-4 heading"><a href="/.." class="link-none">Results: {{ test.name }}</a></h1>
 
-							<!--<p class="text-left sizing"><a href="http://bodelen.com/afu.php?zoneid=2205673" target="_blank">Click here</a> to view an advertisement and help support the site!</p>-->
+                            <hr>
 
-							<p id="results" class="text-left sizing">
-								Test results preamble.
-							</p>
+                            <p ng-bind-html="results.preamble" class="text-left sizing"></p>
 
-							<!-- Begin auto-generated content -->
+                            <!-- Results: Bars -->
+                            <div ng-show="isTypeBars" ng-style="{ height: (86 * results.scales.length) + additionalHeight + 'px' }">
 
-							<div id="container-results"></div>
+                                <div ng-repeat="i in range(results.scales.length)" class="axis">
 
-							<div id="container-explain">
-								<button type="button" class="btn btn-outline-dark btn-block" data-toggle="collapse" data-target="#explain">What do my results mean?</button>
-								<div id="explain" class="collapse"></div>
-							</div>
+                                    <div class="label">
+                                        <span>{{ results.scales[i].a.text }} </span>
+                                        <span class="label-vs">vs</span>
+                                        <span> {{ results.scales[i].b.text }}</span>
+                                    </div>
 
-							<!-- End auto-generated content -->
+                                    <div class="icon icon-left">
+                                        <img alt="icon-l" class="img" src="{{ results.scales[i].a.path }}" ng-style="{ backgroundColor: results.scales[i].a.color }">
+                                    </div>
+                                    <div class="icon icon-right">
+                                        <img alt="icon-r" class="img" src="{{ results.scales[i].b.path }}" ng-style="{ backgroundColor: results.scales[i].b.color } ">
+                                    </div>
 
-							<p class="text-center small sizing mt-10">
-								<!--<a href="https://www.youtube.com/watch?v=abDhE3tC3fs" target="_blank">Arcwords - Father Figure</a>
-								<br>-->
-								Dichotomy Tests - 2019
-							</p>
+                                    <div class="label-percent label-percent-left">
+                                        {{ (percentages[i] > 0.1) ? ((100 * percentages[i]).toFixed(1) + '%') : '' }}
+                                    </div>
+                                    <div class="label-percent label-percent-right">
+                                        {{ (percentages[i] < 0.9) ? ((100 * (1 - percentages[i])).toFixed(1) + '%') : '' }}
+                                    </div>
 
-						</div>
+                                    <img alt="bar" class="bar" src="assets/images/bar.png">
 
-					</div>
+                                    <img alt="fill-l" class="fill fill-l" src="assets/images/fill.png" ng-style="{ backgroundColor: results.scales[i].a.color, width: 'calc((70% - 26px) * ' + percentages[i] + ')' }">
+                                    <img alt="fill-m" class="fill fill-m" src="assets/images/fill.png" ng-style="{ width: 'calc((70% - 26px) * ' + percentages[i] + ') + 0.8px'  }">
+                                    <img alt="fill-r" class="fill fill-r" src="assets/images/fill.png" ng-style="{ backgroundColor: results.scales[i].b.color }">
 
-				</div>
+                                </div>
 
-				<!-- Right margin -->
-				<div class="col-lg-3 col-md-0 col-sm-0 col-xs-0"></div>
+                                <div ng-show="markers.length > 0" class="d-flex justify-content-center">
+                                    <a ng-repeat="marker in markers" href="{{ marker.url }}" target="_blank">
+                                        <img class="marker-img" src="{{ marker.path }}" alt="{{ marker.name }}" title="{{ marker.name }}" data-placement="top" data-toggle="tooltip">
+                                    </a>
+                                </div>
 
-			</div>
+                            </div>
 
-		</div>
+                            <!-- Explanation: Axes -->
+                            <div ng-show="showExplainAxes">
 
-		<script>
+                                <button type="button" data-toggle="collapse" data-target="#explain-axes" class="btn btn-outline-dark btn-block">What do my results mean?</button>
 
-			var id = getParameterInt("id");
-			var test = getTest(id);
-			var mode = test.resultsType;
+                                <div id="explain-axes" class="collapse">
 
-			document.title = "Results | " + test.name;
-			document.getElementById("title").innerText = "Results: " + test.name;
-			document.getElementById("results").innerText = test.results;
+                                    <div ng-repeat="i in range(results.scales.length)" class="explain-axis">
 
-			var results = getResults();
-			buildResults(results);
-			buildMarkers(results);
+                                        <span style="font-weight: bold;">{{ results.scales[i].axisName }}: </span>
+                                        <span>{{ results.scales[i].axisDesc }}</span>
 
-			$(document).ready(function(){
-    			$('[data-toggle="tooltip"]').tooltip();
-			});
+                                        <br>
 
-			//window.addEventListener("resize", resize);
+                                        <span class="explain-content">
 
-		</script>
+                                            <span style="font-style: italic;">{{ results.scales[i].a.text }}: </span>
+                                            <span>{{ results.scales[i].a.desc }}</span>
 
-	</body>
+                                            <br>
+
+                                            <span style="font-style: italic;">{{ results.scales[i].b.text }}: </span>
+                                            <span>{{ results.scales[i].b.desc }}</span>
+
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <p class="text-center small sizing mt-10">Dichotomy Tests - 2020</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Local JavaScript files -->
+        <script src="js/constants.js"></script>
+        <script src="js/utils.js"></script>
+        <script src="js/dtapp.js"></script>
+
+    </body>
 
 </html>

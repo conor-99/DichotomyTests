@@ -10,6 +10,7 @@ const COOKIE_RESULT_PREFIX = 'results-';
 
 // Paths
 const JSON_DIRECTORY = 'assets/json';
+const API_URL = 'api/';
 
 // Miscellaneous
 const ANSWERS_PER_MINUTE = 6;

@@ -51,7 +51,7 @@
                             <!-- Preamble -->
                             <div ng-show="!started">
 
-                                <p ng-show="resultsExist" class="text-left sizing"><i>You have taken this test before. Click <a href="#" ng-click="">here</a> to see your results!</i></p>
+                                <p ng-show="resultsExist" class="text-left sizing"><i>You have taken this test before. Click <a href="#" ng-click="goToResults()">here</a> to see your results!</i></p>
 
                                 <p ng-bind-html="test.preamble" class="text-left sizing"></p>
                                 <button type="button" ng-click="start()" class="btn btn-outline-secondary btn-block sizing btn-{{ test.color }}">Begin test</button>
@@ -65,8 +65,8 @@
 
                                     <div class="card-header">Question {{ current }} of {{ test.numQuestions }}</div>
 
-                                    <div class="progress" style="border-radius:0px; height:3px;">
-                                        <div class="progress-bar" style="width:40%; height:3px;"></div>
+                                    <div class="progress">
+                                        <div class="progress-bar" ng-style="{ width: (percentage + '%') }"></div>
                                     </div>
 
                                     <div class="card-body">
