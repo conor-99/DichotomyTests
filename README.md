@@ -3,9 +3,9 @@ _Dichotomy Tests_ provides interesting tests that show you how inclined you are 
 
 We currently offer the following tests:
 
-* [Memes](https://dichotomytests.com/test.html?id=4)
-* [Literature](https://dichotomytests.com/test.html?id=3)
 * [Philosophy](https://dichotomytests.com/test.html?id=0)
+* [Literature](https://dichotomytests.com/test.html?id=3)
+* [Memes](https://dichotomytests.com/test.html?id=4)
 * [Economics](https://dichotomytests.com/test.html?id=1)
 
 Visit the site here: <https://dichotomytests.com>

@@ -79,8 +79,8 @@ app.controller('dtctrl', function($scope, $cookies, $sce, $http) {
                     let s1 = marker.scales[0];
                     let s2 = marker.scales[1];
 
-                    let hasFirst = (s1.bar == 0 && $scope.percentages[s1.scale] > s1.min) || (s1.bar == 1 && (1 - $scope.percentages[s1.scale]) > s1.min);
-                    let hasSecond = (s2.bar == 0 && $scope.percentages[s2.scale] > s2.min) || (s2.bar == 1 && (1 - $scope.percentages[s2.scale]) > s2.min);
+                    let hasFirst = (s1.bar === 0 && $scope.percentages[s1.scale] > s1.min) || (s1.bar === 1 && (1 - $scope.percentages[s1.scale]) > s1.min);
+                    let hasSecond = (s2.bar === 0 && $scope.percentages[s2.scale] > s2.min) || (s2.bar === 1 && (1 - $scope.percentages[s2.scale]) > s2.min);
 
                     if (hasFirst && hasSecond)
                         $scope.markers.push(marker);
