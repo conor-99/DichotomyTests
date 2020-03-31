@@ -7,6 +7,5 @@ We currently offer the following tests:
 * [Literature](https://dichotomytests.com/test.html?id=3)
 * [Philosophy](https://dichotomytests.com/test.html?id=0)
 * [Economics](https://dichotomytests.com/test.html?id=1)
-* [Personality Compass](https://dichotomytests.com/test.html?id=2)
 
 Visit the site here: <https://dichotomytests.com>
