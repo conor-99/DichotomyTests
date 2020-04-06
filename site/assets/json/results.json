@@ -548,49 +548,6 @@
       ]
     },
     {
-      "id": 2,
-      "name": "Personality Compass",
-      "preamble": "Your results are displayed below:",
-      "resultsType": 1,
-      "scales": [
-        {
-          "a": {
-            "text": "Reasonable",
-            "path": "",
-            "color": "#d9d2ed",
-            "desc": "Stable and conventional."
-          },
-          "b": {
-            "text": "Sentimental",
-            "path": "",
-            "color": "#fff2cf",
-            "desc": "Emotional and creative."
-          },
-          "param": "h",
-          "axisName": "Emotional Axis",
-          "axisDesc": "How open you are to passion and how you are influenced by it."
-        },
-        {
-          "a": {
-            "text": "Assertive",
-            "path": "",
-            "color": "#cfe2f8",
-            "desc": "Disagreeable and conscientious."
-          },
-          "b": {
-            "text": "Deferential",
-            "path": "",
-            "color": "#d9ead8",
-            "desc": "Agreeable and indifferent."
-          },
-          "param": "v",
-          "axisName": "Exacting Axis",
-          "axisDesc": "How competitive and diligent you are."
-        }
-      ],
-      "markers": []
-    },
-    {
       "id": 3,
       "name": "Literature",
       "preamble": "Your results are displayed below:",
