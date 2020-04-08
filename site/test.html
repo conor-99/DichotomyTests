@@ -78,9 +78,9 @@
                                         <div ng-show="isTypeStatement">
 
                                             <button type="button" ng-click="next(1.0)" class="btn btn-outline-secondary btn-sm btn-block sizing btn-str-agree">Strongly Agree</button>
-                                            <button type="button" ng-click="next(0.5)" class="btn btn-outline-secondary btn-sm btn-block sizing btn-agree">Agree</button>
-                                            <button type="button" ng-click="next(0.0)" class="btn btn-outline-secondary btn-sm btn-block sizing btn-neutral">Neutral/I don't know</button>
-                                            <button type="button" ng-click="next(-0.5)" class="btn btn-outline-secondary btn-sm btn-block sizing btn-disagree">Disagree</button>
+                                            <button type="button" ng-click="next(hideNeutral ? 0.65: 0.5)" class="btn btn-outline-secondary btn-sm btn-block sizing btn-agree">Agree</button>
+                                            <button ng-show="!hideNeutral" type="button" ng-click="next(0.0)" class="btn btn-outline-secondary btn-sm btn-block sizing btn-neutral">Neutral/I don't know</button>
+                                            <button type="button" ng-click="next(hideNeutral ? -0.65: -0.5)" class="btn btn-outline-secondary btn-sm btn-block sizing btn-disagree">Disagree</button>
                                             <button type="button" ng-click="next(-1.0)" class="btn btn-outline-secondary btn-sm btn-block sizing btn-str-disagree">Strongly Disagree</button>
 
                                         </div>

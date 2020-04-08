@@ -113,6 +113,8 @@ app.controller('dtctrl', function($scope, $cookies, $sce, $http) {
             $scope.isTypeImages = ($scope.test.testType === TEST_TYPES.IMAGES);
             $scope.isTypeSurvey = ($scope.test.testType === TEST_TYPES.STATEMENT_SURVEY);
 
+            $scope.hideNeutral = ($scope.testId === 5);
+
             $scope.answers = Array($scope.test.numQuestions).fill(0);
             $scope.current = 1;
 
