@@ -1,4 +1,4 @@
-var app = angular.module('dtapp', ['ngCookies', 'ngSanitize'])
+let app = angular.module('dtapp', ['ngCookies', 'ngSanitize'])
 
 app.controller('dtctrl', function($scope, $cookies, $sce, $http) {
 
@@ -6,7 +6,11 @@ app.controller('dtctrl', function($scope, $cookies, $sce, $http) {
     let Initialisation = {
 
         index: function() {
+
+            $scope.acceptedCookies = ($cookies.get(COOKIE_ACCEPTED) !== undefined);
+
             JsonReader.loadBasicInfo();
+
         },
 
         test: function() {
@@ -21,9 +25,7 @@ app.controller('dtctrl', function($scope, $cookies, $sce, $http) {
 
         results: function() {
 
-            $(document).ready(function(){
-                $('[data-toggle="tooltip"]').tooltip();
-            });
+            $("[data-toggle=tooltip]").tooltip();
 
             $scope.testId = getParameterInt(PARAM_TEST_ID);
             $scope.percentages = JSON.parse($cookies.get(`${COOKIE_RESULT_PREFIX}${$scope.testId}`));
@@ -67,8 +69,9 @@ app.controller('dtctrl', function($scope, $cookies, $sce, $http) {
 
                 $scope.results = json.data.tests.filter(test => test.id === test_id)[0];
 
-                $scope.isTypeBars = ($scope.results.resultsType === RESULT_TYPES.BARS);
+                $scope.isTypeBars = ($scope.results.resultsType === RESULT_TYPES.BARS || $scope.results.resultsType === RESULT_TYPES.BARS_OVERALL);
                 $scope.isTypeCompass = ($scope.results.resultsType === RESULT_TYPES.COMPASS);
+                $scope.isTypeBarsOverall = ($scope.results.resultsType === RESULT_TYPES.BARS_OVERALL);
 
                 $scope.showExplainAxes = ($scope.testId !== 4);
 
@@ -87,7 +90,12 @@ app.controller('dtctrl', function($scope, $cookies, $sce, $http) {
 
                 });
 
+                // foreach special markers
+
                 $scope.additionalHeight = ($scope.markers.length > 0) ? 60 : 0;
+
+                if ($scope.isTypeBarsOverall)
+                    $scope.additionalHeight += 30;
 
             });
         }
@@ -101,8 +109,9 @@ app.controller('dtctrl', function($scope, $cookies, $sce, $http) {
 
             $scope.started = true;
 
-            $scope.isTypeStatement = ($scope.test.testType === TEST_TYPES.STATEMENT);
+            $scope.isTypeStatement = ($scope.test.testType === TEST_TYPES.STATEMENT || $scope.test.testType === TEST_TYPES.STATEMENT_SURVEY);
             $scope.isTypeImages = ($scope.test.testType === TEST_TYPES.IMAGES);
+            $scope.isTypeSurvey = ($scope.test.testType === TEST_TYPES.STATEMENT_SURVEY);
 
             $scope.answers = Array($scope.test.numQuestions).fill(0);
             $scope.current = 1;
@@ -151,11 +160,20 @@ app.controller('dtctrl', function($scope, $cookies, $sce, $http) {
             // Store results in cookie
             $cookies.put(`${COOKIE_RESULT_PREFIX}${$scope.testId}`, JSON.stringify($scope.percentages));
 
-            // Send results to database
-            Test.sendToDb();
+            if ($scope.isTypeSurvey) {
+                $scope.inSurvey = true;
+            } else {
 
-            // Go to results page
-            Test.goToResults();
+                // Ignore survey string
+                $scope.survey = '';
+
+                // Send results to database
+                Test.sendToDb();
+
+                // Go to results page
+                Test.goToResults();
+
+            }
 
         },
 
@@ -173,7 +191,8 @@ app.controller('dtctrl', function($scope, $cookies, $sce, $http) {
             let params = {
                 'id': $scope.testId,
                 'answers': $scope.answers.join(','),
-                'percentages': $scope.percentages.join(',')
+                'percentages': $scope.percentages.join(','),
+                'survey': $scope.survey
             };
 
             $http({
@@ -181,6 +200,19 @@ app.controller('dtctrl', function($scope, $cookies, $sce, $http) {
                 url: url,
                 params: params
             });
+
+        },
+
+        submitSurvey: function() {
+
+            // Set survey string
+            $scope.survey = `${$scope.surveyScale},${$scope.surveyAge},${$scope.surveyGender},${$scope.surveyEthnicity}`;
+
+            // Send results to database
+            Test.sendToDb();
+
+            // Go to results page
+            Test.goToResults();
 
         }
 
@@ -195,6 +227,10 @@ app.controller('dtctrl', function($scope, $cookies, $sce, $http) {
         return a;
     };
 
+    $scope.acceptCookies = function() {
+        $cookies.put(COOKIE_ACCEPTED, 'yes');
+    }
+
     /* index.html */
     $scope.initIndex = Initialisation.index;
 
@@ -204,6 +240,7 @@ app.controller('dtctrl', function($scope, $cookies, $sce, $http) {
     $scope.start = Test.start;
     $scope.next = Test.next;
     $scope.prev = Test.prev;
+    $scope.submitSurvey = Test.submitSurvey;
 
     /* results.html */
     $scope.initResults = Initialisation.results;

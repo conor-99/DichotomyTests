@@ -6,7 +6,7 @@
       "description": "Find out how you stand along many philosophical dichotomies from egoism and altruism to skepticism and absolutism.",
       "questions": 74,
       "color": "a51344",
-      "sort": 200
+      "sort": 100
     },
     {
       "id": 1,
@@ -30,7 +30,15 @@
       "description": "Do you like memes? <a href='https://reddit.com/r/fellowkids' target='_blank'>/r/FellowKids</a> here we come...",
       "questions": 35,
       "color": "ddbdd5",
-      "sort": 100
+      "sort": 200
+    },
+    {
+      "id": 5,
+      "name": "Politics",
+      "description": "Do you lean to the left or to the right politically? This test will attempt to discover your philosophical beliefs regarding politics along a number of axes.",
+      "questions": 60,
+      "color": "347e45",
+      "sort": 50
     }
   ]
 }

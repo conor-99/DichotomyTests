@@ -16,7 +16,6 @@
 		<link rel="icon" type="image/png" href="assets/images/favicon.png">
 		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Dosis:500,600,700">
 		<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Wruczek/Bootstrap-Cookie-Alert@gh-pages/cookiealert.css">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<link rel="stylesheet" type="text/css" href="css/buttons.css">
 
@@ -28,7 +27,6 @@
 		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-		<script src="https://cdn.jsdelivr.net/gh/Wruczek/Bootstrap-Cookie-Alert@gh-pages/cookiealert.js"></script>
 		
 		<!-- Ads -->
 		<meta name="propeller" content="a4a399ec4c76419ead037822a7fc95d7">
@@ -37,7 +35,7 @@
 	</head>
 	
 	<body>
-		
+
 		<!-- Hidden image to act as a thumbnail when site is linked to externally -->
 		<img style="display: none;" src="https://i.ibb.co/TmTS99G/asceticism.png"/>
 
@@ -52,6 +50,13 @@
 		<style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
 		
 		<div class="container main">
+
+			<!-- Begin cookie alert -->
+			<div ng-show="!acceptedCookies" class="alert alert-secondary alert-dismissible fade show">
+				<button ng-click="acceptCookies()" type="button" class="close" data-dismiss="alert">&times;</button>
+				By continuing to use this site you are agreeing to our use of cookies.
+			</div>
+			<!-- End cookie alert -->
 
 			<div class="row">
 
@@ -105,13 +110,6 @@
 			</div>
 
 		</div>
-
-		<!-- Begin cookie alert -->
-		<div class="alert text-center cookiealert" role="alert">
-			We use cookies to store your tests results. <a href="https://cookiesandyou.com/" target="_blank">Learn more</a>
-			<button type="button" class="btn btn-primary btn-sm acceptcookies" aria-label="Close">I agree</button>
-		</div>
-		<!-- End cookie alert -->
 
 		<!-- Local JavaScript files -->
 		<script src="js/constants.js"></script>

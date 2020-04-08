@@ -16,7 +16,6 @@
         <link rel="icon" type="image/png" href="assets/images/favicon.png">
         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Dosis:500,600,700">
         <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Wruczek/Bootstrap-Cookie-Alert@gh-pages/cookiealert.css">
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="stylesheet" type="text/css" href="css/buttons.css">
 
@@ -28,7 +27,6 @@
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/gh/Wruczek/Bootstrap-Cookie-Alert@gh-pages/cookiealert.js"></script>
 
     </head>
 
@@ -48,14 +46,16 @@
 
                             <hr>
 
+                            <p ng-show="testId !== 5" class="text-left sizing"><i>Check out our new <a href="test.html?id=5" target="_blank">political test</a>!</i></p>
+
                             <p ng-bind-html="results.preamble" class="text-left sizing"></p>
 
                             <!-- Results: Bars -->
                             <div ng-show="isTypeBars" ng-style="{ height: (86 * results.scales.length) + additionalHeight + 'px' }">
 
-                                <div ng-repeat="i in range(results.scales.length)" class="axis">
+                                <div ng-repeat="i in range(results.scales.length)" class="axis" ng-style="{ marginBottom: (isTypeBarsOverall && i === 0) ? '40px' : '20px' }">
 
-                                    <div class="label">
+                                    <div class="label" ng-style="{ fontWeight: (isTypeBarsOverall && i === 0) ? 600 : 500 }">
                                         <span>{{ results.scales[i].a.text }} </span>
                                         <span class="label-vs">vs</span>
                                         <span> {{ results.scales[i].b.text }}</span>
@@ -81,11 +81,15 @@
                                     <img alt="fill-m" class="fill fill-m" src="assets/images/fill.png" ng-style="{ width: 'calc((70% - 26px) * ' + percentages[i] + ') + 0.8px'  }">
                                     <img alt="fill-r" class="fill fill-r" src="assets/images/fill.png" ng-style="{ backgroundColor: results.scales[i].b.color }">
 
+                                    <div ng-show="isTypeBarsOverall && i === 0" style="width: 70%; margin-left: 15%; padding-top: 49px">
+                                        <hr style="border-color: rgba(0, 0, 0, .2)">
+                                    </div>
+
                                 </div>
 
                                 <div ng-show="markers.length > 0" class="d-flex justify-content-center">
                                     <a ng-repeat="marker in markers" href="{{ marker.url }}" target="_blank">
-                                        <img class="marker-img" src="{{ marker.path }}" alt="{{ marker.name }}" title="{{ marker.name }}" data-placement="top" data-toggle="tooltip">
+                                        <img class="marker-img" src="{{ marker.path }}" alt="{{ marker.name }}" title="{{ marker.name }}" data-placement="top" data-toggle="tooltip" onmouseenter="$(this).tooltip('show')">
                                     </a>
                                 </div>
 

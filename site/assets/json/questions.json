@@ -1066,6 +1066,257 @@
           "effects": [0, 0, 0, 0, 10]
         }
       ]
+    },
+    {
+      "id": 5,
+      "name": "Politics",
+      "description": "Do you lean to the left or to the right politically? This test will attempt to discover your philosophical beliefs regarding politics along a number of axes.",
+      "color": "347e45",
+      "preamble": "Unlike most online political quizzes this test will attempt to determine your basic political beliefs through philosophically-oriented questions - as opposed to questions directly related to policy.<br><br>You will be asked a number of questions. These will be in the form of either a statement or a scenario. For each of these questions you should state whether you agree or disagree (broadly speaking). Please try to answer as honestly as possible.",
+      "testType": 2,
+      "instruction": "How much do you agree/disagree with the following statement?",
+      "questions": [
+        {
+          "text": "Hierarchies will inevitably be formed in every society.",
+          "effects": [-10, 0, 0, 0, -10, 0]
+        },
+        {
+          "text": "We are living in a post-modern age with no discernible 'true' reality.",
+          "effects": [10, 0, 0, 10, 0, 0]
+        },
+        {
+          "text": "A truly democratic system is unrealistic.",
+          "effects": [-10, 0, 0, 0, -10, 0]
+        },
+        {
+          "text": "The penal system is designed to protect the interests of the ruling class.",
+          "effects": [10, 0, 0, 10, 0, 0]
+        },
+        {
+          "text": "We must retain the core constitutional principles of our institutions.",
+          "effects": [-10, 0, 0, -10, 0, 0]
+        },
+        {
+          "text": "The traditions of law and justice in my community must be greatly respected.",
+          "effects": [-10, 0, 0, -10, 0, 0]
+        },
+        {
+          "text": "We should not question sovereign authority so long as it provides peace.",
+          "effects": [-10, 0, 0, 0, 0, -10]
+        },
+        {
+          "text": "A society that promotes equal outcomes for all is desirable.",
+          "effects": [10, 0, 0, 0, 10, 0]
+        },
+        {
+          "text": "The traditional family is the embodiment of an authoritarian personality and, ultimately, fascism.",
+          "effects": [10, 0, 0, 0, 0, 10]
+        },
+        {
+          "text": "There is no grand tradition of anything only various competing claims.",
+          "effects": [10, 0, 0, 10, 0, 0]
+        },
+        {
+          "text": "We have no transcendent purpose beyond our own material pleasure.",
+          "effects": [10, 10, 0, 0, 0, 0]
+        },
+        {
+          "text": "Collective obligations that are placed on an individual by society are inherently immoral.",
+          "effects": [10, 0, 0, 0, 0, 10]
+        },
+        {
+          "text": "Corruption and decay is an 'iron law' of human societies.",
+          "effects": [-10, 0, -10, 0, 0, 0]
+        },
+        {
+          "text": "Humanity only experiences linear growth - not decay.",
+          "effects": [10, 0, 10, 0, 0, 0]
+        },
+        {
+          "text": "Societies develop through a cooperative social contract.",
+          "effects": [-10, 0, 0, -10, 0, 0]
+        },
+        {
+          "text": "The concepts of 'good' and 'evil' are subjective.",
+          "effects": [10, 10, 0, 0, 0, 0]
+        },
+        {
+          "text": "The industrial revolution and its consequences have been largely negative.",
+          "effects": [-10, 0, -10, 0, 0, 0]
+        },
+        {
+          "text": "People should be treated equally regardless of their social group.",
+          "effects": [10, 0, 0, 0, 10, 0]
+        },
+        {
+          "text": "Technological development has brought about a better world.",
+          "effects": [10, 0, 10, 0, 0, 0]
+        },
+        {
+          "text": "To ground any coherent worldview one needs higher spiritual values.",
+          "effects": [-10, -10, 0, 0, 0, 0]
+        },
+        {
+          "text": "Religion is merely a distraction from the material world.",
+          "effects": [10, 10, 0, 0, 0, 0]
+        },
+        {
+          "text": "Language developed as a tool to dominate and exclude 'the other'.",
+          "effects": [10, 0, 0, 10, 0, 0]
+        },
+        {
+          "text": "Human society should be viewed through a pessimistic lens.",
+          "effects": [-10, 0, 0, 0, 0, -10]
+        },
+        {
+          "text": "Societies of vulnerability will always defeat societies of exclusion.",
+          "effects": [10, 0, 0, 0, 0, 10]
+        },
+        {
+          "text": "A liberal democracy is the final stage in societal development.",
+          "effects": [10, 0, 10, 0, 0, 0]
+        },
+        {
+          "text": "There is more to this world than the purely physical.",
+          "effects": [-10, -10, 0, 0, 0, 0]
+        },
+        {
+          "text": "All people possess a soul.",
+          "effects": [-10, -10, 0, 0, 0, 0]
+        },
+        {
+          "text": "History can be understood as a great march of progress.",
+          "effects": [10, 0, 10, 0, 0, 0]
+        },
+        {
+          "text": "Human nature is nasty, brutish and short, it must be repressed by society.",
+          "effects": [-10, 0, 0, 0, 0, -10]
+        },
+        {
+          "text": "We are defined morally, at least in part, by our actions.",
+          "effects": [-10, -10, 0, 0, 0, 0]
+        },
+        {
+          "text": "If a society is not grounded by ancestral traditions it will fall into chaos.",
+          "effects": [-10, 0, 0, -10, 0, 0]
+        },
+        {
+          "text": "We should strive to eliminate social biases toward minority groups.",
+          "effects": [10, 0, 0, 0, 10, 0]
+        },
+        {
+          "text": "Humanity can be relied on to self-regulate and self-reform.",
+          "effects": [10, 0, 10, 0, 0, 0]
+        },
+        {
+          "text": "We are currently in the dark age of human flourishing.",
+          "effects": [-10, 0, -10, 0, 0, 0]
+        },
+        {
+          "text": "A collective founded on absolute values will always outlive those founded on relative values.",
+          "effects": [-10, 0, 0, -10, 0, 0]
+        },
+        {
+          "text": "Without a constraining force society will always tend towards immorality.",
+          "effects": [-10, 0, -10, 0, 0, 0]
+        },
+        {
+          "text": "It is better to die standing than to live on one's knees.",
+          "effects": [10, 10, 0, 0, 0, 0]
+        },
+        {
+          "text": "All institutions are biased towards their own cultural background.",
+          "effects": [10, 0, 0, 10, 0, 0]
+        },
+        {
+          "text": "No institution can be truly egalitarian.",
+          "effects": [-10, 0, 0, 0, -10, 0]
+        },
+        {
+          "text": "Without God and higher ideals institutions will collapse.",
+          "effects": [-10, 0, 0, -10, 0, 0]
+        },
+        {
+          "text": "Some people will always be more successful than others.",
+          "effects": [-10, 0, 0, 0, -10, 0]
+        },
+        {
+          "text": "Our modern world is progressing towards a utopia.",
+          "effects": [10, 0, 10, 0, 0, 0]
+        },
+        {
+          "text": "Man's natural state is egalitarian and pacifistic.",
+          "effects": [10, 0, 0, 0, 0, 10]
+        },
+        {
+          "text": "We can best pursue meaning by living disciplined and virtuous lives.",
+          "effects": [-10, -10, 0, 0, 0, 0]
+        },
+        {
+          "text": "Different combinations of social identities produce unique forms of disadvantage and oppression.",
+          "effects": [10, 0, 0, 0, 10, 0]
+        },
+        {
+          "text": "Science and rationality are best when it comes to describing our world.",
+          "effects": [10, 10, 0, 0, 0, 0]
+        },
+        {
+          "text": "There is more to life than the pursuit of pleasure.",
+          "effects": [-10, -10, 0, 0, 0, 0]
+        },
+        {
+          "text": "Liberation of the individual from all arbitrary boundaries (race, gender, etc.) is ideal.",
+          "effects": [10, 0, 0, 0, 0, 10]
+        },
+        {
+          "text": "Social relations should be understood, primarily, as expressions of power.",
+          "effects": [10, 0, 0, 10, 0, 0]
+        },
+        {
+          "text": "Societies tend toward immorality and, as such, they require a strong leader to maintain order.",
+          "effects": [-10, 0, 0, 0, 0, -10]
+        },
+        {
+          "text": "Society will always consist of rulers and subjects.",
+          "effects": [-10, 0, 0, 0, -10, 0]
+        },
+        {
+          "text": "The ideas of progress and rationality are symptoms of societal decline.",
+          "effects": [-10, 0, -10, 0, 0, 0]
+        },
+        {
+          "text": "Every civilization goes through a birth, a rise and a fall.",
+          "effects": [-10, 0, -10, 0, 0, 0]
+        },
+        {
+          "text": "The most successful people are those who are the most deserving of their success.",
+          "effects": [-10, 0, 0, 0, -10, 0]
+        },
+        {
+          "text": "Individuals have a duty towards upholding the collective good.",
+          "effects": [-10, 0, 0, 0, 0, -10]
+        },
+        {
+          "text": "Societal hierarchies often come about through the oppression of disadvantaged groups.",
+          "effects": [10, 0, 0, 0, 10, 0]
+        },
+        {
+          "text": "Direct or pure democracy is the ideal form of government.",
+          "effects": [10, 0, 0, 0, 10, 0]
+        },
+        {
+          "text": "An action is generally good if its consequences are good.",
+          "effects": [10, 10, 0, 0, 0, 0]
+        },
+        {
+          "text": "Peaceful societies are rare and fragile.",
+          "effects": [-10, 0, 0, 0, 0, -10]
+        },
+        {
+          "text": "Through sexual exploration and liberation we can escape the societies of control.",
+          "effects": [10, 0, 0, 0, 0, 10]
+        }
+      ]
     }
   ]
 }

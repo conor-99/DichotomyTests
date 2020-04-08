@@ -14,6 +14,7 @@ create table result (
     ip_address varchar(255) not null,
     answers text not null,
     percentages text not null,
+    survey text null,
     `timestamp` datetime not null,
     constraint fk_result_test foreign key (test_id) references test(id)
 );
@@ -24,5 +25,6 @@ values
 	(0, 'Philosophy'),
     (1, 'Economics'),
     (3, 'Literature'),
-    (4, 'Memes')
+    (4, 'Memes'),
+    (5, 'Politics')
 ;

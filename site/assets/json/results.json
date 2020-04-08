@@ -1059,6 +1059,356 @@
           ]
         }
       ]
+    },
+    {
+      "id": 5,
+      "name": "Politics",
+      "preamble": "Your results are displayed below:",
+      "resultsType": 2,
+      "scales": [
+        {
+          "a": {
+            "text": "Overall Left",
+            "path": "https://i.ibb.co/Nx4C76Z/leftoverall.png",
+            "color": "#e8a4ad",
+            "desc": "You tend towards left-wing beliefs."
+          },
+          "b": {
+            "text": "Overall Right",
+            "path": "https://i.ibb.co/tq3mTJy/rightoverall.png",
+            "color": "#9cb1d8",
+            "desc": "You tend towards right-wing beliefs."
+          },
+          "param": "a",
+          "axisName": "Overall Axis",
+          "axisDesc": "Your overall tendency towards left-wing or right-wing beliefs."
+        },
+        {
+          "a": {
+            "text": "Naturalist",
+            "path": "https://i.ibb.co/F4FkgFQ/naturalist.png",
+            "color": "#9ca2c1",
+            "desc": "The universe is physical - we can discount spirituality."
+          },
+          "b": {
+            "text": "Transcendental",
+            "path": "https://i.ibb.co/4gk0k40/transcendental.png",
+            "color": "#bcdbba",
+            "desc": "There is a universal divinity that transcends the physical world."
+          },
+          "param": "b",
+          "axisName": "Metaphysical Axis",
+          "axisDesc": "How you view reality and the universe."
+        },
+        {
+          "a": {
+            "text": "Progressive",
+            "path": "https://i.ibb.co/pQgQpjN/progressive.png",
+            "color": "#a89299",
+            "desc": "Society naturally progresses in a positive manner."
+          },
+          "b": {
+            "text": "Entropic",
+            "path": "https://i.ibb.co/MGw2bxW/entropic.png",
+            "color": "#e0afa0",
+            "desc": "Society tends to degenerate and corrupt."
+          },
+          "param": "c",
+          "axisName": "Teleological Axis",
+          "axisDesc": "How you view the progression of societies."
+        },
+        {
+          "a": {
+            "text": "Deconstructive",
+            "path": "https://i.ibb.co/5RJf009/deconstructive.png",
+            "color": "#87bba2",
+            "desc": "Socially constructed institutions and traditions cannot be trusted."
+          },
+          "b": {
+            "text": "Traditional",
+            "path": "https://i.ibb.co/56QhdJq/traditional.png",
+            "color": "#9da0a9",
+            "desc": "Socially constructed institutions and traditions ought to be upheld."
+          },
+          "param": "d",
+          "axisName": "Sociological Axis",
+          "axisDesc": "Howe you view social institutions and traditions."
+        },
+        {
+          "a": {
+            "text": "Equality",
+            "path": "https://i.ibb.co/brXgj9M/equality.png",
+            "color": "#dd9e9b",
+            "desc": "Society should be structured in an egalitarian manner."
+          },
+          "b": {
+            "text": "Hierarchy",
+            "path": "https://i.ibb.co/tKKk48Y/hierarchy.png",
+            "color": "#f9d690",
+            "desc": "Society should be structured in a hierarchical manner."
+          },
+          "param": "e",
+          "axisName": "Structural Axis",
+          "axisDesc": "How you view the anthropological structure of society."
+        },
+        {
+          "a": {
+            "text": "Liberation",
+            "path": "https://i.ibb.co/Th87B8b/liberation.png",
+            "color": "#d3b1d8",
+            "desc": "Individuals should be free from societal control."
+          },
+          "b": {
+            "text": "Control",
+            "path": "https://i.ibb.co/3zDjx6K/control.png",
+            "color": "#d9d1d4",
+            "desc": "Society must exert control over the individual in order to survive."
+          },
+          "param": "f",
+          "axisName": "Psychological Axis",
+          "axisDesc": "How you view man's nature and role in society."
+        }
+      ],
+      "markers": [
+        {
+          "name": "Pure Right",
+          "path": "https://i.ibb.co/KWtK597/pureright.png",
+          "url": "https://en.wikipedia.org/wiki/Right-wing_politics",
+          "scales": [
+            {
+              "scale": 0,
+              "bar": 1,
+              "min": 0.875
+            },
+            {
+              "scale": 0,
+              "bar": 1,
+              "min": 0.875
+            }
+          ]
+        },
+        {
+          "name": "Pure Left",
+          "path": "https://i.ibb.co/mqwVW3x/pureleft.png",
+          "url": "https://en.wikipedia.org/wiki/Left-wing_politics",
+          "scales": [
+            {
+              "scale": 0,
+              "bar": 0,
+              "min": 0.875
+            },
+            {
+              "scale": 0,
+              "bar": 0,
+              "min": 0.875
+            }
+          ]
+        },
+        {
+          "name": "Centrist",
+          "path": "https://i.ibb.co/P1cHPSh/centrist.png",
+          "url": "https://en.wikipedia.org/wiki/Centrism",
+          "scales": [
+            {
+              "scale": 0,
+              "bar": 0,
+              "min": 0.45
+            },
+            {
+              "scale": 0,
+              "bar": 1,
+              "min": 0.45
+            }
+          ]
+        },
+        {
+          "name": "Anarchist",
+          "path": "https://i.ibb.co/55Qx2Wh/anarchist.png",
+          "url": "https://en.wikipedia.org/wiki/Anarchy",
+          "scales": [
+            {
+              "scale": 4,
+              "bar": 0,
+              "min": 0.65
+            },
+            {
+              "scale": 5,
+              "bar": 0,
+              "min": 0.65
+            }
+          ]
+        },
+        {
+          "name": "Conservative Revolutionary",
+          "path": "https://i.ibb.co/cTC2Ncz/conservative-revolutionary.png",
+          "url": "https://en.wikipedia.org/wiki/Conservative_Revolution",
+          "scales": [
+            {
+              "scale": 1,
+              "bar": 1,
+              "min": 0.65
+            },
+            {
+              "scale": 4,
+              "bar": 1,
+              "min": 0.65
+            }
+          ]
+        },
+        {
+          "name": "Critical Theorist",
+          "path": "https://i.ibb.co/ZYrbW0D/criticaltheorist.png",
+          "url": "https://en.wikipedia.org/wiki/Critical_theory",
+          "scales": [
+            {
+              "scale": 5,
+              "bar": 0,
+              "min": 0.65
+            },
+            {
+              "scale": 3,
+              "bar": 0,
+              "min": 0.65
+            }
+          ]
+        },
+        {
+          "name": "Intersectionalist",
+          "path": "https://i.ibb.co/dgmLV6m/intersectionalist.png",
+          "url": "https://en.wikipedia.org/wiki/Intersectionality",
+          "scales": [
+            {
+              "scale": 3,
+              "bar": 0,
+              "min": 0.65
+            },
+            {
+              "scale": 4,
+              "bar": 0,
+              "min": 0.65
+            }
+          ]
+        },
+        {
+          "name": "Liberal",
+          "path": "https://i.ibb.co/x7v6dtG/liberal.png",
+          "url": "https://en.wikipedia.org/wiki/Liberalism",
+          "scales": [
+            {
+              "scale": 2,
+              "bar": 0,
+              "min": 0.65
+            },
+            {
+              "scale": 4,
+              "bar": 0,
+              "min": 0.65
+            }
+          ]
+        },
+        {
+          "name": "Libertarian",
+          "path": "https://i.ibb.co/KmvPPBK/libertarian.png",
+          "url": "https://en.wikipedia.org/wiki/Libertarianism",
+          "scales": [
+            {
+              "scale": 5,
+              "bar": 0,
+              "min": 0.65
+            },
+            {
+              "scale": 4,
+              "bar": 1,
+              "min": 0.65
+            }
+          ]
+        },
+        {
+          "name": "Monarchist",
+          "path": "https://i.ibb.co/h9wncyV/monarchist.png",
+          "url": "https://en.wikipedia.org/wiki/Monarchy",
+          "scales": [
+            {
+              "scale": 3,
+              "bar": 1,
+              "min": 0.65
+            },
+            {
+              "scale": 5,
+              "bar": 1,
+              "min": 0.65
+            }
+          ]
+        },
+        {
+          "name": "Oligarchy",
+          "path": "https://i.ibb.co/51GT7Kx/oligarch.png",
+          "url": "https://en.wikipedia.org/wiki/Oligarchy",
+          "scales": [
+            {
+              "scale": 4,
+              "bar": 1,
+              "min": 0.65
+            },
+            {
+              "scale": 5,
+              "bar": 1,
+              "min": 0.65
+            }
+          ]
+        },
+        {
+          "name": "Perrenial School",
+          "path": "https://i.ibb.co/ssC1ws8/perrenialschool.png",
+          "url": "https://en.wikipedia.org/wiki/Perennial_philosophy#Traditionalist_School",
+          "scales": [
+            {
+              "scale": 1,
+              "bar": 1,
+              "min": 0.65
+            },
+            {
+              "scale": 4,
+              "bar": 1,
+              "min": 0.65
+            }
+          ]
+        },
+        {
+          "name": "Reactionary",
+          "path": "https://i.ibb.co/Z2j8jj8/reactionary.png",
+          "url": "https://en.wikipedia.org/wiki/Reactionary",
+          "scales": [
+            {
+              "scale": 2,
+              "bar": 1,
+              "min": 0.65
+            },
+            {
+              "scale": 3,
+              "bar": 1,
+              "min": 0.65
+            }
+          ]
+        },
+        {
+          "name": "Socialist",
+          "path": "https://i.ibb.co/V9z0ByR/socialist.png",
+          "url": "https://en.wikipedia.org/wiki/Socialism",
+          "scales": [
+            {
+              "scale": 1,
+              "bar": 0,
+              "min": 0.65
+            },
+            {
+              "scale": 2,
+              "bar": 0,
+              "min": 0.65
+            }
+          ]
+        }
+      ]
     }
   ]
 }

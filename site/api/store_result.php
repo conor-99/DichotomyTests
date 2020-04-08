@@ -3,7 +3,7 @@
 header('Content-type: text/plain; charset=utf-8');
 require_once('constants.php');
 
-if (!isset($_GET['id']) || !isset($_GET['answers']) || !isset($_GET['percentages'])) {
+if (!isset($_GET['id']) || !isset($_GET['answers']) || !isset($_GET['percentages']) || !isset($_GET['survey'])) {
     http_response_code(400);
     die();
 }
@@ -11,7 +11,7 @@ if (!isset($_GET['id']) || !isset($_GET['answers']) || !isset($_GET['percentages
 $conn = new mysqli(DT_SQL_SERVER, DT_SQL_USER, DT_SQL_PASS, DT_SQL_DATABASE);
 
 $stmt = $conn->prepare(SQL_INSERT_RESULT);
-$stmt->bind_param('isss', $_GET['id'], $_SERVER['REMOTE_ADDR'], $_GET['answers'], $_GET['percentages']);
+$stmt->bind_param('issss', $_GET['id'], $_SERVER['REMOTE_ADDR'], $_GET['answers'], $_GET['percentages'], $_GET['survey']);
 $valid = $stmt->execute();
 $stmt->close();
 

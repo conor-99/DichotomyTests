@@ -16,7 +16,6 @@
         <link rel="icon" type="image/png" href="assets/images/favicon.png">
         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Dosis:500,600,700">
         <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Wruczek/Bootstrap-Cookie-Alert@gh-pages/cookiealert.css">
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="stylesheet" type="text/css" href="css/buttons.css">
 
@@ -28,7 +27,6 @@
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/gh/Wruczek/Bootstrap-Cookie-Alert@gh-pages/cookiealert.js"></script>
 
     </head>
 
@@ -59,7 +57,7 @@
                             </div>
 
                             <!-- Questions -->
-                            <div ng-show="started">
+                            <div ng-show="started && !inSurvey">
 
                                 <div class="card">
 
@@ -115,6 +113,74 @@
 
                                     </div>
 
+                                </div>
+
+                            </div>
+
+                            <!-- Survey -->
+                            <div ng-show="inSurvey">
+
+                                <p>We'd really appreciate it if you answered these quick questions but <span style="font-weight: 600">you can skip them</span> if you want.</p>
+
+                                <div class="row">
+                                    <div class="col-md-8 offset-md-2 col-10 offset-1">
+
+                                        <form novalidate>
+
+                                            <div class="form-group">
+                                                <label><i>Which of the following political labels best describes you?</i></label>
+                                                <select ng-model="surveyScale" ng-init="surveyScale = '0'" class="form-control">
+                                                    <option value="0" selected>Prefer not to say</option>
+                                                    <option value="1">Far left</option>
+                                                    <option value="2">Left</option>
+                                                    <option value="3">Moderately left</option>
+                                                    <option value="4">Neither</option>
+                                                    <option value="5">Moderately right</option>
+                                                    <option value="6">Right</option>
+                                                    <option value="7">Far right</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label><i>What is your age?</i></label>
+                                                <select ng-model="surveyAge" ng-init="surveyAge = '0'" class="form-control">
+                                                    <option value="0" selected>Prefer not to say</option>
+                                                    <option value="1">under 18</option>
+                                                    <option value="2">18-24</option>
+                                                    <option value="3">25-34</option>
+                                                    <option value="4">35-44</option>
+                                                    <option value="5">45-54</option>
+                                                    <option value="6">over 55</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label><i>What is your gender?</i></label>
+                                                <select ng-model="surveyGender" ng-init="surveyGender = '0'" class="form-control">
+                                                    <option value="0" selected>Prefer not to say</option>
+                                                    <option value="1">Male</option>
+                                                    <option value="2">Female</option>
+                                                    <option value="3">Other</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label><i>What is your ethnicity?</i></label>
+                                                <select ng-model="surveyEthnicity" ng-init="surveyEthnicity = '0'" class="form-control">
+                                                    <option value="0" selected>Prefer not to say</option>
+                                                    <option value="1">White</option>
+                                                    <option value="2">African</option>
+                                                    <option value="3">Asian</option>
+                                                    <option value="4">Mixed</option>
+                                                    <option value="5">Other</option>
+                                                </select>
+                                            </div>
+
+                                            <button ng-click="submitSurvey()" type="button" class="btn btn-outline-danger btn-block">Just show me my results</button>
+
+                                        </form>
+
+                                    </div>
                                 </div>
 
                             </div>
