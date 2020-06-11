@@ -45,7 +45,20 @@ html {
     text-decoration: none;
 }
 
+.link-no-underline:hover {
+    text-decoration: none;
+}
+
 .hidden { display: none; }
+
+.badge-category {
+    margin-bottom: 5px;
+}
+
+.badge-purple {
+    color: #ffffff;
+    background-color: #5158bb;
+}
 
 /* Test-type Styling */
 
@@ -58,12 +71,12 @@ html {
     padding: 0;
 }
 
-.progress {
+.progress-test {
     border-radius: 0px;
     height: 3px;
 }
 
-.progress-bar {
+.progress-bar-test {
     height: 3px;
 }
 
@@ -180,4 +193,25 @@ html {
     margin-top: -5px;
     margin-left: 10px;
     font-size: 18px;
+}
+
+/* Results Styling - Psych */
+.progress-psych {
+    margin-top: -10px;
+    margin-bottom: 7px;
+    height: 18px;
+}
+
+.progress-bar-psych {
+    height: 18px;
+}
+
+.results-container-psych {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 40px;
+}
+
+.results-container-psych > h6 {
+    margin-top: 15px;
 }

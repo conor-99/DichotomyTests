@@ -63,14 +63,14 @@
 
                                     <div class="card-header">Question {{ current }} of {{ test.numQuestions }}</div>
 
-                                    <div class="progress">
-                                        <div class="progress-bar" ng-style="{ width: (percentage + '%') }"></div>
+                                    <div class="progress progress-test">
+                                        <div class="progress-bar progress-bar-test" ng-style="{ width: (percentage + '%') }"></div>
                                     </div>
 
                                     <div class="card-body">
 
                                         <p class="small font-italic">{{ test.instruction }}</p>
-                                        <p>{{ test.questions[current - 1].text }}</p>
+                                        <p ng-show="!isTypeScenario">{{ test.questions[current - 1].text }}</p>
 
                                         <hr>
 
@@ -104,6 +104,38 @@
                                             <button type="button" ng-click="next(0.0)" class="btn btn-outline-secondary btn-sm btn-block sizing btn-neutral-light">Neutral/I don't know</button>
                                             <button type="button" ng-click="next(-0.5)" class="btn btn-outline-secondary btn-sm btn-block sizing btn-right">Right</button>
                                             <button type="button" ng-click="next(-1.0)" class="btn btn-outline-secondary btn-sm btn-block sizing btn-str-right">Definitely Right</button>
+
+                                        </div>
+
+                                        <!-- Type: Scenario -->
+                                        <div ng-show="isTypeScenario">
+
+                                            <button type="button" ng-click="next(1.0)" class="btn btn-outline-secondary btn-sm btn-block sizing btn-scen-a">{{ test.questions[current - 1].textA }}</button>
+                                            <button type="button" ng-click="next(-1.0)" class="btn btn-outline-secondary btn-sm btn-block sizing btn-scen-b">{{ test.questions[current - 1].textB }}</button>
+
+                                        </div>
+
+                                        <!-- Type: Custom (Fear) -->
+                                        <div ng-show="isTypeCustomFear">
+
+                                            <button type="button" ng-click="next(1.0)" class="btn btn-outline-secondary btn-sm btn-block sizing btn-fear-7">Terror</button>
+                                            <button type="button" ng-click="next(0.666)" class="btn btn-outline-secondary btn-sm btn-block sizing btn-fear-6">Great fear</button>
+                                            <button type="button" ng-click="next(0.333)" class="btn btn-outline-secondary btn-sm btn-block sizing btn-fear-5">Much fear</button>
+                                            <button type="button" ng-click="next(0.0)" class="btn btn-outline-secondary btn-sm btn-block sizing btn-fear-4">Some fear</button>
+                                            <button type="button" ng-click="next(-0.333)" class="btn btn-outline-secondary btn-sm btn-block sizing btn-fear-3">A little fear</button>
+                                            <button type="button" ng-click="next(-0.666)" class="btn btn-outline-secondary btn-sm btn-block sizing btn-fear-2">Very little fear</button>
+                                            <button type="button" ng-click="next(-1.0)" class="btn btn-outline-secondary btn-sm btn-block sizing btn-fear-1">No fear</button>
+
+                                        </div>
+
+                                        <!-- Type: Custom (OCD) -->
+                                        <div ng-show="isTypeCustomOcd">
+
+                                            <button type="button" ng-click="next(1.0)" class="btn btn-outline-secondary btn-sm btn-block sizing btn-str-agree">Very much</button>
+                                            <button type="button" ng-click="next(0.5)" class="btn btn-outline-secondary btn-sm btn-block sizing btn-agree">A lot</button>
+                                            <button type="button" ng-click="next(0.0)" class="btn btn-outline-secondary btn-sm btn-block sizing btn-neutral-color">Quite a lot</button>
+                                            <button type="button" ng-click="next(-0.5)" class="btn btn-outline-secondary btn-sm btn-block sizing btn-disagree">A little</button>
+                                            <button type="button" ng-click="next(-1.0)" class="btn btn-outline-secondary btn-sm btn-block sizing btn-str-disagree">Not at all</button>
 
                                         </div>
 

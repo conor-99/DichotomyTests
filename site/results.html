@@ -46,7 +46,7 @@
 
                             <hr>
 
-                            <p ng-show="testId !== 5" class="text-left sizing"><i>Check out our new <a href="test.html?id=5" target="_blank">political test</a>!</i></p>
+                            <p ng-show="testId !== 6" class="text-left sizing"><i>Check out our new <a href="test.html?id=6" target="_blank">psychology test</a>!</i></p>
 
                             <p ng-bind-html="results.preamble" class="text-left sizing"></p>
 
@@ -95,6 +95,28 @@
 
                             </div>
 
+                            <!-- Results: Psychology (overall) -->
+                            <div ng-show="isTypePsychOverall" class="results-container-psych">
+
+                                <h6 style="margin-bottom: 15px">Overall</h6>
+
+                                <div class="progress progress-psych">
+                                    <div class="progress-bar progress-bar-striped progress-bar-psych" ng-style="{ width: (mean(percentages) * 100) + '%' }">{{ Math.round(mean(percentages) * 100) + '%' }}</div>
+                                </div>
+
+                                <h6>Breakdown</h6>
+
+                                <div ng-repeat="i in range(results.scales.length)">
+
+                                    <p class="small">{{ results.scales[i].name }}</p>
+                                    <div class="progress progress-psych">
+                                        <div class="progress-bar progress-bar-striped progress-bar-psych {{ results.scales[i].class }}" ng-style="{ width: (percentages[i] * 100) + '%' }">{{ Math.round(percentages[i] * 100) + '%' }}</div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
                             <!-- Explanation: Axes -->
                             <div ng-show="showExplainAxes">
 
@@ -120,6 +142,24 @@
                                             <span>{{ results.scales[i].b.desc }}</span>
 
                                         </span>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <!-- Explanation: Psychology -->
+                            <div ng-show="showExplainPsych">
+
+                                <button type="button" data-toggle="collapse" data-target="#explain-psych" class="btn btn-outline-dark btn-block">What do my results mean?</button>
+
+                                <div id="explain-psych" class="collapse">
+
+                                    <div ng-repeat="i in range(results.scales.length)" class="explain-axis">
+
+                                        <span style="font-weight: bold;">{{ results.scales[i].name }}: </span>
+                                        <span>{{ results.scales[i].desc }}</span>
 
                                     </div>
 

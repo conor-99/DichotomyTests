@@ -72,8 +72,11 @@ app.controller('dtctrl', function($scope, $cookies, $sce, $http) {
                 $scope.isTypeBars = ($scope.results.resultsType === RESULT_TYPES.BARS || $scope.results.resultsType === RESULT_TYPES.BARS_OVERALL);
                 $scope.isTypeCompass = ($scope.results.resultsType === RESULT_TYPES.COMPASS);
                 $scope.isTypeBarsOverall = ($scope.results.resultsType === RESULT_TYPES.BARS_OVERALL);
+                $scope.isTypePsych = ($scope.results.resultsType === RESULT_TYPES.BARS_PSYCH);
+                $scope.isTypePsychOverall = ($scope.results.resultsType === RESULT_TYPES.BARS_PSYCH_OVERALL);
 
-                $scope.showExplainAxes = ($scope.testId !== 4);
+                $scope.showExplainAxes = ($scope.testId !== 4 && !($scope.isTypePsych || $scope.isTypePsychOverall));
+                $scope.showExplainPsych = ($scope.testId === 6 || $scope.testId === 7);
 
                 $scope.markers = [];
 
@@ -89,8 +92,6 @@ app.controller('dtctrl', function($scope, $cookies, $sce, $http) {
                         $scope.markers.push(marker);
 
                 });
-
-                // foreach special markers
 
                 $scope.additionalHeight = ($scope.markers.length > 0) ? 60 : 0;
 
@@ -111,7 +112,10 @@ app.controller('dtctrl', function($scope, $cookies, $sce, $http) {
 
             $scope.isTypeStatement = ($scope.test.testType === TEST_TYPES.STATEMENT || $scope.test.testType === TEST_TYPES.STATEMENT_SURVEY);
             $scope.isTypeImages = ($scope.test.testType === TEST_TYPES.IMAGES);
+            $scope.isTypeScenario = ($scope.test.testType === TEST_TYPES.SCENARIO);
             $scope.isTypeSurvey = ($scope.test.testType === TEST_TYPES.STATEMENT_SURVEY);
+            $scope.isTypeCustomFear = ($scope.test.testType === TEST_TYPES.CUSTOM_FEAR);
+            $scope.isTypeCustomOcd = ($scope.test.testType === TEST_TYPES.CUSTOM_OCD);
 
             $scope.hideNeutral = ($scope.testId === 5);
 
@@ -221,6 +225,8 @@ app.controller('dtctrl', function($scope, $cookies, $sce, $http) {
     };
 
     /* Miscellaneous */
+    $scope.Math = window.Math;
+
     $scope.range = function(n) {
         let a = [];
         for (let i = 0; i < n; i++) {
@@ -228,6 +234,14 @@ app.controller('dtctrl', function($scope, $cookies, $sce, $http) {
         }
         return a;
     };
+
+    $scope.mean = function(a) {
+        let m = 0;
+        for (let i = 0; i < a.length; i++) {
+            m += a[i];
+        }
+        return m / a.length;
+    }
 
     $scope.acceptCookies = function() {
         $cookies.put(COOKIE_ACCEPTED, 'yes');

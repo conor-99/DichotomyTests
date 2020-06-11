@@ -73,7 +73,7 @@
 							<p class="text-justify sizing">
 								Dichotomy Tests provides interesting tests that show you how inclined you are toward certain philosophical, psychological or political views. Each test tries to discover your preferred beliefs and will attempt to accurately position you along numerous dichotomic axes.
 								<br>
-								Follow us on Twitter <a href="https://twitter.com/DichotomyTests" target="_blank">@DichotomyTests</a>.
+								Follow us on Twitter <a class="link-no-underline" href="https://twitter.com/DichotomyTests" target="_blank">@DichotomyTests</a>.
 							</p>
 
 							<div class="row tests-row">
@@ -85,7 +85,11 @@
 											
 											<h5 class="text-center font-weight-normal">{{ test.name }}</h5>
 											<h6 class="text-left text-muted small font-italic">{{ test.questions }} questions, {{ test.minutes }} minutes</h6>
-											<p class="text-left small" ng-bind-html="test.description"></p>
+											<p class="text-left small">
+												<span ng-show="test.isPsych" class="badge badge-purple badge-category">Psychology</span>
+												<br ng-show="test.isPsych">
+												<span ng-bind-html="test.description"></span>
+											</p>
 											<a class="btn btn-outline-secondary btn-block sizing btn-{{ test.color }}" type="button" href="test.html?id={{ test.id }}">Start the test</a>
 											
 										</div>

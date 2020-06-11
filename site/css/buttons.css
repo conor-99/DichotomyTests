@@ -1,3 +1,5 @@
+/* Buttons (statement) */
+
 .btn-str-agree {
     color: #4ecb29;
     border-color: #4ecb29;
@@ -37,6 +39,8 @@
     background-color: #c43131;
     border-color: #c43131;
 }
+
+/* Buttons (images) */
 
 .btn-str-left {
     color: #7a8dbc;
@@ -78,13 +82,96 @@
     border-color: #c387d1;
 }
 
-.btn-1298a5 {
+.btn-scen-a {
     color: #1298a5;
     border-color: #1298a5;
-} .btn-1298a5:hover {
+} .btn-scen-a:hover {
     background-color: #1298a5;
     border-color: #1298a5;
+  }
+
+.btn-scen-b {
+    color: #a51344;
+    border-color: #a51344;
+} .btn-scen-b:hover {
+    background-color: #a51344;
+    border-color: #a51344;
+  }
+
+/* Buttons (fear) */
+.btn-fear-7 {
+    color: #c43131;
+    border-color: #c43131;
+    font-weight: 600;
+} .btn-fear-7:hover {
+    background-color: #c43131;
+    border-color: #c43131;
 }
+
+.btn-fear-6 {
+    color: #c44b31;
+    border-color: #c44b31;
+    font-weight: 600;
+} .btn-fear-6:hover {
+    background-color: #c44b31;
+    border-color: #c44b31;
+}
+
+.btn-fear-5 {
+    color: #c47031;
+    border-color: #c47031;
+    font-weight: 600;
+} .btn-fear-5:hover {
+    background-color: #c47031;
+    border-color: #c47031;
+}
+
+.btn-fear-4 {
+    color: #c4a431;
+    border-color: #c4a431;
+    font-weight: 600;
+} .btn-fear-4:hover {
+    background-color: #c4a431;
+    border-color: #c4a431;
+}
+
+.btn-fear-3 {
+    color: #bac431;
+    border-color: #bac431;
+    font-weight: 600;
+} .btn-fear-3:hover {
+    background-color: #bac431;
+    border-color: #bac431;
+}
+
+.btn-fear-2 {
+    color: #97c431;
+    border-color: #97c431;
+    font-weight: 600;
+} .btn-fear-2:hover {
+    background-color: #97c431;
+    border-color: #97c431;
+}
+
+.btn-fear-1 {
+    color: #64c431;
+    border-color: #64c431;
+    font-weight: 600;
+} .btn-fear-1:hover {
+    background-color: #64c431;
+    border-color: #64c431;
+}
+
+/* Buttons (OCD) */
+.btn-neutral-color {
+    color: #bac431;
+    border-color: #bac431;
+} .btn-neutral-color:hover {
+    background-color: #bac431;
+    border-color: #bac431;
+}
+
+/* Buttons (custom) */
 
 .btn-a51344 {
     color: #a51344;
@@ -140,4 +227,36 @@
 } .btn-347e45:hover {
     background-color: #347e45;
     border-color: #347e45;
+}
+
+.btn-e97e20 {
+    color: #e97e20;
+    border-color: #e97e20;
+} .btn-e97e20:hover {
+    background-color: #e97e20;
+    border-color: #e97e20;
+}
+
+.btn-331c5e {
+    color: #331c5e;
+    border-color: #331c5e;
+} .btn-331c5e:hover {
+    background-color: #331c5e;
+    border-color: #331c5e;
+}
+
+.btn-ec4649 {
+    color: #ec4649;
+    border-color: #ec4649;
+} .btn-ec4649:hover {
+      background-color: #ec4649;
+      border-color: #ec4649;
+}
+
+.btn-629460 {
+    color: #629460;
+    border-color: #629460;
+} .btn-629460:hover {
+      background-color: #629460;
+      border-color: #629460;
 }

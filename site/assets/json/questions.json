@@ -1317,6 +1317,702 @@
           "effects": [13, 0, 0, 0, 0, 15]
         }
       ]
+    },
+    {
+      "id": 6,
+      "name": "Victimhood",
+      "description": "Based on the <a class='link-no-underline' href='https://www.researchgate.net/publication/341548585_The_Tendency_for_Interpersonal_Victimhood_The_Personality_Construct_and_its_Consequences' target='_blank'>Tendency for Interpersonal Victimhood</a>, this test will attempt to determine your perceived level of victimhood across your interpersonal relationships.",
+      "color": "e97e20",
+      "preamble": "Based on the <a class='link-no-underline' href='https://www.researchgate.net/publication/341548585_The_Tendency_for_Interpersonal_Victimhood_The_Personality_Construct_and_its_Consequences' target='_blank'>Tendency for Interpersonal Victimhood</a>, this test will attempt to determine your perceived level of victimhood across your interpersonal relationships.<br><br>The test consists of 22 statements. You should state the degree to which you agree or disagree with each statement (broadly speaking). Please try to answer as honestly as possible.<br><br>Results will be broken down into four factors: need for recognition, moral elitism, lack of empathy and rumination.",
+      "testType": 2,
+      "instruction": "How much do you agree/disagree with the following statement?",
+      "questions": [
+        {
+          "text": "It is important to me that people who hurt me acknowledge that an injustice has been done to me.",
+          "effects": [1, 0, 0, 0]
+        },
+        {
+          "text": "It is important to me that the person who offended me admits that his or her behavior was wrong.",
+          "effects": [1, 0, 0, 0]
+        },
+        {
+          "text": "It makes me angry when people don't believe that I was hurt.",
+          "effects": [1, 0, 0, 0]
+        },
+        {
+          "text": "It is important to me to receive an apology from people who offended me.",
+          "effects": [1, 0, 0, 0]
+        },
+        {
+          "text": "It is important to me that the person who offended me feels guilty for what he or she did.",
+          "effects": [1, 0, 0, 0]
+        },
+        {
+          "text": "I feel angry when people ignore my feeling of being hurt.",
+          "effects": [1, 0, 0, 0]
+        },
+        {
+          "text": "I remain considerate of other people even when they don't deserve it.",
+          "effects": [0, 1, 0, 0]
+        },
+        {
+          "text": "I think I am much more conscientious and moral in my relations with other people compared to their treatment of me.",
+          "effects": [0, 1, 0, 0]
+        },
+        {
+          "text": "People often take advantage of my kindness.",
+          "effects": [0, 1, 0, 0]
+        },
+        {
+          "text": "I give others much more than I receive from them.",
+          "effects": [0, 1, 0, 0]
+        },
+        {
+          "text": "I feel that other people don't hesitate to take advantage of my weaknesses.",
+          "effects": [0, 1, 0, 0]
+        },
+        {
+          "text": "People demand a lot of me without expressing gratitude.",
+          "effects": [0, 1, 0, 0]
+        },
+        {
+          "text": "When people who are close to me feel hurt by my actions, it is very important for me to clarify that justice is on my side.",
+          "effects": [0, 0, 1, 0]
+        },
+        {
+          "text": "People who are offended by me are only thinking of themselves.",
+          "effects": [0, 0, 1, 0]
+        },
+        {
+          "text": "People who claim that I behaved wrongly want me to admit it so they can take advantage of the situation.",
+          "effects": [0, 0, 1, 0]
+        },
+        {
+          "text": "People claim that I have hurt them because they cannot see that they are the ones hurting me.",
+          "effects": [0, 0, 1, 0]
+        },
+        {
+          "text": "The main reason that people are offended by me is that they cannot see things from my perspective.",
+          "effects": [0, 0, 1, 0]
+        },
+        {
+          "text": "It is very important to me that people who were offended by me realize that they are also in the wrong.",
+          "effects": [0, 0, 1, 0]
+        },
+        {
+          "text": "It is very hard for me to stop thinking about the injustice others have done to me.",
+          "effects": [0, 0, 0, 1]
+        },
+        {
+          "text": "Days after the offense I am very preoccupied by the injustice done to me.",
+          "effects": [0, 0, 0, 1]
+        },
+        {
+          "text": "I am flooded by more anger than I would like every time I remember people who hurt me.",
+          "effects": [0, 0, 0, 1]
+        },
+        {
+          "text": "I am flooded by negative feelings every time I remember people who hurt me.",
+          "effects": [0, 0, 0, 1]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Sensation Seeking",
+      "description": "Based on <a class='link-no-underline' href='https://scienceofbehaviorchange.org/measures/zuckerman-sensation-seeking-scale-v/' target='_blank'>Zuckerman's Sensation Seeking Scale</a>, this test will attempt to determine how inclined you are to seek out varied, novel and intense experiences.",
+      "color": "ec4649",
+      "preamble": "Based on <a class='link-no-underline' href='https://scienceofbehaviorchange.org/measures/zuckerman-sensation-seeking-scale-v/' target='_blank'>Zuckerman's Sensation Seeking Scale</a>, this test will attempt to determine how inclined you are to seek out varied, novel and intense experiences.<br><br>The test consists of 40 questions. Each question will pose two separate scenarios: choose the scenario that you would prefer (you must choose a scenario). If neither scenario appeals to you then pick the one that you would dislike the least.<br><br>Results will be broken down into four subscales: thrill and adventure seeking, experience seeking, disinhibition and boredom susceptibility.",
+      "testType": 3,
+      "instruction": "Which of the two statements describes you best?",
+      "questions": [
+        {
+          "textA": "I like 'wild' uninhibited parties",
+          "textB": "I prefer quiet parties with good conversation",
+          "effects": [0, 0, 1, 0]
+        },
+        {
+          "textA": "I can't stand watching a movie that I've seen before",
+          "textB": "There are some movies I enjoy seeing a second or even a third time",
+          "effects": [0, 0, 0, 1]
+        },
+        {
+          "textA": "I often wish I could be a mountain climber",
+          "textB": "I can't understand people who risk their necks climbing mountains",
+          "effects": [1, 0, 0, 0]
+        },
+        {
+          "textA": "I like some of the earthy body smells",
+          "textB": "I dislike all body odors",
+          "effects": [0, 1, 0, 0]
+        },
+        {
+          "textA": "I get bored seeing the same old faces",
+          "textB": "I like the comfortable familiarity of everyday friends",
+          "effects": [0, 0, 0, 1]
+        },
+        {
+          "textA": "I like to explore a strange city or section of town by myself even if it means getting lost",
+          "textB": "I prefer a guide when I am in a place I do not know well",
+          "effects": [0, 1, 0, 0]
+        },
+        {
+          "textA": "When you can predict almost everything a person will do and say he or she must be a bore",
+          "textB": "I dislike people who do or say things just to shock or upset others",
+          "effects": [0, 0, 0, 1]
+        },
+        {
+          "textA": "I usually don't enjoy a movie or play where I can predict what will happen in advance",
+          "textB": "I don't mind watching a movie or a play where I can predict what will happen in advance",
+          "effects": [0, 0, 0, 1]
+        },
+        {
+          "textA": "I have tried marijuana or would like to",
+          "textB": "I would like to try some of the new drugs that produce hallucinations",
+          "effects": [0, 1, 0, 0]
+        },
+        {
+          "textA": "I would like to try some of the new drugs that produce hallucinations",
+          "textB": "I would not like to try any drug which might produce strange and dangerous effects on me",
+          "effects": [0, 1, 0, 0]
+        },
+        {
+          "textA": "I sometimes like to do things that are a little frightening",
+          "textB": "A sensible person avoids activities that are dangerous",
+          "effects": [1, 0, 0, 0]
+        },
+        {
+          "textA": "I enjoy the company of real 'swingers'",
+          "textB": "I dislike 'swingers' (people who are uninhibited and free about sex)",
+          "effects": [0, 0, 1, 0]
+        },
+        {
+          "textA": "I often like to get high (drinking liquor or smoking marijuana)",
+          "textB": "I find that stimulants make me uncomfortable",
+          "effects": [0, 0, 1, 0]
+        },
+        {
+          "textA": "I like to try new foods that I have never tasted before",
+          "textB": "I order the dishes with which I am familiar so as to avoid disappointment and unpleasantness",
+          "effects": [0, 1, 0, 0]
+        },
+        {
+          "textA": "Looking at someone's home movies or travel slides bores me tremendously",
+          "textB": "I enjoy looking at home movies or travel slides",
+          "effects": [0, 0, 0, 1]
+        },
+        {
+          "textA": "I would like to take up the sport of water skiing",
+          "textB": "I would not like to take up water skiing",
+          "effects": [1, 0, 0, 0]
+        },
+        {
+          "textA": "I would like to try surf boarding",
+          "textB": "I would not like to try surf boarding",
+          "effects": [1, 0, 0, 0]
+        },
+        {
+          "textA": "I would like to take off on a trip with no pre-planned or definite routes or timetable",
+          "textB": "When I go on a trip I like to plan my route and timetable fairly carefully",
+          "effects": [0, 1, 0, 0]
+        },
+        {
+          "textA": "I would like to make friends in some of the 'far out' groups like artists or 'punks'",
+          "textB": "I prefer the 'down to earth' kinds of people as friends",
+          "effects": [0, 1, 0, 0]
+        },
+        {
+          "textA": "I would like to learn to fly an airplane",
+          "textB": "I would not like to learn to fly an airplane",
+          "effects": [1, 0, 0, 0]
+        },
+        {
+          "textA": "I would like to go scuba diving",
+          "textB": "I prefer the surface of the water to the depths",
+          "effects": [1, 0, 0, 0]
+        },
+        {
+          "textA": "I would like to meet some persons who are homosexual (men or women)",
+          "textB": "I stay away from anyone I suspect of being 'gay or lesbian'",
+          "effects": [0, 1, 0, 0]
+        },
+        {
+          "textA": "I would like to try parachute jumping",
+          "textB": "I would never want to try jumping out of a plane - with or without a parachute",
+          "effects": [1, 0, 0, 0]
+        },
+        {
+          "textA": "I prefer friends who are excitingly unpredictable",
+          "textB": "I prefer friends who are reliable and predictable",
+          "effects": [0, 0, 0, 1]
+        },
+        {
+          "textA": "I like to have new and exciting experiences and sensations even if they are a little frightening / unconventional or illegal",
+          "textB": "I am not interested in experience for its own sake",
+          "effects": [0, 0, 1, 0]
+        },
+        {
+          "textA": "I often ﬁnd beauty in the clashing colors and irregular forms of modern paintings",
+          "textB": "The essence of good art is in its clarity / symmetry of form and harmony of colors",
+          "effects": [0, 1, 0, 0]
+        },
+        {
+          "textA": "I get very restless if I have to stay around home for any length of time",
+          "textB": "I enjoy spending time in the familiar surroundings of home",
+          "effects": [0, 0, 0, 1]
+        },
+        {
+          "textA": "I like to dive off the high board",
+          "textB": "I don't like the feeling I get standing on the high board (or I don't go near it at all)",
+          "effects": [1, 0, 0, 0]
+        },
+        {
+          "textA": "I like to date people who are physically exciting",
+          "textB": "I like to date people who share my values",
+          "effects": [0, 0, 1, 0]
+        },
+        {
+          "textA": "Keeping the drinks full is the key to a good party",
+          "textB": "Heavy drinking usually ruins a party because some people get loud and boisterous",
+          "effects": [0, 0, 1, 0]
+        },
+        {
+          "textA": "The worst social sin is to be a bore",
+          "textB": "The worst social sin is to be rude",
+          "effects": [0, 0, 0, 1]
+        },
+        {
+          "textA": "A person should have considerable sexual experience before marriage",
+          "textB": "It's better if two married persons begin their sexual experience with each other",
+          "effects": [0, 0, 1, 0]
+        },
+        {
+          "textA": "I could conceive of myself seeking pleasures around the world with the \"jet set\"",
+          "textB": "Even if I had the money I would not care to associate with flight rich persons like those in the \"jet set\"",
+          "effects": [0, 0, 1, 0]
+        },
+        {
+          "textA": "I like people who are sharp and witty even if they do sometimes insult others",
+          "textB": "I dislike people who have their fun at the expensive of hurting the feelings of others",
+          "effects": [0, 0, 0, 1]
+        },
+        {
+          "textA": "I enjoy watching many of the 'sexy' scenes in movies",
+          "textB": "There is altogether too much portrayal of sex in movies",
+          "effects": [0, 0, 1, 0]
+        },
+        {
+          "textA": "I feel best after taking a couple of drinks",
+          "textB": "Something is wrong with people who need liquor to feel good",
+          "effects": [0, 0, 1, 0]
+        },
+        {
+          "textA": "People should dress in individual ways even if the effects are sometimes strange",
+          "textB": "People should dress according to some standard of taste / neatness and style",
+          "effects": [0, 1, 0, 0]
+        },
+        {
+          "textA": "I would like to sail a long distance in a small but seaworthy sailing craft",
+          "textB": "Sailing long distances in small sailing crafts is foolhardy",
+          "effects": [1, 0, 0, 0]
+        },
+        {
+          "textA": "I have no patience with dull or boring persons",
+          "textB": "I find something interesting in almost every person I talk to",
+          "effects": [0, 0, 0, 1]
+        },
+        {
+          "textA": "I think I would enjoy the sensations of skiing very fast down a high mountain slope",
+          "textB": "Skiing down a high mountain slope is a good way to end up on crutches",
+          "effects": [1, 0, 0, 0]
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Fear",
+      "description": "Based on <a class='link-no-underline' href='https://www.researchgate.net/publication/9242854_The_Development_of_a_Scale_to_Measure_Fear' target='_blank'>Geer's Fear Survey Schedule</a>, this test will attempt to determine how fearful you are; the test incorporates multiple fear factors to break down your results.",
+      "color": "331c5e",
+      "preamble": "Based on <a class='link-no-underline' href='https://www.researchgate.net/publication/9242854_The_Development_of_a_Scale_to_Measure_Fear' target='_blank'>Geer's Fear Survey Schedule</a>, this test will attempt to determine how fearful you are; the test incorporates multiple fear factors to break down your results.<br><br>The test consists of 52 items. An item may be a scenario, an object, etc. You must mark how fearful (or anxious) the item in question would usually make you. All items must be marked.<br><br>Results will be broken down into five fear factors: social anxiety, agoraphobia, fear of bodily injury/death/illness, fear of sexual/aggressive scenes, fear of harmless animals.",
+      "testType": 4,
+      "instruction": "The following object/scenario might inspire what level of fear/anxiety?",
+      "questions": [
+        {
+          "text": "Speaking in public.",
+          "effects": [1, 0, 0, 0, 0]
+        },
+        {
+          "text": "Being teased.",
+          "effects": [1, 0, 0, 0, 0]
+        },
+        {
+          "text": "Failure.",
+          "effects": [1, 0, 0, 0, 0]
+        },
+        {
+          "text": "Entering a room where other people are already seated.",
+          "effects": [1, 0, 0, 0, 0]
+        },
+        {
+          "text": "Strangers.",
+          "effects": [1, 0, 0, 0, 0]
+        },
+        {
+          "text": "People in authority.",
+          "effects": [1, 0, 0, 0, 0]
+        },
+        {
+          "text": "Being watched working.",
+          "effects": [1, 0, 0, 0, 0]
+        },
+        {
+          "text": "Being criticized.",
+          "effects": [1, 0, 0, 0, 0]
+        },
+        {
+          "text": "Feeling rejected by others.",
+          "effects": [1, 0, 0, 0, 0]
+        },
+        {
+          "text": "Feeling disapproved of.",
+          "effects": [1, 0, 0, 0, 0]
+        },
+        {
+          "text": "Being ignored.",
+          "effects": [1, 0, 0, 0, 0]
+        },
+        {
+          "text": "Making mistakes.",
+          "effects": [1, 0, 0, 0, 0]
+        },
+        {
+          "text": "Looking foolish.",
+          "effects": [1, 0, 0, 0, 0]
+        },
+        {
+          "text": "Being alone.",
+          "effects": [0, 1, 0, 0, 0]
+        },
+        {
+          "text": "Being in a strange place.",
+          "effects": [0, 1, 0, 0, 0]
+        },
+        {
+          "text": "Crossing streets.",
+          "effects": [0, 1, 0, 0, 0]
+        },
+        {
+          "text": "Falling.",
+          "effects": [0, 1, 0, 0, 0]
+        },
+        {
+          "text": "High places on land.",
+          "effects": [0, 1, 0, 0, 0]
+        },
+        {
+          "text": "Journeys by train.",
+          "effects": [0, 1, 0, 0, 0]
+        },
+        {
+          "text": "Journeys by bus.",
+          "effects": [0, 1, 0, 0, 0]
+        },
+        {
+          "text": "Journeys by car.",
+          "effects": [0, 1, 0, 0, 0]
+        },
+        {
+          "text": "Crowds.",
+          "effects": [0, 1, 0, 0, 0]
+        },
+        {
+          "text": "Large open spaces.",
+          "effects": [0, 1, 0, 0, 0]
+        },
+        {
+          "text": "Being in an elevator.",
+          "effects": [0, 1, 0, 0, 0]
+        },
+        {
+          "text": "Enclosed places.",
+          "effects": [0, 1, 0, 0, 0]
+        },
+        {
+          "text": "Aeroplanes.",
+          "effects": [0, 1, 0, 0, 0]
+        },
+        {
+          "text": "Open wounds.",
+          "effects": [0, 0, 1, 0, 0]
+        },
+        {
+          "text": "Dead people.",
+          "effects": [0, 0, 1, 0, 0]
+        },
+        {
+          "text": "People with deformities.",
+          "effects": [0, 0, 1, 0, 0]
+        },
+        {
+          "text": "Receiving injections.",
+          "effects": [0, 0, 1, 0, 0]
+        },
+        {
+          "text": "Seeing other people injected.",
+          "effects": [0, 0, 1, 0, 0]
+        },
+        {
+          "text": "Sick people.",
+          "effects": [0, 0, 1, 0, 0]
+        },
+        {
+          "text": "Witnessing surgical operations.",
+          "effects": [0, 0, 1, 0, 0]
+        },
+        {
+          "text": "Human blood.",
+          "effects": [0, 0, 1, 0, 0]
+        },
+        {
+          "text": "Animal blood.",
+          "effects": [0, 0, 1, 0, 0]
+        },
+        {
+          "text": "Medical odours.",
+          "effects": [0, 0, 1, 0, 0]
+        },
+        {
+          "text": "Cemeteries.",
+          "effects": [0, 0, 1, 0, 0]
+        },
+        {
+          "text": "Doctors.",
+          "effects": [0, 0, 1, 0, 0]
+        },
+        {
+          "text": "One person bullying another.",
+          "effects": [0, 0, 0, 1, 0]
+        },
+        {
+          "text": "Tough looking people.",
+          "effects": [0, 0, 0, 1, 0]
+        },
+        {
+          "text": "Dirt.",
+          "effects": [0, 0, 0, 1, 0]
+        },
+        {
+          "text": "Sight of fighting.",
+          "effects": [0, 0, 0, 1, 0]
+        },
+        {
+          "text": "Ugly people.",
+          "effects": [0, 0, 0, 1, 0]
+        },
+        {
+          "text": "Strange shapes.",
+          "effects": [0, 0, 0, 1, 0]
+        },
+        {
+          "text": "Nude men.",
+          "effects": [0, 0, 0, 1, 0]
+        },
+        {
+          "text": "Nude women.",
+          "effects": [0, 0, 0, 1, 0]
+        },
+        {
+          "text": "Worms.",
+          "effects": [0, 0, 0, 0, 1]
+        },
+        {
+          "text": "Bats.",
+          "effects": [0, 0, 0, 0, 1]
+        },
+        {
+          "text": "Flying insects.",
+          "effects": [0, 0, 0, 0, 1]
+        },
+        {
+          "text": "Crawling insects.",
+          "effects": [0, 0, 0, 0, 1]
+        },
+        {
+          "text": "Mice.",
+          "effects": [0, 0, 0, 0, 1]
+        },
+        {
+          "text": "Harmless snakes.",
+          "effects": [0, 0, 0, 0, 1]
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Obsessions and Compulsions",
+      "description": "Based on the <a class='link-no-underline' href='https://pubmed.ncbi.nlm.nih.gov/30089225/' target='_blank'>Padua Inventory</a>, this test will attempt to determine how obsessive-compulsive you are.",
+      "color": "629460",
+      "preamble": "Based on the <a class='link-no-underline' href='https://pubmed.ncbi.nlm.nih.gov/30089225/' target='_blank'>Padua Inventory</a>, this test will attempt to determine how obsessive-compulsive you are.<br><br>The test contains 39 questions. You should answer each question by considering how well the scenario/behaviour in the question applies to you. You must answer all questions.<br><br>Results will be broken down into five obsessive-compulsive factors: contamination and washing, dressing and grooming, checking, thoughts of harm, impulses to harm.",
+      "testType": 5,
+      "instruction": "Choose the reply which best seems to fit you.",
+      "questions": [
+        {
+          "text": "I feel my hands are dirty when I touch money.",
+          "effects": [1, 0, 0, 0, 0]
+        },
+        {
+          "text": "I think even the slightest contact with bodily secretions (perspiration, saliva, urine, etc.) may contaminate my clothes or somehow harm me.",
+          "effects": [1, 0, 0, 0, 0]
+        },
+        {
+          "text": "I find it difficult to touch an object when I know it has been touched by strangers or by certain people.",
+          "effects": [1, 0, 0, 0, 0]
+        },
+        {
+          "text": "I find it difficult to touch garbage or dirty things.",
+          "effects": [1, 0, 0, 0, 0]
+        },
+        {
+          "text": "I avoid using public toilets because I am afraid if disease and contamination.",
+          "effects": [1, 0, 0, 0, 0]
+        },
+        {
+          "text": "I avoid using public telephones because I am afraid of contagion and disease.",
+          "effects": [1, 0, 0, 0, 0]
+        },
+        {
+          "text": "I wash my hands more often and longer than necessary.",
+          "effects": [1, 0, 0, 0, 0]
+        },
+        {
+          "text": "I sometimes have to wash or clean myself simply because I think I may be dirty or 'contaminated'.",
+          "effects": [1, 0, 0, 0, 0]
+        },
+        {
+          "text": "If I touch something I think is 'contaminated', I immediately have to wash or clean myself.",
+          "effects": [1, 0, 0, 0, 0]
+        },
+        {
+          "text": "If an animal touches me, I feel dirty and immediately have to wash myself or change my clothing.",
+          "effects": [1, 0, 0, 0, 0]
+        },
+        {
+          "text": "I feel obliged to follow a particular order in dressing, undressing, and washing myself.",
+          "effects": [0, 1, 0, 0, 0]
+        },
+        {
+          "text": "Before doing to sleep, I have to do certain things in a certain order.",
+          "effects": [0, 1, 0, 0, 0]
+        },
+        {
+          "text": "Before going to bed, I have to hang up or fold my clothes in a special way.",
+          "effects": [0, 1, 0, 0, 0]
+        },
+        {
+          "text": "I have to do things several times before I think they are properly done.",
+          "effects": [0, 0, 1, 0, 0]
+        },
+        {
+          "text": "I tend to keep on checking things more often than necessary.",
+          "effects": [0, 0, 1, 0, 0]
+        },
+        {
+          "text": "I check and recheck gas and water taps and light switches after turning them off.",
+          "effects": [0, 0, 1, 0, 0]
+        },
+        {
+          "text": "I return home to check doors, windows, drawers, etc., to make sure they are properly shut.",
+          "effects": [0, 0, 1, 0, 0]
+        },
+        {
+          "text": "I keep checking forms, documents, checks, etc., in detail to make sure I have filled them in correctly.",
+          "effects": [0, 0, 1, 0, 0]
+        },
+        {
+          "text": "I keep on going back to see that matches, cigarettes, etc., are properly extinguished.",
+          "effects": [0, 0, 1, 0, 0]
+        },
+        {
+          "text": "When I handle money, I count and recount it several times.",
+          "effects": [0, 0, 1, 0, 0]
+        },
+        {
+          "text": "I check letters carefully many times before posting them.",
+          "effects": [0, 0, 1, 0, 0]
+        },
+        {
+          "text": "Sometimes I am not sure I have done things which in fact I knew I have done.",
+          "effects": [0, 0, 1, 0, 0]
+        },
+        {
+          "text": "When I read, I have the impression I have missed something important and must go back and reread the passage at least two or three times.",
+          "effects": [0, 0, 1, 0, 0]
+        },
+        {
+          "text": "I imagine catastrophic consequences as a result of absent-mindedness or minor errors which I make.",
+          "effects": [0, 0, 0, 1, 0]
+        },
+        {
+          "text": "I think or worry at length about having hurt someone without knowing it.",
+          "effects": [0, 0, 0, 1, 0]
+        },
+        {
+          "text": "When I hear about a disaster, I think it is somehow my fault.",
+          "effects": [0, 0, 0, 1, 0]
+        },
+        {
+          "text": "I sometimes worry at length for no reason that I have hurt myself or have some disease.",
+          "effects": [0, 0, 0, 1, 0]
+        },
+        {
+          "text": "I get upset and worried at the sight of knives, daggers, and other pointed objects.",
+          "effects": [0, 0, 0, 1, 0]
+        },
+        {
+          "text": "When I hear about a suicide or crime, I am upset for a long time and find it difficult to stop thinking about it.",
+          "effects": [0, 0, 0, 1, 0]
+        },
+        {
+          "text": "I invent useless worries about germs and disease.",
+          "effects": [0, 0, 0, 1, 0]
+        },
+        {
+          "text": "When I look down from a bridge or a very high window, I feel an impulse to throw myself into space.",
+          "effects": [0, 0, 0, 0, 1]
+        },
+        {
+          "text": "When I see a train approaching, I sometimes think I could throw myself under its wheels.",
+          "effects": [0, 0, 0, 0, 1]
+        },
+        {
+          "text": "At certain moments, I am tempted to tear off my clothes in public.",
+          "effects": [0, 0, 0, 0, 1]
+        },
+        {
+          "text": "While driving, I sometimes feel an impulse to drive the car into someone or something.",
+          "effects": [0, 0, 0, 0, 1]
+        },
+        {
+          "text": "Seeing weapons excites me and makes me think violent thoughts.",
+          "effects": [0, 0, 0, 0, 1]
+        },
+        {
+          "text": "I sometimes feel the need to break or damage things for no reason.",
+          "effects": [0, 0, 0, 0, 1]
+        },
+        {
+          "text": "I sometimes have an impulse to steal other people's belongings, even if they are of no use to me.",
+          "effects": [0, 0, 0, 0, 1]
+        },
+        {
+          "text": "I am sometimes almost irresistibly tempted to steal something from the supermarket.",
+          "effects": [0, 0, 0, 0, 1]
+        },
+        {
+          "text": "I sometimes have an impulse to hurt defenseless children or animals.",
+          "effects": [0, 0, 0, 0, 1]
+        }
+      ]
     }
   ]
 }

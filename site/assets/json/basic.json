@@ -6,7 +6,8 @@
       "description": "Find out how you stand along many philosophical dichotomies from egoism and altruism to skepticism and absolutism.",
       "questions": 74,
       "color": "a51344",
-      "sort": 100
+      "isPsych": false,
+      "sort": 200
     },
     {
       "id": 1,
@@ -14,7 +15,8 @@
       "description": "How do you think the economy should be run? Find out now and see your results displayed along multiple economic axes.",
       "questions": 68,
       "color": "5158bb",
-      "sort": 400
+      "isPsych": false,
+      "sort": 500
     },
     {
       "id": 3,
@@ -22,15 +24,17 @@
       "description": "Do you prefer realistic literature or fantasy? Dark or light-hearted? This test breaks down your literary taste into seven different dichotomies!",
       "questions": 70,
       "color": "3f88c5",
-      "sort": 300
+      "isPsych": false,
+      "sort": 400
     },
     {
       "id": 4,
       "name": "Memes",
-      "description": "Do you like memes? <a href='https://reddit.com/r/fellowkids' target='_blank'>/r/FellowKids</a> here we come...",
+      "description": "Do you like memes? <a class='link-no-underline' href='https://reddit.com/r/fellowkids' target='_blank'>/r/FellowKids</a> here we come...",
       "questions": 35,
       "color": "ddbdd5",
-      "sort": 200
+      "isPsych": false,
+      "sort": 300
     },
     {
       "id": 5,
@@ -38,7 +42,44 @@
       "description": "Do you lean to the left or to the right politically? This test will attempt to discover your philosophical beliefs regarding politics along a number of axes.",
       "questions": 60,
       "color": "347e45",
+      "isPsych": false,
+      "sort": 100
+    },
+    {
+      "id": 6,
+      "name": "Victimhood",
+      "description": "Based on the <a class='link-no-underline' href='https://www.researchgate.net/publication/341548585_The_Tendency_for_Interpersonal_Victimhood_The_Personality_Construct_and_its_Consequences' target='_blank'>Tendency for Interpersonal Victimhood</a>, this test will attempt to determine your perceived level of victimhood across your interpersonal relationships.",
+      "questions": 22,
+      "color": "e97e20",
+      "isPsych": true,
       "sort": 50
+    },
+    {
+      "id": 7,
+      "name": "Sensation Seeking",
+      "description": "Based on <a class='link-no-underline' href='https://scienceofbehaviorchange.org/measures/zuckerman-sensation-seeking-scale-v/' target='_blank'>Zuckerman's Sensation Seeking Scale</a>, this test will attempt to determine how inclined you are to seek out varied, novel and intense experiences.",
+      "questions": 40,
+      "color": "ec4649",
+      "isPsych": true,
+      "sort": 700
+    },
+    {
+      "id": 8,
+      "name": "Fear",
+      "description": "Based on <a class='link-no-underline' href='https://www.researchgate.net/publication/9242854_The_Development_of_a_Scale_to_Measure_Fear' target='_blank'>Geer's Fear Survey Schedule</a>, this test will attempt to determine how fearful you are; the test incorporates multiple fear factors to break down your results.",
+      "questions": 52,
+      "color": "331c5e",
+      "isPsych": true,
+      "sort": 800
+    },
+    {
+      "id": 9,
+      "name": "Obsessions and Compulsions",
+      "description": "Based on the <a class='link-no-underline' href='https://pubmed.ncbi.nlm.nih.gov/30089225/' target='_blank'>Padua Inventory</a>, this test will attempt to determine how obsessive-compulsive you are.",
+      "questions": 39,
+      "color": "629460",
+      "isPsych": true,
+      "sort": 900
     }
   ]
 }

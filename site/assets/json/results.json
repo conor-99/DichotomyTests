@@ -1409,6 +1409,146 @@
           ]
         }
       ]
+    },
+    {
+      "id": 6,
+      "name": "Victimhood",
+      "preamble": "Your results are displayed below.",
+      "resultsType": 4,
+      "scales": [
+        {
+          "name": "Need for Recognition",
+          "class": "bg-warning",
+          "desc": "A victims' motivation to have their victimhood acknowledged and empathized with.",
+          "param": "a"
+        },
+        {
+          "name": "Moral Elitism",
+          "class": "bg-danger",
+          "desc": "The perception of immaculate morality of the self and the immorality of the other side.",
+          "param": "b"
+        },
+        {
+          "name": "Lack of Empathy",
+          "class": "bg-success",
+          "desc": "An oblivious reaction to others in general and to their suffering in particular.",
+          "param": "c"
+        },
+        {
+          "name": "Rumination",
+          "class": "bg-dark",
+          "desc": "A focus of attention on the symptoms of one's distress and its possible causes and consequences rather than its possible solutions.",
+          "param": "d"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Sensation Seeking",
+      "preamble": "Your results are displayed below.",
+      "resultsType": 4,
+      "scales": [
+        {
+          "name": "Thrill and Adventure Seeking",
+          "class": "bg-danger",
+          "desc": "Also known as 'stimulus seeking' or 'fearlessness'. Tendency to participate in high stimulus activities such as sky diving, mountain climbing, bungee jumping, etc.",
+          "param": "a"
+        },
+        {
+          "name": "Experience Seeking",
+          "class": "bg-success",
+          "desc": "Tendency to participate in travel, psychedelic drugs, art, music, and other less risky sensations.",
+          "param": "b"
+        },
+        {
+          "name": "Disinhibition",
+          "class": "bg-info",
+          "desc": "Tendency to participate in drug use, alcohol use, vandalism, unsafe sex, etc.",
+          "param": "c"
+        },
+        {
+          "name": "Boredom Susceptibility",
+          "class": "bg-warning",
+          "desc": "Proneness to boredom; has a need for a constant, new external stimuli such as social interaction,activities and movies.",
+          "param": "d"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Fear",
+      "preamble": "Your results are displayed below.",
+      "resultsType": 4,
+      "scales": [
+        {
+          "name": "Social anxiety",
+          "class": "bg-warning",
+          "desc": "",
+          "param": "a"
+        },
+        {
+          "name": "Agoraphobia",
+          "class": "bg-info",
+          "desc": "",
+          "param": "b"
+        },
+        {
+          "name": "Fear of bodily injury, death or illness",
+          "class": "bg-dark",
+          "desc": "",
+          "param": "c"
+        },
+        {
+          "name": "Fear of sexual/aggressive scenes",
+          "class": "bg-danger",
+          "desc": "",
+          "param": "d"
+        },
+        {
+          "name": "Fear of harmless animals",
+          "class": "bg-success",
+          "desc": "",
+          "param": "e"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Obsessions and Compulsions",
+      "preamble": "Your results are displayed below. You can learn more about your results <a href='https://www.ocdtypes.com/' target='_blank'>here</a>.",
+      "resultsType": 4,
+      "scales": [
+        {
+          "name": "Contamination and Washing",
+          "class": "bg-warning",
+          "desc": "",
+          "param": "a"
+        },
+        {
+          "name": "Dressing/Grooming",
+          "class": "bg-info",
+          "desc": "",
+          "param": "b"
+        },
+        {
+          "name": "Checking",
+          "class": "bg-dark",
+          "desc": "",
+          "param": "c"
+        },
+        {
+          "name": "Thoughts of Harm",
+          "class": "bg-danger",
+          "desc": "",
+          "param": "d"
+        },
+        {
+          "name": "Impulses to Harm",
+          "class": "bg-success",
+          "desc": "",
+          "param": "e"
+        }
+      ]
     }
   ]
 }
