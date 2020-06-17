@@ -27,6 +27,7 @@ insert into test (id, `name`, `is_psych`)
 values
 	(0, 'Philosophy', 0),
     (1, 'Economics', 0),
+    (2, 'Personality Compass', 0),
     (3, 'Literature', 0),
     (4, 'Memes', 0),
     (5, 'Politics', 0),
