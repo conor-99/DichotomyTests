@@ -13,5 +13,8 @@ const COOKIE_RESULT_PREFIX = 'results-';
 const JSON_DIRECTORY = 'assets/json';
 const API_URL = 'api/';
 
+// Compass
+const CANVAS_WIDTH = 600;
+
 // Miscellaneous
 const ANSWERS_PER_MINUTE = 6;

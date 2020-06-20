@@ -117,6 +117,21 @@
 
                             </div>
 
+                            <!-- Results: Compass -->
+                            <div ng-show="isTypeCompass">
+
+                                <canvas id="compass-canvas" width="600" height="600"></canvas>
+
+                                <p class="compass-text">
+                                    <b>{{ results.scales[0].axisName }}</b>:<br>
+                                    <i>{{ results.scales[0].a.text }}</i> vs <i>{{ results.scales[0].b.text }}</i>: {{ ((percentages[0] - 0.5) * 20).toFixed(1) }}
+                                    <br>
+                                    <b>{{ results.scales[1].axisName }}</b>:<br>
+                                    <i>{{ results.scales[1].a.text }}</i> vs <i>{{ results.scales[1].b.text }}</i>: {{ ((percentages[1] - 0.5) * 20).toFixed(1) }}
+                                </p>
+
+                            </div>
+
                             <!-- Explanation: Axes -->
                             <div ng-show="showExplainAxes">
 
@@ -182,6 +197,7 @@
         <!-- Local JavaScript files -->
         <script src="js/constants.js"></script>
         <script src="js/utils.js"></script>
+        <script src="js/compass.js"></script>
         <script src="js/dtapp.js"></script>
 
     </body>

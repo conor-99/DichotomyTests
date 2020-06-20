@@ -69,6 +69,8 @@ app.controller('dtctrl', function($scope, $cookies, $sce, $http) {
 
                 $scope.results = json.data.tests.filter(test => test.id === test_id)[0];
 
+                // To-do: replace convoluted logical statements below with new parameters in results.json
+
                 $scope.isTypeBars = ($scope.results.resultsType === RESULT_TYPES.BARS || $scope.results.resultsType === RESULT_TYPES.BARS_OVERALL);
                 $scope.isTypeCompass = ($scope.results.resultsType === RESULT_TYPES.COMPASS);
                 $scope.isTypeBarsOverall = ($scope.results.resultsType === RESULT_TYPES.BARS_OVERALL);
@@ -98,6 +100,9 @@ app.controller('dtctrl', function($scope, $cookies, $sce, $http) {
                 if ($scope.isTypeBarsOverall)
                     $scope.additionalHeight += 30;
 
+                if ($scope.isTypeCompass)
+                    Compass.generate($scope.results, $scope.percentages);
+
             });
         }
 
@@ -117,7 +122,7 @@ app.controller('dtctrl', function($scope, $cookies, $sce, $http) {
             $scope.isTypeCustomFear = ($scope.test.testType === TEST_TYPES.CUSTOM_FEAR);
             $scope.isTypeCustomOcd = ($scope.test.testType === TEST_TYPES.CUSTOM_OCD);
 
-            $scope.hideNeutral = ($scope.testId === 5);
+            $scope.hideNeutral = ($scope.testId === 2 || $scope.testId === 5);
 
             $scope.answers = Array($scope.test.numQuestions).fill(0);
             $scope.current = 1;
