@@ -8,6 +8,7 @@ We currently offer the following dichotomic tests:
 * [Memes](https://dichotomytests.com/test.html?id=4)
 * [Literature](https://dichotomytests.com/test.html?id=3)
 * [Economics](https://dichotomytests.com/test.html?id=1)
+* [Personality Compass](https://dichotomytests.com/test.html?id=2)
 
 We also offer the following psychology tests:
 
