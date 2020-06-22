@@ -7,19 +7,13 @@ app.controller('dtctrl', function($scope, $cookies, $sce, $http) {
 
         index: function() {
 
-            $scope.checkAcceptedCookies();
+            $scope.acceptedCookies = ($cookies.get(COOKIE_ACCEPTED) !== undefined);
 
             JsonReader.loadBasicInfo();
 
         },
 
-        privacy: function() {
-            $scope.checkAcceptedCookies();
-        },
-
         test: function() {
-
-            $scope.checkAcceptedCookies();
 
             $scope.testId = getParameterInt(PARAM_TEST_ID);
             $scope.started = false;
@@ -30,8 +24,6 @@ app.controller('dtctrl', function($scope, $cookies, $sce, $http) {
         },
 
         results: function() {
-
-            $scope.checkAcceptedCookies();
 
             $("[data-toggle=tooltip]").tooltip();
 
@@ -258,10 +250,6 @@ app.controller('dtctrl', function($scope, $cookies, $sce, $http) {
 
     $scope.acceptCookies = function() {
         $cookies.put(COOKIE_ACCEPTED, 'yes');
-    }
-
-    $scope.checkAcceptedCookies = function() {
-        $scope.acceptedCookies = ($cookies.get(COOKIE_ACCEPTED) !== undefined);
     }
 
     /* index.html */
