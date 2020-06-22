@@ -34,6 +34,13 @@
 
         <div class="container main">
 
+            <!-- Begin cookie alert -->
+            <div ng-show="!acceptedCookies" class="alert alert-secondary alert-dismissible fade show">
+                <button ng-click="acceptCookies()" type="button" class="close" data-dismiss="alert">&times;</button>
+                By continuing to use this site you are agreeing to our <a href="privacy.html" target="_blank" class="link-no-underline">privacy policy</a> and our use of cookies.
+            </div>
+            <!-- End cookie alert -->
+
             <div class="row">
 
                 <div class="col-lg-6 col-md-12 offset-lg-3 offset-md-0">
@@ -218,6 +225,7 @@
                             </div>
 
                             <p class="text-center small sizing mt-10">Dichotomy Tests - 2020</p>
+                            <p class="text-center small sizing"><a href="privacy.html" target="_blank" class="link-no-underline">Privacy Policy</a></p>
 
                         </div>
 

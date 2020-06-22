@@ -12,14 +12,28 @@ html {
     text-align: center;
 }
 
+.subheading {
+    font-weight: 400;
+    font-size: 18px;
+}
+
 .sizing {
     margin-left: 5%;
     width: 90%;
 }
 
-.sizing-small {
-    margin-left: 40%;
-    width: 20%;
+@media only screen and (max-width: 500px) {
+    .sizing-small {
+        margin-left: 30%;
+        width: 40%;
+    }
+}
+
+@media only screen and (min-width: 500px) {
+    .sizing-small {
+        margin-left: 40%;
+        width: 20%;
+    }
 }
 
 .mt-10 {
